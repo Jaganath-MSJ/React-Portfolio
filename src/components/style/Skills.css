@@ -1,0 +1,41 @@
+.skills {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    align-content: center;
+    background-color: #2b3dda;
+}
+.skills>h1 {
+    font-size: 45px;
+    text-align: center;
+    color: white;
+    margin-bottom: 2em;
+    padding-bottom: -2em;
+}
+.skills>div {
+    background-color: #182385;
+    margin: -3em 15em 0em 15em;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    flex-wrap: wrap;
+}
+.skills>div>div {
+    margin: 1em 1em 1em 1em;
+    background-color: black;
+    border-radius: 10px;
+    transition: .5s;
+}
+.skills>div>div:hover {
+    box-shadow: 5px 5px 10px rgb(11, 1, 75);
+    transition-duration: 1s;
+}
+.skills>div>div>img {
+    display: block;
+    margin: .5em auto 0 auto;
+    width: 50%;
+}
+.skills>div>div>h2 {
+    color: white;
+    text-align: center;
+    font-weight: normal;
+}

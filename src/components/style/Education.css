@@ -1,0 +1,36 @@
+.education {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    align-content: center;
+    background-color: #f7f7f7;
+}
+.education>h1 {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 2em;
+    padding-bottom: -2em;
+}
+.education>div {
+    margin: -3em 15em 0em 15em;
+}
+.education>div>div {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px lightgray;
+    padding: .5em 1em 1em 1em;
+    margin: 1em 1em 1em 1em;
+    transition: .5s;
+}
+.education>div>div:hover {
+    box-shadow: 10px 10px 10px rgb(168, 167, 167);
+    transition-duration: 1s;
+}
+.education>div>div>h2 {
+    color: darkblue;
+}
+.education>div>div>h4 {
+    font-weight: normal;
+}
+.education>div>div>h3 {
+    color: green;
+}

@@ -1,0 +1,16 @@
+.home {
+    text-align: center;
+    padding: 15em 0em 12em 0em;
+}
+.home>div {
+    text-align: center;
+}
+.home h3 {
+    font-size: 20px;
+}
+.home h1 {
+    font-size: 55px;
+}
+.home h2 {
+    font-size: 25px;
+}
