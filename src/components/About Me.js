@@ -29,7 +29,7 @@ class AboutMe extends Component {
                             <p>Phone: <span>+91 9385304351</span></p>
                             <p>Place: <span>Tamil Nadu, India - 636302</span></p>
                         </div>
-                        <a href={resume} target="_blank">Resume <FontAwesomeIcon icon={faAngleRight} /></a>
+                        <a href={resume} target="_blank" rel="noreferrer">Resume <FontAwesomeIcon icon={faAngleRight} /></a>
                     </div>
                 </div>
             </section>

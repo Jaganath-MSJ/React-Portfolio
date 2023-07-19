@@ -11,14 +11,14 @@
     font-size: 40px;
 }
 .aboutme>div {
-    display: grid;
-    grid-template-columns: [one] 40% [two] 60%;
+    display: flex;
+    flex-wrap: wrap;
 }
 .aboutme>div>div {
     margin-left: 100px;
 }
 .aboutme_img>img {
-    margin-left: 5em;
+    margin: 0px auto;
     width: 22em;
     border-radius: 20px;
     box-shadow: 10px 10px 10px lightgray;
@@ -31,9 +31,6 @@
     transform: skew(ax, ay);
     transition-duration: 1s;
 }
-.aboutme_details {
-    padding-left: -20em;
-}
 .aboutme_details>h2 {
     font-weight: bolder;
 }
@@ -41,14 +38,13 @@
     font-weight: bold;
 }
 .aboutme_details>h4 {
-    padding-right: 10em;
     font-size: 18px;
     font-weight: lighter;
     color: black;
 }
 .aboutme_contact {
     display: grid;
-    grid-template-columns: [one] 30% [two] 50%;
+    grid-template-columns: 30% 50%;
     font-size: 18px;
     margin-bottom: 30px;
 }
@@ -79,4 +75,11 @@
 .aboutme_details>a:hover {
     color: black;
     transition: 1s;
+}
+
+@media only screen and (max-width: 500px) {
+    .aboutme_contact {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

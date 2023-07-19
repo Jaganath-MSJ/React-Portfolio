@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
-// import { faLinkedIn } from '@fortawesome/free-solid-svg-icons';
-// import { faGitHub } from '@fortawesome/free-solid-svg-icons';
-// import { faTelegram } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faTelegram } from "@fortawesome/free-brands-svg-icons";
 
 import './style/Footer.css';
 
@@ -47,17 +47,17 @@ class Footer extends Component {
                             <span><FontAwesomeIcon icon={faMapMarkedAlt}/></span> Tamil Nadu, India - 636302
                         </p>
                         <div>
-                            <a href="https://www.linkedin.com/in/jaganathms" target="_blank">
-                                <FontAwesomeIcon icon={faEnvelope} />
+                            <a href="https://www.linkedin.com/in/jaganathms" target="_blank" rel="noreferrer">
+                                <FontAwesomeIcon icon={faLinkedin} />
                             </a>
-                            <a href="https://github.com/Jaganath-MSJ" target="_blank">
+                            <a href="https://github.com/Jaganath-MSJ" target="_blank" rel="noreferrer">
+                                <FontAwesomeIcon icon={faGithub}/>
+                            </a>
+                            <a href="mailto:jagan.msjc@gmail.com" target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon icon={faEnvelope}/>
                             </a>
-                            <a href="mailto:jagan.msjc@gmail.com" target="_blank">
-                                <FontAwesomeIcon icon={faEnvelope}/>
-                            </a>
-                            <a href="https://t.me/MSJ_J" target="_blank">
-                                <FontAwesomeIcon icon={faEnvelope}/>
+                            <a href="https://t.me/MSJ_J" target="_blank" rel="noreferrer">
+                                <FontAwesomeIcon icon={faTelegram}/>
                             </a>
                         </div>
                     </div>

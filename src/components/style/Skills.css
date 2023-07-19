@@ -13,16 +13,17 @@
 }
 .skills>div {
     background-color: #182385;
-    margin: -3em 15em 0em 15em;
+    margin: 0em 14%;
     border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
     flex-wrap: wrap;
 }
 .skills>div>div {
     margin: 1em 1em 1em 1em;
     background-color: black;
     border-radius: 10px;
+    width: 140px;
+    height: 140px;
     transition: .5s;
 }
 .skills>div>div:hover {

@@ -10,8 +10,8 @@ function EachProject(props) {
             <img src={props.img} alt={props.label} />
             <div class="projectContent">
                 <h2>{props.label}</h2>
-                <a href={props.view} target="_blank"><FontAwesomeIcon icon={faEye} /> View</a>
-                <a href={props.code} target="_blank"><FontAwesomeIcon icon={faCode} /> Code</a>
+                <a href={props.view} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEye} /> View</a>
+                <a href={props.code} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faCode} /> Code</a>
             </div>
         </div>
     )

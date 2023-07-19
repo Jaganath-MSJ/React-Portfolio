@@ -19,7 +19,7 @@ class Contact extends Component {
                 <h1><FontAwesomeIcon icon={faHeadset}/> Contact</h1>
                 <div>
                     <div class="conatct_Image">
-                        <img src={contact} alt="Contact Image" />
+                        <img src={contact} alt="Contact" />
                     </div>
                     <div class="contact_Form">
                         <form action="">
