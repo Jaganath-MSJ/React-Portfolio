@@ -36,7 +36,7 @@
     transition: .5s;
 }
 .projects>div>div:hover .projectContent {
-    margin-top: -7em;
+    margin-top: -6.5em;
     height: 120px;
     transition: .3s;
 }
@@ -47,8 +47,8 @@
 }
 
 .projectContent>a {
-    margin: 0px 2em 0px 2em;
-    padding: 15px 30px 15px 30px;
+    margin: 0px 2em;
+    padding: 15px 30px;
     background-color: black;
     color: rgb(100, 254, 154);
     border-radius: 5px;
@@ -74,5 +74,12 @@
         width: 300px;
         height: 70px;
         margin-top: -4em;
+    }
+    .projectContent>a {
+        margin: 0px 10px;
+    }
+    .projects>div>div:hover .projectContent {
+        margin-top: -8.5em;
+        height: 140px;
     }
 }

@@ -43,4 +43,8 @@
     .skills>div {
         margin: 0 4%;
     }
+    .skills>div>div {
+        width: 133px;
+        height: 133px;
+    }
 }
