@@ -1,11 +1,11 @@
 import React from "react";
 
-function EachEducation(props) {
+function EachEducation({education}) {
     return (
         <div>
-            <h2>{props.degree}</h2>
-            <h4>{props.college}</h4>
-            <h3>{props.year} | {props.isCompleted}</h3>
+            <h2>{education.degree}</h2>
+            <h4>{education.college}</h4>
+            <h3>{education.year} | {education.isCompleted}</h3>
         </div>
     )
 }

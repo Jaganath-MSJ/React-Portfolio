@@ -1,11 +1,9 @@
 .aboutme {
-    margin-bottom: 8em;
     padding: 3em 0em;
 }
 .aboutme>h1 {
     font-size: 45px;
     text-align: center;
-    margin-bottom: 2em;
 }
 .aboutme>h1>i {
     font-size: 40px;
@@ -15,7 +13,7 @@
     flex-wrap: wrap;
 }
 .aboutme>div>div {
-    margin-left: 100px;
+    margin-left: 10%;
 }
 .aboutme_img>img {
     margin: 0px auto;
@@ -63,7 +61,6 @@
     background-color: dodgerblue;
     border-radius: 15px;
     transition: .5s;
-    /* box-shadow: 8px 8px 5px lightblue; */
 }
 .aboutme_details>a:hover {
     box-shadow: 5px 5px 5px rgb(81, 81, 82);
@@ -81,5 +78,11 @@
     .aboutme_contact {
         display: flex;
         flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .aboutme_img>img {
+        width: 70%;
     }
 }

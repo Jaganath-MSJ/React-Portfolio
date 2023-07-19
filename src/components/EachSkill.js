@@ -1,10 +1,10 @@
 import React from "react";
 
-function EachSkill(props) {
+function EachSkill({skill}) {
     return (
         <div>
-            <img src={props.img} alt={props.label} />
-            <h2>{props.label}</h2>
+            <img src={skill.img} alt={skill.label} />
+            <h2>{skill.label}</h2>
         </div>
     )
 }

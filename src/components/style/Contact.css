@@ -77,3 +77,16 @@
         width: 17em;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .conatct_Image>img {
+        width: 200px;
+        height: 200px;
+    }
+    .contact_Input>input {
+        width: 12.5em;
+    }
+    .contact_Input>textarea {
+        width: 11.5em;
+    }
+}

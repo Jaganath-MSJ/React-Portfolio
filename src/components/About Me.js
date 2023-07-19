@@ -1,40 +1,45 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
+import { Data } from "../Data/data";
 
-import myImage from "./../img/Jaganath M S Image.jpg";
-import resume from "./../pdf/Jaganath M S Resume.pdf";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-
-import './style/About Me.css';
+import "./style/About Me.css";
 
 class AboutMe extends Component {
-    render() {
-        return (
-            <section class="aboutme" id="AboutMe">
-                <h1><FontAwesomeIcon icon={faUser}/> About Me</h1>
-                <div>
-                    <div class="aboutme_img">
-                        <img src={myImage} alt="Jaganath M S" />
-                    </div>
-                    <div class="aboutme_details">
-                        <h2>I'm Jaganath</h2>
-                        <p>Passionate with Web Developer</p>
-                        <h4>I am Currently Studying Third year at Sri Krishna College of Engineering and Technology.
-                        </h4>
-                        <div class="aboutme_contact">
-                            <p>DOB: <span>Oct 23, 2001</span></p>
-                            <p>Email: <span>jagan.msjc@gmail.com</span></p>
-                            <p>Phone: <span>+91 9385304351</span></p>
-                            <p>Place: <span>Tamil Nadu, India - 636302</span></p>
-                        </div>
-                        <a href={resume} target="_blank" rel="noreferrer">Resume <FontAwesomeIcon icon={faAngleRight} /></a>
-                    </div>
-                </div>
-            </section>
-        )
-    }
+  render() {
+    const aboutMe = Data.AboutMe;
+    return (
+      <section class="aboutme" id="AboutMe">
+        <h1>
+          <FontAwesomeIcon icon={faUser} /> About Me
+        </h1>
+        <div>
+          <div class="aboutme_img">
+            <img src={aboutMe.img} alt="Jaganath M S" />
+          </div>
+          <div class="aboutme_details">
+            <h2>I'm {aboutMe.name}</h2>
+            <p>Passionate with {aboutMe.role}</p>
+            <h4>{aboutMe.currently}</h4>
+            <div class="aboutme_contact">
+              {aboutMe.contact.map((contact) => {
+                return (
+                  <p>
+                    {contact.key}: <span>{contact.value}</span>
+                  </p>
+                );
+              })}
+            </div>
+            <a href={aboutMe.resume} target="_blank" rel="noreferrer">
+              Resume <FontAwesomeIcon icon={faAngleRight} />
+            </a>
+          </div>
+        </div>
+      </section>
+    );
+  }
 }
 
 export default AboutMe;

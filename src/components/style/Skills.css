@@ -8,8 +8,6 @@
     font-size: 45px;
     text-align: center;
     color: white;
-    margin-bottom: 2em;
-    padding-bottom: -2em;
 }
 .skills>div {
     background-color: #182385;
@@ -39,4 +37,10 @@
     color: white;
     text-align: center;
     font-weight: normal;
+}
+
+@media only screen and (max-width: 400px) {
+    .skills>div {
+        margin: 0 4%;
+    }
 }
