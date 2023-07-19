@@ -11,6 +11,7 @@ import react from "../img/react-logo.png";
 import github from "../img/github-logo.png";
 import git from "../img/git-logo.png";
 
+import jobSearch from "../img/Job Search.png";
 import netflixClone from "../img/Netflix Clone.png";
 import basicsBankingSystem from "../img/Basics Banking System.png";
 import paymentGatewayIntegation from "../img/Payment Gateway Integration.png";
@@ -27,10 +28,9 @@ export const Data = {
   },
   AboutMe: {
     img: myImage,
-    name: "Jaganath",
-    role: "Web Developer",
-    currently:
-      "I am Currently Studying Third year at Sri Krishna College of Engineering and Technology.",
+    name: "I'm Jaganath",
+    role: "Passionate Web Developer",
+    currently: "I am engineering graduate majoring in EEE, open for entry level job as Web developer.",
     contact: [
       { key: "DOB", value: "Oct 23, 2001" },
       { key: "Email", value: "jagan.msjc@gmail.com" },
@@ -41,8 +41,8 @@ export const Data = {
   },
   Skills: [
     {
-      label: "C",
-      img: c,
+      label: "React",
+      img: react,
     },
     {
       label: "Java",
@@ -65,8 +65,8 @@ export const Data = {
       img: mySql,
     },
     {
-      label: "React",
-      img: react,
+      label: "C",
+      img: c,
     },
     {
       label: "Github",
@@ -80,26 +80,42 @@ export const Data = {
   Education: [
     {
       degree: "10th - SSLC",
-      college:
-        "Sri Sarada Balamandir Boys Matric Higher Secondary School, Salem",
+      college: "Sri Sarada Balamandir Boys Matric Higher Secondary School, Salem",
       year: "2016 - 2017",
       isCompleted: "Completed",
     },
     {
       degree: "Diploma In Electrical and Electronics Engineering",
-      college: "Thiagarajar Polytechnic College Polytechnic, Salem",
+      college: "Thiagarajar Polytechnic College, Salem",
       year: "2017 - 2020",
       isCompleted: "Completed",
     },
     {
-      degree:
-        "Bachelor Of Engineering In Electrical and Electronics Engineering",
+      degree: "Bachelor Of Engineering In Electrical and Electronics Engineering",
       college: "Sri Krishna College of Engineering and Technology, Coimbatore",
       year: "2020 - 2023",
-      isCompleted: "Present",
+      isCompleted: "Completed",
     },
   ],
   Projects: [
+    {
+      label: "Job Search",
+      img: jobSearch,
+      view: "https://msj-job-search.netlify.app/",
+      code: "https://github.com/Jaganath-MSJ/Job-Search",
+    },
+    {
+      label: "React Calculator",
+      img: reactCalculator,
+      view: "https://msj-react-calculator.netlify.app",
+      code: "https://github.com/Jaganath-MSJ/React-Calculator",
+    },
+    {
+      label: "Bank System using Java",
+      img: bank,
+      view: "https://github.com/Jaganath-MSJ/Bank",
+      code: "https://github.com/Jaganath-MSJ/Bank",
+    },
     {
       label: "Netflix Clone",
       img: netflixClone,
@@ -113,16 +129,10 @@ export const Data = {
       code: "https://github.com/Jaganath-MSJ/Basics_Banking_System",
     },
     {
-      label: "Payment Gateway Integation",
+      label: "Payment Gateway Integration",
       img: paymentGatewayIntegation,
       view: "https://jaganath-msj.github.io/Payment_Gateway_Integration",
       code: "https://github.com/Jaganath-MSJ/Payment_Gateway_Integration",
-    },
-    {
-      label: "Bank",
-      img: bank,
-      view: "https://github.com/Jaganath-MSJ/Bank",
-      code: "https://github.com/Jaganath-MSJ/Bank",
     },
     {
       label: "Farmer Friend",
@@ -142,19 +152,11 @@ export const Data = {
       view: "https://youtu.be/TGikf_Y0c50",
       code: "https://github.com/Jaganath-MSJ/Detection_of_face_mask",
     },
-    {
-      label: "React Calculator",
-      img: reactCalculator,
-      view: "https://github.com/Jaganath-MSJ/React-Calculator",
-      code: "https://github.com/Jaganath-MSJ/React-Calculator",
-    },
   ],
   Footer: {
     name: "Jaganath Portfolio",
-    aboutMe:
-      "Motivated entry level, goal driven individual with organised, detail-oriented and efficient working person.",
-    thankYou:
-      "Thank you for visiting my personal portfolio website. Connect with me over social media.",
+    aboutMe: "Motivated entry level, goal driven individual with organised, detail-oriented and efficient working person.",
+    thankYou: "Thank you for visiting my personal portfolio website. Connect with me over social media.",
     phoneNo: "+91 9385304351",
     mail: "jagan.msjc@gmail.com",
     place: "Tamil Nadu, India - 636302",

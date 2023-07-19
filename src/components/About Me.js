@@ -20,8 +20,8 @@ class AboutMe extends Component {
             <img src={aboutMe.img} alt="Jaganath M S" />
           </div>
           <div class="aboutme_details">
-            <h2>I'm {aboutMe.name}</h2>
-            <p>Passionate with {aboutMe.role}</p>
+            <h2>{aboutMe.name}</h2>
+            <p>{aboutMe.role}</p>
             <h4>{aboutMe.currently}</h4>
             <div class="aboutme_contact">
               {aboutMe.contact.map((contact) => {

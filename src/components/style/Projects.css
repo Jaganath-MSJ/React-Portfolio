@@ -83,3 +83,14 @@
         height: 140px;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .projects>div>div .projectContent {
+        margin-top: -8.5em;
+        height: 140px;
+    }
+    .projects>div>div .projectContent>a {
+        opacity: 1;
+        transition: .3s;
+    }
+}
