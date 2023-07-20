@@ -5,7 +5,7 @@ class Navigation extends Component {
     render() {
         return (
             <nav>
-                <h2><a href="#Home">Jaganath</a></h2>
+                <h2><a href="/">Jaganath</a></h2>
                 <ul className="menuBar">
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#AboutMe">About Me</a></li>

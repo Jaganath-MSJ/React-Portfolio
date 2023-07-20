@@ -1,2 +1,2 @@
 # React-Portfolio
-### Visit Now: <a href="https://jaganath-protfolio.netlify.app/" target="_blank">Click here</a>
+### Visit Now: <a href="https://jaganath-portfolio.netlify.app/" target="_blank">Click here</a>

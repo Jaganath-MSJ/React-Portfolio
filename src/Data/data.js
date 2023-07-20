@@ -30,7 +30,7 @@ export const Data = {
     img: myImage,
     name: "I'm Jaganath",
     role: "Passionate Web Developer",
-    currently: "I am engineering graduate majoring in EEE, open for entry level job as Web developer.",
+    currently: "I am engineering graduate Majoring in EEE, open for entry level job as Web developer.",
     contact: [
       { key: "DOB", value: "Oct 23, 2001" },
       { key: "Email", value: "jagan.msjc@gmail.com" },
@@ -156,7 +156,7 @@ export const Data = {
   Footer: {
     name: "Jaganath Portfolio",
     aboutMe: "Motivated entry level, goal driven individual with organised, detail-oriented and efficient working person.",
-    thankYou: "Thank you for visiting my personal portfolio website. Connect with me over social media.",
+    thankYou: "Thank you for visiting my personal portfolio website. Please connect with me using contacts below or social media.",
     phoneNo: "+91 9385304351",
     mail: "jagan.msjc@gmail.com",
     place: "Tamil Nadu, India - 636302",
