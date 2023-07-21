@@ -1,5 +1,5 @@
 # React-Portfolio
-### View Deploy: [Click Here] (https://jaganath-portfolio.netlify.app)
+### View Deploy: [Click Here](https://jaganath-portfolio.netlify.app)
 
 ## Build With
 This project was built using these technologies:
@@ -15,4 +15,4 @@ cd React-Portfolio
 ```
 
 ## Deployed On
-[Netlify] (https://www.netlify.com)
+### [Netlify](https://www.netlify.com)
