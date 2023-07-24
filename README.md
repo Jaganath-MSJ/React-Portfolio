@@ -12,7 +12,9 @@ You will need `node.js` and `git` installed globally on your machine.
 ```cmd
 git clone https://github.com/Jaganath-MSJ/React-Portfolio.git
 cd React-Portfolio
+npm start
 ```
+Check the web site in `http://localhost:3000`
 
 ## Deployed On
 ### [Netlify](https://www.netlify.com)
