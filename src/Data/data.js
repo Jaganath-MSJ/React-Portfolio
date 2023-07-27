@@ -11,7 +11,10 @@ import react from "../img/react-logo.png";
 import github from "../img/github-logo.png";
 import git from "../img/git-logo.png";
 
+import weatherApp from "../img/Weather App.png";
 import jobSearch from "../img/Job Search.png";
+import happyChatApp from "../img/Happy Chat.png";
+import mobileStore from "../img/Mobile Store.png";
 import netflixClone from "../img/Netflix Clone.png";
 import basicsBankingSystem from "../img/Basics Banking System.png";
 import paymentGatewayIntegation from "../img/Payment Gateway Integration.png";
@@ -20,6 +23,7 @@ import farmerFriend from "../img/Farmer Friend.png";
 import colorIdentification from "../img/Color Identification.png";
 import detectionOfFaceMask from "../img/Detection of Face Mask.png";
 import reactCalculator from "../img/React Calculator.png";
+import reactPortfolio from "../img/React Portfolio.png";
 
 export const Data = {
   Home: {
@@ -99,10 +103,28 @@ export const Data = {
   ],
   Projects: [
     {
+      label: "Weather App",
+      img: weatherApp,
+      view: "https://msj-weather-app.netlify.app",
+      code: "https://github.com/Jaganath-MSJ/Weather-App",
+    },
+    {
       label: "Job Search",
       img: jobSearch,
-      view: "https://msj-job-search.netlify.app/",
+      view: "https://msj-job-search.netlify.app",
       code: "https://github.com/Jaganath-MSJ/Job-Search",
+    },
+    {
+      label: "Happy Chat App",
+      img: happyChatApp,
+      view: "https://happychat-app.netlify.app",
+      code: "https://github.com/Jaganath-MSJ/Happy-Chat-App",
+    },
+    {
+      label: "Mobile Store",
+      img: mobileStore,
+      view: "https://msj-mobile-store.netlify.app",
+      code: "https://github.com/Jaganath-MSJ/Mobile-Store",
     },
     {
       label: "React Calculator",
@@ -151,6 +173,12 @@ export const Data = {
       img: detectionOfFaceMask,
       view: "https://youtu.be/TGikf_Y0c50",
       code: "https://github.com/Jaganath-MSJ/Detection_of_face_mask",
+    },
+    {
+      label: "Portfolio",
+      img: reactPortfolio,
+      view: "https://jaganath-portfolio.netlify.app",
+      code: "https://github.com/Jaganath-MSJ/React-Portfolio",
     },
   ],
   Footer: {
