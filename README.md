@@ -1,5 +1,7 @@
-# React-Portfolio
+# React Portfolio
 ### View Deploy: [Click Here](https://jaganath-portfolio.netlify.app)
+
+[![React Portfolio](https://github.com/Jaganath-MSJ/React-Portfolio/blob/main/src/img/React%20Portfolio.png)](https://jaganath-portfolio.netlify.app)
 
 ## Build With
 This project was built using these technologies:
