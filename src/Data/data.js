@@ -1,6 +1,10 @@
 import myImage from "../img/Jaganath M S Image.jpg";
 import resume from "../pdf/Jaganath M S Resume.pdf";
 
+import appian from "../img/appian-logo.png";
+import nodeJs from "../img/node-js-logo.png";
+import mongoDB from "../img/mongo-db-logo.png";
+import phpMyAdmin from "../img/php-my-admin-logo.png";
 import c from "../img/c-plus-plus-logo.png";
 import java from "../img/java-logo.png";
 import html from "../img/html-logo.png";
@@ -49,8 +53,16 @@ export const Data = {
       img: react,
     },
     {
+      label: "Node.js",
+      img: nodeJs,
+    },
+    {
       label: "Java",
       img: java,
+    },
+    {
+      label: "Appian",
+      img: appian,
     },
     {
       label: "HTML",
@@ -67,6 +79,14 @@ export const Data = {
     {
       label: "My Sql",
       img: mySql,
+    },
+    {
+      label: "Mongo DB",
+      img: mongoDB,
+    },
+    {
+      label: "phpMyAdmin",
+      img: phpMyAdmin,
     },
     {
       label: "C",
