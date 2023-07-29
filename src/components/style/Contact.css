@@ -16,14 +16,14 @@
 .contact>div>div {
     margin: 0 auto;
 }
-.conatct_Image>img {
+.conatctImage>img {
     width: 400px;
     height: 400px;
 }
-.contact_Input {
+.contactInput {
     margin: 20px 0px;
 }
-.contact_Input>span {
+.contactInput>span {
     color: gray;
     position: absolute;
     margin-left: 20px;
@@ -31,7 +31,7 @@
     font-size: 20px;
     pointer-events: none;
 }
-.contact_Input>input, .contact_Input>textarea {
+.contactInput>input, .contactInput>textarea {
     width: 30em;
     height: 40px;
     font-size: 18px;
@@ -40,23 +40,29 @@
     border-radius: 5px;
     text-indent: 50px;
 }
-.contact_Input>textarea {
+.contactInput>textarea {
     width: 29em;
     height: 90px;
     text-indent: 40px;
     padding: 10px;
 }
-.contact_Submit {
-    text-align: right;
+.submitConform {
+    display: flex;
+    justify-content: space-between;
 }
-.contact_Submit>span {
+.submitConform>p {
+    margin-top: 0;
+    font-weight: bold;
+    font-size: large;
+}
+.contactSubmit>span {
     position: absolute;
     margin-left: -45px;
     margin-top: 14px;
     font-size: 15px;
     color: white;
 }
-.contact_Submit>input {
+.contactSubmit>button {
     width: 8em;
     height: 45px;
     padding-right: 30px;
@@ -70,23 +76,23 @@
 }
 
 @media only screen and (max-width: 730px) {
-    .contact_Input>input {
+    .contactInput>input {
         width: 18em;
     }
-    .contact_Input>textarea {
+    .contactInput>textarea {
         width: 17em;
     }
 }
 
 @media only screen and (max-width: 400px) {
-    .conatct_Image>img {
+    .conatctImage>img {
         width: 200px;
         height: 200px;
     }
-    .contact_Input>input {
+    .contactInput>input {
         width: 12.5em;
     }
-    .contact_Input>textarea {
+    .contactInput>textarea {
         width: 11.5em;
     }
 }

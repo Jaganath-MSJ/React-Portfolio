@@ -1,26 +1,32 @@
-import React, { Component } from "react";
-
-import EachEducation from "./EachEducation";
+import React from "react";
 import { Data } from "../Data/data";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 
-import './style/Education.css';
+import "./style/Education.css";
 
-class Education extends Component {
-    render() {
-        return (
-            <section class="education" id="Education">
-                <h1><FontAwesomeIcon icon={faGraduationCap} /> Education</h1>
-                <div>
-                    {Data.Education.map((education) => {
-                        return <EachEducation education={education} />
-                    })}
-                </div>
-            </section>
-        )
-    }
+function Education() {
+  return (
+    <section className="education" id="Education">
+      <h1>
+        <FontAwesomeIcon icon={faGraduationCap} /> Education
+      </h1>
+      <div>
+        {Data.Education.map((education) => {
+          return (
+            <div key={education.degree}>
+              <h2>{education.degree}</h2>
+              <h4>{education.college}</h4>
+              <h3>
+                {education.year} | {education.isCompleted}
+              </h3>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
 }
 
 export default Education;

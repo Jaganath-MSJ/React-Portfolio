@@ -15,7 +15,7 @@
 .aboutme>div>div {
     margin-left: 10%;
 }
-.aboutme_img>img {
+.aboutmeImg>img {
     margin: 0px auto;
     width: 22em;
     border-radius: 20px;
@@ -23,37 +23,37 @@
     filter: grayscale(100%); 
     transition: .5s;
 }
-.aboutme_img>img:hover {
+.aboutmeImg>img:hover {
     box-shadow: 10px 10px 10px rgb(168, 167, 167);
     filter: none;
     transform: skew(ax, ay);
     transition-duration: 1s;
 }
-.aboutme_details>h2 {
+.aboutmeDetails>h2 {
     font-weight: bolder;
 }
-.aboutme_details>p {
+.aboutmeDetails>p {
     font-weight: bold;
 }
-.aboutme_details>h4 {
+.aboutmeDetails>h4 {
     font-size: 18px;
     font-weight: lighter;
     color: black;
 }
-.aboutme_contact {
+.aboutmeContact {
     display: grid;
     grid-template-columns: 30% 50%;
     font-size: 18px;
     margin-bottom: 30px;
 }
-.aboutme_contact>p {
+.aboutmeContact>p {
     color: dodgerblue;
 }
-.aboutme_contact>p>span {
+.aboutmeContact>p>span {
     color: black;
     margin-left: 5px;
 }
-.aboutme_details>a {
+.aboutmeDetails>a {
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -62,27 +62,27 @@
     border-radius: 15px;
     transition: .5s;
 }
-.aboutme_details>a:hover {
+.aboutmeDetails>a:hover {
     box-shadow: 5px 5px 5px rgb(81, 81, 82);
     transition: 1s;
 }   
-.aboutme_details>a>i {
+.aboutmeDetails>a>i {
     font-size: 25px;
 }
-.aboutme_details>a:hover {
+.aboutmeDetails>a:hover {
     color: black;
     transition: 1s;
 }
 
 @media only screen and (max-width: 500px) {
-    .aboutme_contact {
+    .aboutmeContact {
         display: flex;
         flex-wrap: wrap;
     }
 }
 
 @media only screen and (max-width: 400px) {
-    .aboutme_img>img {
+    .aboutmeImg>img {
         width: 70%;
     }
 }
