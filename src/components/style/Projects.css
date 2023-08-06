@@ -4,25 +4,29 @@
     align-content: center;
     background-color: #2b3dda;
 }
+
 .projects>h1 {
     font-size: 45px;
     text-align: center;
     color: white;
 }
+
 .projects>div {
     margin: 0em 5%;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
 }
+
 .projects>div>div {
     margin: 1em;
 }
+
 .projects>div>div>img {
     margin: .5em auto 0 auto;
     width: 400px;
     height: 400px;
-    object-fit:cover;
+    object-fit: cover;
     border-radius: 5px;
 }
 
@@ -35,6 +39,7 @@
     border-radius: 0px 0px 5px 5px;
     transition: .5s;
 }
+
 .projects>div>div:hover .projectContent {
     margin-top: -6.5em;
     height: 120px;
@@ -55,6 +60,7 @@
     opacity: 0;
     transition: .5s;
 }
+
 .projects>div>div:hover .projectContent>a {
     opacity: 1;
     transition: .3s;
@@ -66,18 +72,21 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .projects>div>div>img  {
+    .projects>div>div>img {
         width: 300px;
         height: 300px;
     }
+
     .projectContent {
         width: 300px;
         height: 70px;
         margin-top: -4em;
     }
+
     .projectContent>a {
         margin: 0px 10px;
     }
+
     .projects>div>div:hover .projectContent {
         margin-top: -8.5em;
         height: 140px;
@@ -89,6 +98,7 @@
         margin-top: -8.5em;
         height: 140px;
     }
+
     .projects>div>div .projectContent>a {
         opacity: 1;
         transition: .3s;

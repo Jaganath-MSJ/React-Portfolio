@@ -5,6 +5,7 @@ footer {
     padding-top: 30px;
     padding-bottom: 1px;
 }
+
 .footerContent {
     display: flex;
     flex-direction: row;
@@ -13,21 +14,26 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
+
 .footerContent>div {
     display: flex;
     flex-direction: column;
 }
+
 .footerAbout {
     width: 30em;
 }
+
 .footerAbout>p {
     margin-right: 5em;
     color: rgb(173, 169, 169);
     font-size: 19px;
 }
+
 .footerLinks {
     width: 20em;
 }
+
 .footerLinks>a {
     font-weight: bold;
     font-size: 19px;
@@ -35,25 +41,31 @@ footer {
     color: rgb(173, 169, 169);
     transition: .5s;
 }
+
 .footerLinks>a:hover {
     color: dodgerblue;
     transition: .5s;
 }
+
 .footerContact {
     width: 30em;
 }
+
 .footerContact>p {
     color: rgb(173, 169, 169);
     font-size: 19px;
 }
+
 .footerContact>p>span {
     color: blueviolet;
     padding-right: 10px;
 }
+
 .footerContact>div {
     width: 20em;
     margin: 20px 0px;
 }
+
 .footerContact>div>a {
     font-size: 18px;
     padding: 10px;
@@ -64,23 +76,28 @@ footer {
     border-radius: 50px;
     transition: .7s;
 }
+
 .footerContact>div>a:hover {
     background-color: transparent;
     color: blueviolet;
     transition: .7s;
 }
+
 footer>p {
     font-size: 19px;
     text-align: center;
     padding-top: 30px;
 }
+
 footer>p>span {
     color: red;
 }
+
 footer>p>a {
     color: blueviolet;
     transition: .5s;
 }
+
 footer>p>a:hover {
     color: white;
     transition: .5s;

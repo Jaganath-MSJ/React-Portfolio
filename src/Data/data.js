@@ -5,6 +5,7 @@ import appian from "../img/appian-logo.png";
 import nodeJs from "../img/node-js-logo.png";
 import mongoDB from "../img/mongo-db-logo.png";
 import phpMyAdmin from "../img/php-my-admin-logo.png";
+import redux from "../img/redux-logo.png";
 import c from "../img/c-plus-plus-logo.png";
 import java from "../img/java-logo.png";
 import html from "../img/html-logo.png";
@@ -15,6 +16,7 @@ import react from "../img/react-logo.png";
 import github from "../img/github-logo.png";
 import git from "../img/git-logo.png";
 
+import socialMedia from "../img/Social Media.png";
 import weatherApp from "../img/Weather App.png";
 import jobSearch from "../img/Job Search.png";
 import happyChatApp from "../img/Happy Chat.png";
@@ -38,7 +40,8 @@ export const Data = {
     img: myImage,
     name: "I'm Jaganath",
     role: "Passionate Web Developer",
-    currently: "I am engineering graduate Majoring in EEE, open for entry level job as Web developer.",
+    currently:
+      "I am engineering graduate Majoring in EEE, open for entry level job as Web developer.",
     contact: [
       { key: "DOB", value: "Oct 23, 2001" },
       { key: "Email", value: "jagan.msjc@gmail.com" },
@@ -63,6 +66,10 @@ export const Data = {
     {
       label: "Appian",
       img: appian,
+    },
+    {
+      label: "Redux",
+      img: redux,
     },
     {
       label: "HTML",
@@ -104,7 +111,8 @@ export const Data = {
   Education: [
     {
       degree: "10th - SSLC",
-      college: "Sri Sarada Balamandir Boys Matric Higher Secondary School, Salem",
+      college:
+        "Sri Sarada Balamandir Boys Matric Higher Secondary School, Salem",
       year: "2016 - 2017",
       isCompleted: "Completed",
     },
@@ -115,13 +123,20 @@ export const Data = {
       isCompleted: "Completed",
     },
     {
-      degree: "Bachelor Of Engineering In Electrical and Electronics Engineering",
+      degree:
+        "Bachelor Of Engineering In Electrical and Electronics Engineering",
       college: "Sri Krishna College of Engineering and Technology, Coimbatore",
       year: "2020 - 2023",
       isCompleted: "Completed",
     },
   ],
   Projects: [
+    {
+      label: "Social Media",
+      img: socialMedia,
+      view: "https://msj-social-media.netlify.app",
+      code: "https://github.com/Jaganath-MSJ/Social-Media",
+    },
     {
       label: "Weather App",
       img: weatherApp,
@@ -203,8 +218,10 @@ export const Data = {
   ],
   Footer: {
     name: "Jaganath Portfolio",
-    aboutMe: "Motivated entry level, goal driven individual with organised, detail-oriented and efficient working person.",
-    thankYou: "Thank you for visiting my personal portfolio website. Please connect with me using contacts below or social media.",
+    aboutMe:
+      "Motivated entry level, goal driven individual with organised, detail-oriented and efficient working person.",
+    thankYou:
+      "Thank you for visiting my personal portfolio website. Please connect with me using contacts below or social media.",
     phoneNo: "+91 9385304351",
     mail: "jagan.msjc@gmail.com",
     place: "Tamil Nadu, India - 636302",

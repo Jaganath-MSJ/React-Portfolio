@@ -4,13 +4,16 @@
     align-content: center;
     background-color: #f7f7f7;
 }
+
 .education>h1 {
     font-size: 45px;
     text-align: center;
 }
+
 .education>div {
     margin: 0em 14%;
 }
+
 .education>div>div {
     background-color: white;
     border-radius: 10px;
@@ -19,16 +22,20 @@
     margin: 1em 1em 1em 1em;
     transition: .5s;
 }
+
 .education>div>div:hover {
     box-shadow: 10px 10px 10px rgb(168, 167, 167);
     transition-duration: 1s;
 }
+
 .education>div>div>h2 {
     color: darkblue;
 }
+
 .education>div>div>h4 {
     font-weight: normal;
 }
+
 .education>div>div>h3 {
     color: green;
 }

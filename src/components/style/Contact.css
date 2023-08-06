@@ -1,10 +1,12 @@
 .contact {
-    padding:  20px;
+    padding: 20px;
 }
+
 .contact>h1 {
     text-align: center;
     font-size: 35px;
 }
+
 .contact>div {
     margin: 0px 5%;
     padding: 20px 40px;
@@ -13,16 +15,20 @@
     display: flex;
     flex-wrap: wrap;
 }
+
 .contact>div>div {
     margin: 0 auto;
 }
+
 .conatctImage>img {
     width: 400px;
     height: 400px;
 }
+
 .contactInput {
     margin: 20px 0px;
 }
+
 .contactInput>span {
     color: gray;
     position: absolute;
@@ -31,7 +37,9 @@
     font-size: 20px;
     pointer-events: none;
 }
-.contactInput>input, .contactInput>textarea {
+
+.contactInput>input,
+.contactInput>textarea {
     width: 30em;
     height: 40px;
     font-size: 18px;
@@ -40,21 +48,25 @@
     border-radius: 5px;
     text-indent: 50px;
 }
+
 .contactInput>textarea {
     width: 29em;
     height: 90px;
     text-indent: 40px;
     padding: 10px;
 }
+
 .submitConform {
     display: flex;
     justify-content: space-between;
 }
+
 .submitConform>p {
     margin-top: 0;
     font-weight: bold;
     font-size: large;
 }
+
 .contactSubmit>span {
     position: absolute;
     margin-left: -45px;
@@ -62,6 +74,7 @@
     font-size: 15px;
     color: white;
 }
+
 .contactSubmit>button {
     width: 8em;
     height: 45px;
@@ -79,6 +92,7 @@
     .contactInput>input {
         width: 18em;
     }
+
     .contactInput>textarea {
         width: 17em;
     }
@@ -89,9 +103,11 @@
         width: 200px;
         height: 200px;
     }
+
     .contactInput>input {
         width: 12.5em;
     }
+
     .contactInput>textarea {
         width: 11.5em;
     }
