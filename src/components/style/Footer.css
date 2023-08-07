@@ -64,12 +64,17 @@ footer {
 .footerContact>div {
     width: 20em;
     margin: 20px 0px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5em;
 }
 
 .footerContact>div>a {
     font-size: 18px;
-    padding: 10px;
+    padding: 10px 8px 8px 10px;
     margin: 5px;
+    width: 1.2em;
+    height: 1.2em;
     color: black;
     border: 1px solid white;
     background-color: white;
