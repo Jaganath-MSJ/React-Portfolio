@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +12,36 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Navigation() {
+  const sections = [
+    "Home",
+    "AboutMe",
+    "Skills",
+    "Education",
+    "Projects",
+    "Contact",
+  ];
+  const [activeSection, setActiveSection] = useState(sections[0]);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    sections.forEach((section) => {
+      const target = document.getElementById(section);
+      if (target) {
+        const offsetTop = target.offsetTop;
+        const offsetBottom = offsetTop + target.offsetHeight;
+        if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+          setActiveSection(section);
+        }
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <Nav>
       <h2 className="navHeader">
@@ -21,37 +51,37 @@ function Navigation() {
         </a>
       </h2>
       <ul className="navMenuBar">
-        <li>
+        <li className={activeSection === "Home" ? "active" : ""}>
           <a href="#Home">
             <FontAwesomeIcon icon={faHouse} />
             <span>Home</span>
           </a>
         </li>
-        <li>
+        <li className={activeSection === "AboutMe" ? "active" : ""}>
           <a href="#AboutMe">
             <FontAwesomeIcon icon={faUser} />
             <span>About Me</span>
           </a>
         </li>
-        <li>
+        <li className={activeSection === "Skills" ? "active" : ""}>
           <a href="#Skills">
             <FontAwesomeIcon icon={faLaptopCode} />
             <span>Skills</span>
           </a>
         </li>
-        <li>
+        <li className={activeSection === "Education" ? "active" : ""}>
           <a href="#Education">
             <FontAwesomeIcon icon={faGraduationCap} />
             <span>Education</span>
           </a>
         </li>
-        <li>
+        <li className={activeSection === "Projects" ? "active" : ""}>
           <a href="#Projects">
             <FontAwesomeIcon icon={faDiagramProject} />
             <span>Projects</span>
           </a>
         </li>
-        <li>
+        <li className={activeSection === "Contact" ? "active" : ""}>
           <a href="#Contact">
             <FontAwesomeIcon icon={faHeadset} />
             <span>Contact</span>
@@ -65,7 +95,7 @@ function Navigation() {
 const Nav = styled.nav`
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-flow: nowrap;
   justify-content: space-between;
@@ -113,12 +143,28 @@ const Nav = styled.nav`
         width: 0;
         background: dodgerblue;
         position: absolute;
+        top: 1.8rem;
         left: 0;
         bottom: 0.5rem;
         transition: 0.2s ease-in-out;
       }
       &:hover::after {
         width: 100%;
+      }
+    }
+    .active {
+      & > a {
+        color: dodgerblue;
+      }
+      &::after {
+        height: 3px;
+        width: 100%;
+        background: dodgerblue;
+        position: absolute;
+        top: 1.8rem;
+        left: 0;
+        bottom: 0.5rem;
+        transition: 0.2s ease-in-out;
       }
     }
   }
@@ -155,8 +201,11 @@ const Nav = styled.nav`
           }
         }
         &::after {
-          background: transparent;
+          display: none;
         }
+      }
+      .active::after{
+        display: none;
       }
       &:hover {
         transition: 0.5s ease-in-out;
