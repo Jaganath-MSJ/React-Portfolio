@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,17 +12,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Navigation() {
-  const sections = [
-    "Home",
-    "AboutMe",
-    "Skills",
-    "Education",
-    "Projects",
-    "Contact",
-  ];
+  const sections = useMemo(
+    () => ["Home", "AboutMe", "Skills", "Education", "Projects", "Contact"],
+    []
+  );
   const [activeSection, setActiveSection] = useState(sections[0]);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const scrollPosition = window.scrollY;
     sections.forEach((section) => {
       const target = document.getElementById(section);
@@ -34,14 +30,14 @@ function Navigation() {
         }
       }
     });
-  };
+  }, [sections]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
   return (
     <Nav>
       <h2 className="navHeader">
@@ -204,7 +200,7 @@ const Nav = styled.nav`
           display: none;
         }
       }
-      .active::after{
+      .active::after {
         display: none;
       }
       &:hover {
