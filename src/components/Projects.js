@@ -2,9 +2,7 @@ import React from "react";
 import { Data } from "../Data/data";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiagramProject } from "@fortawesome/free-solid-svg-icons";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faDiagramProject, faEye, faCode } from "@fortawesome/free-solid-svg-icons";
 
 import "./style/Projects.css";
 

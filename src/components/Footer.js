@@ -2,13 +2,17 @@ import React from "react";
 import { Data } from "../Data/data";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faTelegram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faPhone,
+  faEnvelope,
+  faMapMarkedAlt,
+  faHeart,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedin,
+  faGithub,
+  faTelegram,
+} from "@fortawesome/free-brands-svg-icons";
 
 import "./style/Footer.css";
 

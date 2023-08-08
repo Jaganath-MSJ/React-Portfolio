@@ -4,12 +4,14 @@ import emailjs from "emailjs-com";
 import contact from "./../img/contact.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeadset } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
-import { faCommentDots } from "@fortawesome/free-solid-svg-icons";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeadset,
+  faUser,
+  faEnvelope,
+  faPhoneAlt,
+  faCommentDots,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
 
 import "./style/Contact.css";
 

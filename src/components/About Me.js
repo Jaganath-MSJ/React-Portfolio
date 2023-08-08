@@ -2,8 +2,7 @@ import React from "react";
 import { Data } from "../Data/data";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 import "./style/About Me.css";
 
