@@ -173,7 +173,6 @@ const Nav = styled.nav`
       }
     }
     .navMenuBar {
-      position: fixed;
       display: flex;
       position: absolute;
       flex-direction: column;

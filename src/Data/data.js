@@ -31,22 +31,38 @@ import detectionOfFaceMask from "../img/Detection of Face Mask.png";
 import reactCalculator from "../img/React Calculator.png";
 import reactPortfolio from "../img/React Portfolio.png";
 
+const nameWithInicial = "Jaganath M S";
+const name = "Jaganath";
+
+const linkedInLink = "https://www.linkedin.com/in/jaganathms";
+const githubLink = "https://github.com/Jaganath-MSJ";
+const telegramLink = "https://t.me/MSJ_J";
+
+const DOB = "Oct 23, 2001";
+const email = "jagan.msjc@gmail.com";
+const phone = "+91 9385304351";
+const place = "Tamil Nadu, India - 636302";
+
 export const Data = {
   Home: {
-    name: "Jaganath M S",
+    name: nameWithInicial,
     role: "Web Developer",
+    linkedInLink: linkedInLink,
+    githubLink: githubLink,
+    mail: email,
+    telegramLink: telegramLink,
   },
   AboutMe: {
     img: myImage,
-    name: "I'm Jaganath",
+    name: `I'm ${name}`,
     role: "Passionate Web Developer",
     currently:
       "I am engineering graduate Majoring in EEE, open for entry level job as Web developer.",
     contact: [
-      { key: "DOB", value: "Oct 23, 2001" },
-      { key: "Email", value: "jagan.msjc@gmail.com" },
-      { key: "Phone", value: "+91 9385304351" },
-      { key: "Place", value: "Tamil Nadu, India - 636302" },
+      { key: "DOB", value: DOB },
+      { key: "Email", value: email },
+      { key: "Phone", value: phone },
+      { key: "Place", value: place },
     ],
     resume: resume,
   },
@@ -217,17 +233,17 @@ export const Data = {
     },
   ],
   Footer: {
-    name: "Jaganath Portfolio",
+    name: `${name} Portfolio`,
     aboutMe:
       "Motivated entry level, goal driven individual with organised, detail-oriented and efficient working person.",
     thankYou:
       "Thank you for visiting my personal portfolio website. Please connect with me using contacts below or social media.",
-    phoneNo: "+91 9385304351",
-    mail: "jagan.msjc@gmail.com",
-    place: "Tamil Nadu, India - 636302",
-    linkedIn: "https://www.linkedin.com/in/jaganathms",
-    github: "https://github.com/Jaganath-MSJ",
-    telegram: "https://t.me/MSJ_J",
-    linkedInName: "Jaganath M S",
+    phoneNo: phone,
+    mail: email,
+    place: place,
+    linkedIn: linkedInLink,
+    github: githubLink,
+    telegram: telegramLink,
+    linkedInName: nameWithInicial,
   },
 };
