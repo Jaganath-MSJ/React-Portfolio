@@ -1,0 +1,63 @@
+.skills {
+    padding: 2em 0;
+    align-content: center;
+    background-color: #2b3dda;
+}
+
+.skills>h1 {
+    font-size: 45px;
+    text-align: center;
+    color: white;
+}
+
+.skills>div {
+    background-color: #182385;
+    margin: 0em 14%;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills>div>div {
+    margin: 1em 1em 1em 1em;
+    background-color: black;
+    border-radius: 10px;
+    width: 140px;
+    height: 140px;
+    transition: .5s;
+}
+
+.skills>div>div:hover {
+    box-shadow: 5px 5px 10px rgb(11, 1, 75);
+    transition-duration: 1s;
+}
+
+.skills>div>div>div {
+    margin: auto 0;
+    margin-top: 0.5rem;
+    height: 50%;
+}
+
+.skills>div>div>div>img {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 100%;
+}
+
+.skills>div>div>h2 {
+    color: white;
+    text-align: center;
+    font-weight: normal;
+}
+
+@media only screen and (max-width: 400px) {
+    .skills>div {
+        margin: 0 4%;
+    }
+
+    .skills>div>div {
+        width: 133px;
+        height: 133px;
+    }
+}
