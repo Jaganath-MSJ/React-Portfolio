@@ -72,6 +72,10 @@ export const Data = {
       img: react,
     },
     {
+      label: "Redux",
+      img: redux,
+    },
+    {
       label: "Node.js",
       img: nodeJs,
     },
@@ -82,10 +86,6 @@ export const Data = {
     {
       label: "Appian",
       img: appian,
-    },
-    {
-      label: "Redux",
-      img: redux,
     },
     {
       label: "HTML",
@@ -108,7 +108,7 @@ export const Data = {
       img: mongoDB,
     },
     {
-      label: "phpMyAdmin",
+      label: "Php My Admin",
       img: phpMyAdmin,
     },
     {
