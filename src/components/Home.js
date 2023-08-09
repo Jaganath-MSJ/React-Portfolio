@@ -61,7 +61,7 @@ const Section = styled.section`
       display: flex;
       justify-content: center;
       gap: 1rem;
-      &>a {
+      & > a {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -77,6 +77,11 @@ const Section = styled.section`
           background-color: transparent;
           color: blueviolet;
         }
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      & > h1 {
+        font-size: 3rem;
       }
     }
   }
