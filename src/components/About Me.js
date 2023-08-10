@@ -43,6 +43,7 @@ function AboutMe() {
 const Section = styled.section`
   padding: 3rem 1rem 8rem 1rem;
   height: auto;
+  background-color: white;
   & > h1 {
     text-align: center;
     font-size: 3rem;
