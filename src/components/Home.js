@@ -12,7 +12,7 @@ import {
 
 function Home() {
   return (
-    <Section className="home" id="Home">
+    <Section id="Home">
       <div>
         <h3>Hey! I am</h3>
         <h1>{Data.Home.name}</h1>

@@ -8,7 +8,7 @@ import { faUser, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 function AboutMe() {
   const aboutMe = Data.AboutMe;
   return (
-    <Section className="aboutme" id="AboutMe">
+    <Section id="AboutMe">
       <h1>
         <FontAwesomeIcon icon={faUser} />
         &nbsp;About Me
@@ -41,9 +41,9 @@ function AboutMe() {
 }
 
 const Section = styled.section`
-  padding: 3rem 1rem 8rem 1rem;
+  padding: 3rem 5% 8rem 5%;
   height: auto;
-  background-color: white;
+  background-color: #f7f7f7;
   & > h1 {
     text-align: center;
     font-size: 3rem;

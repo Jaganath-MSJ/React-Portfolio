@@ -7,7 +7,7 @@ import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 
 function Skills() {
   return (
-    <Section className="skills" id="Skills">
+    <Section id="Skills">
       <h1>
         <FontAwesomeIcon icon={faLaptopCode} /> Skills
       </h1>
@@ -31,7 +31,7 @@ const Section = styled.section`
   padding: 3rem 10%;
   height: auto;
   background-color: rgb(43, 61, 218);
-  color: white;
+  color: #f7f7f7;
   & > h1 {
     text-align: center;
     font-size: 3rem;
