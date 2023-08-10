@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import emailjs from "emailjs-com";
-
 import contact from "./../img/contact.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,8 +12,6 @@ import {
   faCommentDots,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
-
-import "./style/Contact.css";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -49,13 +47,13 @@ function Contact() {
   };
 
   return (
-    <section className="contact" id="Contact">
+    <Section id="Contact">
       <h1>
         <FontAwesomeIcon icon={faHeadset} /> Contact
       </h1>
       <div>
         <div className="conatctImage">
-          <img src={contact} alt="Contact" />
+          <img src={contact} alt="Contact" draggable="false" />
         </div>
         <div className="contactForm">
           <form onSubmit={handleSubmitToSendMail}>
@@ -108,22 +106,112 @@ function Contact() {
                 required
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-              ></textarea>
+              />
             </div>
             <div className="submitConform">
               <p>{responseMessage}</p>
               <div className="contactSubmit">
-                <button type="submit">Submit</button>
-                <span>
+                <button type="submit">
+                  Submit &nbsp;
                   <FontAwesomeIcon icon={faPaperPlane} />
-                </span>
+                </button>
               </div>
             </div>
           </form>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
+
+const Section = styled.section`
+  padding: 3rem 10%;
+  padding-bottom: 7rem;
+  height: auto;
+  & > h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: rgba(220, 220, 220, 0.5);
+    border-radius: 1rem;
+    .conatctImage > img {
+      width: 25rem;
+      height: 25rem;
+      opacity: 1;
+    }
+    .contactForm > form {
+      .contactInput {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 1rem 0;
+        background-color: #f7f7f7;
+        border: 1px solid black;
+        border-radius: 0.3rem;
+        padding: 0.2rem 0.5rem;
+        & > span {
+          font-size: 1.2rem;
+          margin: 0.3rem;
+          color: rgb(194, 189, 190);
+        }
+        & > input,
+        & > textarea {
+          background: transparent;
+          border: none;
+          outline: none;
+          font-size: 1.1rem;
+          width: 30rem;
+          height: 2rem;
+          padding-left: 0.7rem;
+        }
+        & > textarea {
+          height: 5.5rem;
+        }
+      }
+      .submitConform {
+        display: flex;
+        justify-content: space-between;
+        .contactSubmit {
+          & > button {
+            width: 8rem;
+            height: 3rem;
+            font-size: 1.1rem;
+            color: #f7f7f7;
+            background-color: dodgerblue;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            &:hover {
+              color: black;
+              box-shadow: 5px 5px 5px rgba(81, 81, 81, 0.5);
+            }
+          }
+        }
+        & > p {
+          margin-top: 0;
+          font-weight: bold;
+          font-size: large;
+        }
+      }
+    }
+    @media only screen and (max-width: 680px) {
+      .conatctImage > img {
+        width: 15rem;
+        height: 15rem;
+      }
+      .contactForm > form > .contactInput {
+        & > input,
+        & > textarea {
+          width: 100%;
+        }
+      }
+    }
+  }
+`;
 
 export default Contact;

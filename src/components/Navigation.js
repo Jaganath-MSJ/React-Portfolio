@@ -25,7 +25,10 @@ function Navigation() {
       if (target) {
         const offsetTop = target.offsetTop;
         const offsetBottom = offsetTop + target.offsetHeight;
-        if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+        if (
+          scrollPosition >= offsetTop - 200 &&
+          scrollPosition < offsetBottom - 200
+        ) {
           setActiveSection(section);
         }
       }

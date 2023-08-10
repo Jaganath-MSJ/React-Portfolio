@@ -38,7 +38,7 @@ function Project({ project }) {
   return (
     <div ref={tiltRef} key={project.label} className="project">
       <div className="projectImg">
-        <img src={project.img} alt={project.label} />
+        <img src={project.img} alt={project.label} draggable="false" />
       </div>
       <div className="projectContent">
         <h2>{project.label}</h2>

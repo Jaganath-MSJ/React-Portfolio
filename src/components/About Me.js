@@ -86,6 +86,7 @@ const Section = styled.section`
         font-size: 1.3rem;
       }
       & > h4 {
+        text-align: justify;
         display: flex;
         flex-wrap: wrap;
         font-size: 1.2rem;

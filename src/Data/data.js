@@ -126,10 +126,10 @@ export const Data = {
   ],
   Education: [
     {
-      degree: "10th - SSLC",
-      college:
-        "Sri Sarada Balamandir Boys Matric Higher Secondary School, Salem",
-      year: "2016 - 2017",
+      degree:
+        "Bachelor Of Engineering In Electrical and Electronics Engineering",
+      college: "Sri Krishna College of Engineering and Technology, Coimbatore",
+      year: "2020 - 2023",
       isCompleted: "Completed",
     },
     {
@@ -139,10 +139,10 @@ export const Data = {
       isCompleted: "Completed",
     },
     {
-      degree:
-        "Bachelor Of Engineering In Electrical and Electronics Engineering",
-      college: "Sri Krishna College of Engineering and Technology, Coimbatore",
-      year: "2020 - 2023",
+      degree: "10th - SSLC",
+      college:
+        "Sri Sarada Balamandir Boys Matric Higher Secondary School, Salem",
+      year: "2016 - 2017",
       isCompleted: "Completed",
     },
   ],
@@ -241,9 +241,9 @@ export const Data = {
     phoneNo: phone,
     mail: email,
     place: place,
-    linkedIn: linkedInLink,
-    github: githubLink,
-    telegram: telegramLink,
+    linkedInLink: linkedInLink,
+    githubLink: githubLink,
+    telegramLink: telegramLink,
     linkedInName: nameWithInicial,
   },
 };
