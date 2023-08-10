@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import VanillaTilt from "vanilla-tilt";
 import styled from "styled-components";
 import { Data } from "../Data/data";
 
@@ -17,27 +18,40 @@ function Projects() {
       </h1>
       <div>
         {Data.Projects.map((project) => {
-          return (
-            <div key={project.label} className="project">
-              <div className="projectImg">
-                <img src={project.img} alt={project.label} />
-              </div>
-              <div className="projectContent">
-                <h2>{project.label}</h2>
-                <div>
-                  <a href={project.view} target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faEye} /> View
-                  </a>
-                  <a href={project.code} target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faCode} /> Code
-                  </a>
-                </div>
-              </div>
-            </div>
-          );
+          return <Project key={project.label} project={project} />;
         })}
       </div>
     </Section>
+  );
+}
+
+function Project({ project }) {
+  const tiltRef = useRef(null);
+  useEffect(() => {
+    VanillaTilt.init(tiltRef.current, {
+      max: 15,
+      speed: 400,
+      glare: false,
+    });
+  }, []);
+
+  return (
+    <div ref={tiltRef} key={project.label} className="project">
+      <div className="projectImg">
+        <img src={project.img} alt={project.label} />
+      </div>
+      <div className="projectContent">
+        <h2>{project.label}</h2>
+        <div>
+          <a href={project.view} target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faEye} /> View
+          </a>
+          <a href={project.code} target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faCode} /> Code
+          </a>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -81,8 +95,7 @@ const Section = styled.div`
           margin: 0.5rem 2rem;
           display: flex;
           flex-wrap: nowrap;
-          justify-content: center;
-          gap: 5rem;
+          justify-content: space-around;
           & > a {
             display: none;
             padding: 0.5rem 2rem;
@@ -107,12 +120,28 @@ const Section = styled.div`
       }
     }
     @media only screen and (max-width: 900px) {
-      &>.projectImg > img {
+      & > .project > .projectImg > img {
         width: 20rem;
         height: 10rem;
       }
-      &>.projectContent {
+      & > .project > .projectContent {
         width: 20rem;
+      }
+    }
+    @media only screen and (max-width: 500px) {
+      gap: 6rem 2rem;
+      .project {
+        .projectContent {
+          & > h2 {
+            font-size: 1.3rem;
+          }
+          & > div > a {
+            display: block;
+          }
+        }
+        &:hover .projectContent {
+          margin-top: -1rem;
+        }
       }
     }
   }

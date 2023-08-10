@@ -16,7 +16,7 @@ function Skills() {
           return (
             <div key={skill.label} className="skill">
               <div>
-                <img src={skill.img} alt={skill.label} />
+                <img src={skill.img} draggable="false" alt={skill.label} />
               </div>
               <h2>{skill.label}</h2>
             </div>

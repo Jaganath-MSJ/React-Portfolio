@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import VanillaTilt from "vanilla-tilt";
 import styled from "styled-components";
 import { Data } from "../Data/data";
 
@@ -7,6 +8,15 @@ import { faUser, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 function AboutMe() {
   const aboutMe = Data.AboutMe;
+  const tiltRef = useRef(null);
+  useEffect(() => {
+    VanillaTilt.init(tiltRef.current, {
+      max: 10,
+      speed: 400,
+      glare: false,
+    });
+  }, []);
+  
   return (
     <Section id="AboutMe">
       <h1>
@@ -14,8 +24,8 @@ function AboutMe() {
         &nbsp;About Me
       </h1>
       <div>
-        <div className="aboutmeImg">
-          <img src={aboutMe.img} alt="Jaganath M S" />
+        <div className="aboutmeImg" ref={tiltRef}>
+          <img src={aboutMe.img} draggable="false" alt="Jaganath M S" />
         </div>
         <div className="aboutmeDetails">
           <h2>{aboutMe.name}</h2>
@@ -41,7 +51,8 @@ function AboutMe() {
 }
 
 const Section = styled.section`
-  padding: 3rem 5% 8rem 5%;
+  padding: 3rem 5%;
+  padding-bottom: 8rem;
   height: auto;
   background-color: #f7f7f7;
   & > h1 {
