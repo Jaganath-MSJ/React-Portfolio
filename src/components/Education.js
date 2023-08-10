@@ -1,26 +1,38 @@
 import React from "react";
-import { Data } from "../Data/data";
+import { motion } from "framer-motion";
 import styled from "styled-components";
+import { Data } from "../Data/data";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 
 function Education() {
+  const itemVariantsLeft = {
+    hidden: { opacity: 0, x: -100 },
+    show: { opacity: 1, x: 0 },
+  };
   return (
     <Section id="Education">
       <h1>
         <FontAwesomeIcon icon={faGraduationCap} /> Education
       </h1>
       <div>
-        {Data.Education.map((education) => {
+        {Data.Education.map((education, index) => {
           return (
-            <div key={education.degree} className="education">
+            <motion.div
+              key={education.degree}
+              className="education"
+              variants={itemVariantsLeft}
+              initial="hidden"
+              whileInView="show"
+              transition={{ duration: 1, delay: index * 0.1 }}
+            >
               <h2>{education.degree}</h2>
               <h4>{education.college}</h4>
               <h3>
                 {education.year} | {education.isCompleted}
               </h3>
-            </div>
+            </motion.div>
           );
         })}
       </div>

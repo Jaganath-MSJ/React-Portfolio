@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Data } from "../Data/data";
 
@@ -17,15 +18,22 @@ function Projects() {
         <FontAwesomeIcon icon={faDiagramProject} /> Projects
       </h1>
       <div>
-        {Data.Projects.map((project) => {
-          return <Project key={project.label} project={project} />;
+        {Data.Projects.map((project, index) => {
+          return (
+            <Project key={project.label} project={project} index={index} />
+          );
         })}
       </div>
     </Section>
   );
 }
 
-function Project({ project }) {
+function Project({ project, index }) {
+  const itemVariantsTop = {
+    hidden: { opacity: 0, y: -100 },
+    show: { opacity: 1, y: 0 },
+  };
+
   const tiltRef = useRef(null);
   useEffect(() => {
     VanillaTilt.init(tiltRef.current, {
@@ -36,7 +44,15 @@ function Project({ project }) {
   }, []);
 
   return (
-    <div ref={tiltRef} key={project.label} className="project">
+    <motion.div
+      ref={tiltRef}
+      key={project.label}
+      className="project"
+      variants={itemVariantsTop}
+      initial="hidden"
+      whileInView="show"
+      transition={{ duration: 1, delay: index * 0.1 }}
+    >
       <div className="projectImg">
         <img src={project.img} alt={project.label} draggable="false" />
       </div>
@@ -51,11 +67,11 @@ function Project({ project }) {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
-const Section = styled.div`
+const Section = styled.section`
   padding: 3rem 5%;
   padding-bottom: 6rem;
   height: auto;

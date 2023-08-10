@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Data } from "../Data/data";
 
@@ -11,12 +12,34 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 function Home() {
+  const itemVariantsRight = {
+    hidden: { opacity: 0, x: 100 },
+    show: { opacity: 1, x: 0 },
+  };
+  const itemVariantsLeft = {
+    hidden: { opacity: 0, x: -100 },
+    show: { opacity: 1, x: 0 },
+  };
   return (
     <Section id="Home">
       <div>
         <h3>Hey! I am</h3>
-        <h1>{Data.Home.name}</h1>
-        <h2>I am {Data.Home.role}.</h2>
+        <motion.h1
+          variants={itemVariantsLeft}
+          initial="hidden"
+          whileInView="show"
+          transition={{ duration: 1 }}
+        >
+          {Data.Home.name}
+        </motion.h1>
+        <motion.h2
+          variants={itemVariantsRight}
+          initial="hidden"
+          whileInView="show"
+          transition={{ duration: 1 }}
+        >
+          I am {Data.Home.role}.
+        </motion.h2>
         <div className="connectMe">
           <a href={Data.Home.linkedInLink} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faLinkedin} />
@@ -41,7 +64,7 @@ function Home() {
 }
 
 const Section = styled.section`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -53,6 +76,10 @@ const Section = styled.section`
     }
     & > h1 {
       font-size: 3.5rem;
+      background: linear-gradient(to right, blueviolet, dodgerblue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
     & > h2 {
       font-size: 1.7rem;

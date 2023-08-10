@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Data } from "../Data/data";
 
@@ -8,6 +9,16 @@ import { faUser, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 function AboutMe() {
   const aboutMe = Data.AboutMe;
+
+  const itemVariantsLeft = {
+    hidden: { opacity: 0, x: -100 },
+    show: { opacity: 1, x: 0 },
+  };
+  const itemVariantsRight = {
+    hidden: { opacity: 0, x: 200 },
+    show: { opacity: 1, x: 0 },
+  };
+
   const tiltRef = useRef(null);
   useEffect(() => {
     VanillaTilt.init(tiltRef.current, {
@@ -16,7 +27,7 @@ function AboutMe() {
       glare: false,
     });
   }, []);
-  
+
   return (
     <Section id="AboutMe">
       <h1>
@@ -24,10 +35,23 @@ function AboutMe() {
         &nbsp;About Me
       </h1>
       <div>
-        <div className="aboutmeImg" ref={tiltRef}>
+        <motion.div
+          className="aboutmeImg"
+          ref={tiltRef}
+          variants={itemVariantsLeft}
+          initial="hidden"
+          whileInView="show"
+          transition={{ duration: 1 }}
+        >
           <img src={aboutMe.img} draggable="false" alt="Jaganath M S" />
-        </div>
-        <div className="aboutmeDetails">
+        </motion.div>
+        <motion.div
+          className="aboutmeDetails"
+          variants={itemVariantsRight}
+          initial="hidden"
+          whileInView="show"
+          transition={{ duration: 1 }}
+        >
           <h2>{aboutMe.name}</h2>
           <h3>{aboutMe.role}</h3>
           <h4>{aboutMe.currently}</h4>
@@ -44,7 +68,7 @@ function AboutMe() {
             Resume&nbsp;
             <FontAwesomeIcon icon={faAngleRight} />
           </a>
-        </div>
+        </motion.div>
       </div>
     </Section>
   );

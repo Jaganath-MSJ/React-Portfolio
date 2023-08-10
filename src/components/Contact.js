@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import emailjs from "emailjs-com";
+import { motion } from "framer-motion";
+import styled from "styled-components";
 import contact from "./../img/contact.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,6 +20,15 @@ function Contact() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [responseMessage, setResponseMessage] = useState();
+
+  const itemVariantsLeft = {
+    hidden: { opacity: 0, x: -100 },
+    show: { opacity: 1, x: 0 },
+  };
+  const itemVariantsRight = {
+    hidden: { opacity: 0, x: 100 },
+    show: { opacity: 1, x: 0 },
+  };
 
   const handleSubmitToSendMail = async (e) => {
     e.preventDefault();
@@ -52,10 +62,22 @@ function Contact() {
         <FontAwesomeIcon icon={faHeadset} /> Contact
       </h1>
       <div>
-        <div className="conatctImage">
+        <motion.div
+          className="conatctImage"
+          variants={itemVariantsLeft}
+          initial="hidden"
+          whileInView="show"
+          transition={{ duration: 1 }}
+        >
           <img src={contact} alt="Contact" draggable="false" />
-        </div>
-        <div className="contactForm">
+        </motion.div>
+        <motion.div
+          className="contactForm"
+          variants={itemVariantsRight}
+          initial="hidden"
+          whileInView="show"
+          transition={{ duration: 1 }}
+        >
           <form onSubmit={handleSubmitToSendMail}>
             <div className="contactInput">
               <span>
@@ -118,7 +140,7 @@ function Contact() {
               </div>
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </Section>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Data } from "../Data/data";
 
@@ -6,20 +7,31 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 
 function Skills() {
+  const itemVariantsLeft = {
+    hidden: { opacity: 0, x: -100 },
+    show: { opacity: 1, x: 0 },
+  };
   return (
     <Section id="Skills">
       <h1>
         <FontAwesomeIcon icon={faLaptopCode} /> Skills
       </h1>
       <div>
-        {Data.Skills.map((skill) => {
+        {Data.Skills.map((skill, index) => {
           return (
-            <div key={skill.label} className="skill">
+            <motion.div
+              key={skill.label}
+              className="skill"
+              variants={itemVariantsLeft}
+              initial="hidden"
+              whileInView="show"
+              transition={{ duration: 1, delay: index * 0.1 }}
+            >
               <div>
                 <img src={skill.img} draggable="false" alt={skill.label} />
               </div>
               <h2>{skill.label}</h2>
-            </div>
+            </motion.div>
           );
         })}
       </div>

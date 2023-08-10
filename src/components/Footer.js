@@ -77,7 +77,7 @@ function Footer() {
       <div className="footerBottom">
         <p>
           This Designed is made with <FontAwesomeIcon icon={faHeart} />
-          by <a href={footer.linkedIn}>{footer.linkedInName}</a>
+          by <a href={footer.linkedInLink}>{footer.linkedInName}</a>
         </p>
       </div>
     </Foot>
