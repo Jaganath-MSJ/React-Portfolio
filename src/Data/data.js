@@ -46,7 +46,12 @@ const place = "Tamil Nadu, India - 636302";
 export const Data = {
   Home: {
     name: nameWithInicial,
-    role: "Web Developer",
+    role: [
+      "Web Developer",
+      "Frondend Developer",
+      "Backend Developer",
+      "Full Stack Developer",
+    ],
     linkedInLink: linkedInLink,
     githubLink: githubLink,
     mail: email,

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 import styled from "styled-components";
 import { Data } from "../Data/data";
 
@@ -38,7 +39,23 @@ function Home() {
           whileInView="show"
           transition={{ duration: 1 }}
         >
-          I am {Data.Home.role}.
+          <span>I am&nbsp;</span>
+          <TypeAnimation
+            className="changeText"
+            sequence={Data.Home.role.flatMap((r) => [r, 1000])}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+            style={{
+              fontSize: "3rem",
+              display: "inline-block",
+              background:
+                "linear-gradient(to left bottom, blue, dodgerblue)",
+              webkitBackgroundClip: "text",
+              backgroundClip: "text",
+              color: "transparent",
+            }}
+          />
         </motion.h2>
         <div className="connectMe">
           <a href={Data.Home.linkedInLink} target="_blank" rel="noreferrer">
@@ -76,13 +93,15 @@ const Section = styled.section`
     }
     & > h1 {
       font-size: 3.5rem;
-      background: linear-gradient(to right, blueviolet, dodgerblue);
+      background: linear-gradient(to right bottom, blueviolet, dodgerblue);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
     & > h2 {
-      font-size: 1.7rem;
+      & > span {
+        font-size: 2rem;
+      }
     }
     .connectMe {
       display: flex;
