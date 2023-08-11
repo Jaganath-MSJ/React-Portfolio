@@ -68,6 +68,11 @@ const Section = styled.section`
       &:hover {
         box-shadow: 10px 10px 10px rgb(168, 167, 167);
       }
+      @media only screen and (max-width: 400px) {
+        & > h2 {
+          font-size: 1.3rem;
+        }
+      }
     }
   }
 `;

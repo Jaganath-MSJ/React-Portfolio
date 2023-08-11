@@ -55,15 +55,8 @@ function AboutMe() {
           <h2>{aboutMe.name}</h2>
           <h3>{aboutMe.role}</h3>
           <h4>{aboutMe.currently}</h4>
-          <div className="aboutmeContact">
-            {aboutMe.contact.map((contact) => {
-              return (
-                <p key={contact.key}>
-                  <span>{contact.key}:</span>&nbsp;{contact.value}
-                </p>
-              );
-            })}
-          </div>
+          <h4>{aboutMe.experience}</h4>
+          <h4>{aboutMe.projects}</h4>
           <a href={aboutMe.resume} target="_blank" rel="noreferrer">
             Resume&nbsp;
             <FontAwesomeIcon icon={faAngleRight} />
@@ -76,7 +69,7 @@ function AboutMe() {
 
 const Section = styled.section`
   padding: 3rem 5%;
-  padding-bottom: 8rem;
+  padding-bottom: 6.3rem;
   height: auto;
   background-color: #f7f7f7;
   & > h1 {
@@ -116,20 +109,7 @@ const Section = styled.section`
         font-size: 1.2rem;
         font-weight: 500;
       }
-      .aboutmeContact {
-        display: grid;
-        grid-template-columns: 35% 50%;
-        font-size: 1.1rem;
-        font-weight: 400;
-        margin-bottom: 2rem;
-        & > p {
-          & > span {
-            color: dodgerblue;
-          }
-        }
-      }
       & > a {
-        margin-top: 2rem;
         padding: 1rem 2rem;
         background-color: dodgerblue;
         color: white;
@@ -152,9 +132,6 @@ const Section = styled.section`
       .aboutmeImg > img {
         width: 18rem;
         height: 20rem;
-      }
-      .aboutmeDetails > .aboutmeContact {
-        grid-template-columns: 100%;
       }
     }
   }

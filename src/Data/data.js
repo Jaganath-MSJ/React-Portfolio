@@ -38,7 +38,6 @@ const linkedInLink = "https://www.linkedin.com/in/jaganathms";
 const githubLink = "https://github.com/Jaganath-MSJ";
 const telegramLink = "https://t.me/MSJ_J";
 
-const DOB = "Oct 23, 2001";
 const email = "jagan.msjc@gmail.com";
 const phone = "+91 9385304351";
 const place = "Tamil Nadu, India - 636302";
@@ -61,14 +60,12 @@ export const Data = {
     img: myImage,
     name: `I'm ${name}`,
     role: "Passionate Web Developer",
-    currently:
-      "I am engineering graduate Majoring in EEE, open for entry level job as Web developer.",
-    contact: [
-      { key: "DOB", value: DOB },
-      { key: "Email", value: email },
-      { key: "Phone", value: phone },
-      { key: "Place", value: place },
-    ],
+    currently: `I am an engineering graduate with a major in Electrical and Electronics Engineering (EEE), and 
+    I am enthusiastic about pursuing an entry-level role as a web developer.`,
+    experience: `My skill set includes expertise in React JS, Node JS, Java, Appian, SQL, and MongoDB, among others. 
+    I gained valuable hands-on experience during a 6-month internship at WNS Vuram Tech, where I specialized in the Appian tool.`,
+    projects: `Subsequently, I embarked on personal projects such as Personal Portfolio, Social Media Platform, Weather App, and a Chat App. 
+    These endeavors have further strengthened my development skills and have allowed me to apply my knowledge in practical scenarios.`,
     resume: resume,
   },
   Skills: [
@@ -239,10 +236,10 @@ export const Data = {
   ],
   Footer: {
     name: `${name} Portfolio`,
-    aboutMe:
-      "Motivated entry level, goal driven individual with organised, detail-oriented and efficient working person.",
-    thankYou:
-      "Thank you for visiting my personal portfolio website. Please connect with me using contacts below or social media.",
+    aboutMe: `I am a motivated and goal-driven individual, seeking entry-level opportunities. 
+    I am organized, detail-oriented, and efficient in my work approach.`,
+    thankYou: `Thank you for taking the time to visit my personal portfolio website. 
+    If you'd like to connect, please feel free to reach out to me using the contact details provided below or through my social media profiles.`,
     phoneNo: phone,
     mail: email,
     place: place,

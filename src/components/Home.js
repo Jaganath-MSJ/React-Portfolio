@@ -47,7 +47,6 @@ function Home() {
             speed={50}
             repeat={Infinity}
             style={{
-              fontSize: "3rem",
               display: "inline-block",
               background: "linear-gradient(to left bottom, blue, dodgerblue)",
               webkitBackgroundClip: "text",
@@ -101,6 +100,9 @@ const Section = styled.section`
       & > span {
         font-size: 2rem;
       }
+      .changeText {
+        font-size: 3rem;
+      }
     }
     .connectMe {
       display: flex;
@@ -127,6 +129,14 @@ const Section = styled.section`
     @media only screen and (max-width: 400px) {
       & > h1 {
         font-size: 3rem;
+      }
+      & > h2 {
+        & > span {
+          font-size: 1.2rem;
+        }
+        .changeText {
+          font-size: 2rem;
+        }
       }
     }
   }

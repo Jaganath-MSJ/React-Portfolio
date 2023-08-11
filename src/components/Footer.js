@@ -110,6 +110,8 @@ const Foot = styled.footer`
       flex-direction: column;
       gap: 0.5rem;
       & > a {
+        outline: none;
+        border: none;
         font-size: 1.1rem;
         font-weight: bold;
         color: rgb(194, 189, 190);
@@ -171,6 +173,8 @@ const Foot = styled.footer`
         margin-right: 0.3rem;
       }
       & > a {
+        outline: none;
+        border: none;
         color: blueviolet;
         cursor: pointer;
         transition: 0.3s ease-in-out;

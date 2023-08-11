@@ -107,6 +107,8 @@ const Nav = styled.nav`
     margin-left: 2rem;
     & > a {
       display: flex;
+      outline: none;
+      border: none;
       transition: 0.2s ease-in-out;
       & > span {
         display: none;
@@ -128,6 +130,8 @@ const Nav = styled.nav`
       & > a {
         flex-wrap: nowrap;
         font-size: 1.3rem;
+        outline: none;
+        border: none;
         transition: 0.2s ease-in-out;
         & > svg {
           display: none;
