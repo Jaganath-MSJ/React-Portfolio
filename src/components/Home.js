@@ -49,8 +49,7 @@ function Home() {
             style={{
               fontSize: "3rem",
               display: "inline-block",
-              background:
-                "linear-gradient(to left bottom, blue, dodgerblue)",
+              background: "linear-gradient(to left bottom, blue, dodgerblue)",
               webkitBackgroundClip: "text",
               backgroundClip: "text",
               color: "transparent",

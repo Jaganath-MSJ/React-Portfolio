@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import contact from "./../img/contact.png";
+import contact from "../assets/contact.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

@@ -1,12 +1,18 @@
 # React Portfolio
 ### View Deploy: [Click Here](https://jaganath-portfolio.netlify.app)
 
-[![React Portfolio](./src/img/React%20Portfolio.png)](https://jaganath-portfolio.netlify.app)
+[![React Portfolio](./src/assets/React-Portfolio.png)](https://jaganath-portfolio.netlify.app)
 
 ## Build With
 This project was built using these technologies:
-  - React.js
+  - React JS
+  - HTML
   - CSS
+  - Library Used:
+    - Email JS
+    - Framer Motion
+    - Vanilla Tilt
+    - JS Particles
 
 ## Clone My React Portfolio
 Clone down this repository. 
