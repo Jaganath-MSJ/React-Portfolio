@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Data } from "../Data/data";
+import Data from "../Data/data.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,18 +16,13 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
-  const footer = Data.Footer;
   return (
     <Foot>
       <div className="footerContent">
         <div className="footerAbout">
-          <h2>{footer.name}</h2>
-          <p>
-            {footer.aboutMe}
-            <br />
-            <br />
-            {footer.thankYou}
-          </p>
+          <h2>{Data.name} Portfolio</h2>
+          <p>{Data.Footer.aboutMe}</p>
+          <p>{Data.Footer.thankYou}</p>
         </div>
         <div className="footerLinks">
           <h2>Links</h2>
@@ -44,31 +39,31 @@ function Footer() {
             <span>
               <FontAwesomeIcon icon={faPhone} />
             </span>{" "}
-            {footer.phoneNo}
+            {Data.phone}
           </p>
           <p>
             <span>
               <FontAwesomeIcon icon={faEnvelope} />
             </span>{" "}
-            {footer.mail}
+            {Data.email}
           </p>
           <p>
             <span>
               <FontAwesomeIcon icon={faMapMarkedAlt} />
             </span>{" "}
-            {footer.place}
+            {Data.place}
           </p>
           <div>
-            <a href={footer.linkedInLink} target="_blank" rel="noreferrer">
+            <a href={Data.linkedInLink} target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href={footer.githubLink} target="_blank" rel="noreferrer">
+            <a href={Data.githubLink} target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faGithub} />
             </a>
-            <a href={"mailto:" + footer.mail} target="_blank" rel="noreferrer">
+            <a href={`mailto:${Data.email}`} target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
-            <a href={footer.telegramLink} target="_blank" rel="noreferrer">
+            <a href={Data.telegramLink} target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faTelegram} />
             </a>
           </div>
@@ -77,7 +72,7 @@ function Footer() {
       <div className="footerBottom">
         <p>
           This Designed is made with <FontAwesomeIcon icon={faHeart} />
-          by <a href={footer.linkedInLink}>{footer.linkedInName}</a>
+          by <a href={Data.linkedInLink}>{Data.nameInc}</a>
         </p>
       </div>
     </Foot>

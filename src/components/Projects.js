@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { Data } from "../Data/data";
+import Data from "../Data/data.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -51,7 +51,7 @@ function Project({ project, index }) {
       variants={itemVariantsTop}
       initial="hidden"
       whileInView="show"
-      transition={{ duration: 1, delay: index * 0.1 }}
+      transition={{ duration: 1, delay: index * 0.07 }}
     >
       <div className="projectImg">
         <img src={project.img} alt={project.label} draggable="false" />

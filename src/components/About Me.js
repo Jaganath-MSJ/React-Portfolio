@@ -2,14 +2,12 @@ import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { Data } from "../Data/data";
+import Data from "../Data/data.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 function AboutMe() {
-  const aboutMe = Data.AboutMe;
-
   const itemVariantsLeft = {
     hidden: { opacity: 0, x: -100 },
     show: { opacity: 1, x: 0 },
@@ -43,7 +41,7 @@ function AboutMe() {
           whileInView="show"
           transition={{ duration: 1 }}
         >
-          <img src={aboutMe.img} draggable="false" alt="Jaganath M S" />
+          <img src={Data.img} draggable="false" alt={Data.nameInc} />
         </motion.div>
         <motion.div
           className="aboutmeDetails"
@@ -52,12 +50,12 @@ function AboutMe() {
           whileInView="show"
           transition={{ duration: 1 }}
         >
-          <h2>{aboutMe.name}</h2>
-          <h3>{aboutMe.role}</h3>
-          <h4>{aboutMe.currently}</h4>
-          <h4>{aboutMe.experience}</h4>
-          <h4>{aboutMe.projects}</h4>
-          <a href={aboutMe.resume} target="_blank" rel="noreferrer">
+          <h2>I'm {Data.name}</h2>
+          <h3>{Data.role}</h3>
+          <h4>{Data.currently}</h4>
+          <h4>{Data.experience}</h4>
+          <h4>{Data.projects}</h4>
+          <a href={Data.resume} target="_blank" rel="noreferrer">
             Resume&nbsp;
             <FontAwesomeIcon icon={faAngleRight} />
           </a>

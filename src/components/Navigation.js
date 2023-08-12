@@ -41,6 +41,7 @@ function Navigation() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [handleScroll]);
+  
   return (
     <Nav>
       <h2 className="navHeader">

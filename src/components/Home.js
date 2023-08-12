@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import styled from "styled-components";
-import { Data } from "../Data/data";
+import Data from "../Data/data.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -31,7 +31,7 @@ function Home() {
           whileInView="show"
           transition={{ duration: 1 }}
         >
-          {Data.Home.name}
+          {Data.nameInc}
         </motion.h1>
         <motion.h2
           variants={itemVariantsRight}
@@ -42,7 +42,7 @@ function Home() {
           <span>I am&nbsp;</span>
           <TypeAnimation
             className="changeText"
-            sequence={Data.Home.role.flatMap((r) => [r, 1000])}
+            sequence={Data.roles.flatMap((r) => [r, 1000])}
             wrapper="span"
             speed={50}
             repeat={Infinity}
@@ -56,20 +56,20 @@ function Home() {
           />
         </motion.h2>
         <div className="connectMe">
-          <a href={Data.Home.linkedInLink} target="_blank" rel="noreferrer">
+          <a href={Data.linkedInLink} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href={Data.Home.githubLink} target="_blank" rel="noreferrer">
+          <a href={Data.githubLink} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
           <a
-            href={`mailto: + ${Data.Home.mail}`}
+            href={`mailto: + ${Data.email}`}
             target="_blank"
             rel="noreferrer"
           >
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
-          <a href={Data.Home.telegramLink} target="_blank" rel="noreferrer">
+          <a href={Data.telegramLink} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faTelegram} />
           </a>
         </div>

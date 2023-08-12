@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { Data } from "../Data/data";
+import Data from "../Data/data.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
@@ -25,7 +25,7 @@ function Education() {
               variants={itemVariantsLeft}
               initial="hidden"
               whileInView="show"
-              transition={{ duration: 1, delay: index * 0.1 }}
+              transition={{ duration: 1, delay: index * 0.2 }}
             >
               <h2>{education.degree}</h2>
               <h4>{education.college}</h4>
