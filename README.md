@@ -1,7 +1,7 @@
 # Portfolio
 Welcome to my online portfolio, where I present a collection of projects, highlight my skills, and share my experiences. This platform serves as a comprehensive showcase of my journey in the field of web development.
 
-[![React Portfolio](./src/assets/React-Portfolio.png)](https://jaganath-portfolio.netlify.app)
+[![React Portfolio](./public/assets/React-Portfolio.png)](https://jaganath-portfolio.netlify.app)
 
 ## Features
 - A curated selection of my recent web development projects.
