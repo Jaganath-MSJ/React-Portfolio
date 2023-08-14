@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
-import particlesConfig from "./Data/particles.config.js";
+import particlesConfig from "./Data/particles.config.json";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
 import AboutMe from "./components/About Me";

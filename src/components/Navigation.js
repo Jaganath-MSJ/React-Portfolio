@@ -41,7 +41,7 @@ function Navigation() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [handleScroll]);
-  
+
   return (
     <Nav>
       <h2 className="navHeader">
@@ -100,7 +100,7 @@ const Nav = styled.nav`
   flex-flow: nowrap;
   justify-content: space-between;
   z-index: 1;
-  background-color: rgb(194, 189, 190);
+  background-color: var(--color1);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   .navHeader {
     font-size: 2rem;
@@ -115,7 +115,7 @@ const Nav = styled.nav`
         display: none;
       }
       &:hover {
-        color: dodgerblue;
+        color: var(--hover-color1);
       }
     }
   }
@@ -138,14 +138,14 @@ const Nav = styled.nav`
           display: none;
         }
         &:hover {
-          color: dodgerblue;
+          color: var(--hover-color1);
         }
       }
       &::after {
         content: "";
         height: 3px;
         width: 0;
-        background: dodgerblue;
+        background: var(--hover-color1);
         position: absolute;
         top: 1.8rem;
         left: 0;
@@ -158,12 +158,12 @@ const Nav = styled.nav`
     }
     .active {
       & > a {
-        color: dodgerblue;
+        color: var(--hover-color1);
       }
       &::after {
         height: 3px;
         width: 100%;
-        background: dodgerblue;
+        background: var(--hover-color1);
         position: absolute;
         top: 1.8rem;
         left: 0;

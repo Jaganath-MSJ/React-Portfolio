@@ -69,7 +69,7 @@ const Section = styled.section`
   padding: 3rem 5%;
   padding-bottom: 6.3rem;
   height: auto;
-  background-color: #f7f7f7;
+  background-color: var(--background-color1);
   & > h1 {
     text-align: center;
     font-size: 3rem;
@@ -109,7 +109,7 @@ const Section = styled.section`
       }
       & > a {
         padding: 1rem 2rem;
-        background-color: dodgerblue;
+        background-color: var(--hover-color1);
         color: white;
         border-radius: 1rem;
         font-size: 1.2rem;

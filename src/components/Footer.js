@@ -21,8 +21,8 @@ function Footer() {
       <div className="footerContent">
         <div className="footerAbout">
           <h2>{Data.name} Portfolio</h2>
-          <p>{Data.Footer.aboutMe}</p>
-          <p>{Data.Footer.thankYou}</p>
+          <p>{Data.aboutMe}</p>
+          <p>{Data.thankYou}</p>
         </div>
         <div className="footerLinks">
           <h2>Links</h2>
@@ -81,7 +81,7 @@ function Footer() {
 
 const Foot = styled.footer`
   background-color: black;
-  color: #f7f7f7;
+  color: var(--text-color2);
   width: 100%;
   padding-bottom: 0.1rem;
   .footerContent {
@@ -97,7 +97,7 @@ const Foot = styled.footer`
       & > p {
         text-align: justify;
         font-size: 1.2rem;
-        color: rgb(194, 189, 190);
+        color: var(--color1);
       }
     }
     .footerLinks {
@@ -109,10 +109,10 @@ const Foot = styled.footer`
         border: none;
         font-size: 1.1rem;
         font-weight: bold;
-        color: rgb(194, 189, 190);
+        color: var(--color1);
         transition: 0.2s ease-in-out;
         &:hover {
-          color: dodgerblue;
+          color: var(--hover-color1);
         }
       }
     }
@@ -120,10 +120,10 @@ const Foot = styled.footer`
       & > p {
         display: flex;
         gap: 1rem;
-        color: rgb(194, 189, 190);
+        color: var(--color1);
         font-size: 1.1rem;
         & > span {
-          color: blueviolet;
+          color: var(--hover-color2);
         }
       }
       & > div {
@@ -137,14 +137,13 @@ const Foot = styled.footer`
           font-size: 1.3rem;
           width: 2.5rem;
           height: 2.5rem;
-          color: black;
           background-color: white;
           border: 1px solid white;
           border-radius: 1.5rem;
           transition: 0.3s ease-in-out;
           &:hover {
             background: transparent;
-            color: blueviolet;
+            color: var(--hover-color2);
           }
         }
       }
@@ -170,11 +169,11 @@ const Foot = styled.footer`
       & > a {
         outline: none;
         border: none;
-        color: blueviolet;
+        color: var(--hover-color2);
         cursor: pointer;
         transition: 0.3s ease-in-out;
         &:hover {
-          color: #f7f7f7;
+          color: var(--text-color2);
         }
       }
     }

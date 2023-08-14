@@ -18,7 +18,7 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const [responseMessage, setResponseMessage] = useState();
+  const [responseMessage, setResponseMessage] = useState("");
 
   const itemVariantsLeft = {
     hidden: { opacity: 0, x: -100 },
@@ -31,6 +31,7 @@ function Contact() {
 
   const handleSubmitToSendMail = async (e) => {
     e.preventDefault();
+    setResponseMessage("");
     try {
       const templateParams = {
         from_mail: email,
@@ -47,6 +48,10 @@ function Contact() {
 
       if (result.status === 200) {
         setResponseMessage("Email sent successfully");
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
       } else {
         setResponseMessage("Failed to send email");
       }
@@ -89,6 +94,7 @@ function Contact() {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                autoComplete="name"
               />
             </div>
             <div className="contactInput">
@@ -102,6 +108,7 @@ function Contact() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
               />
             </div>
             <div className="contactInput">
@@ -114,6 +121,7 @@ function Contact() {
                 placeholder="Phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
+                autoComplete="phone"
               />
             </div>
             <div className="contactInput">
@@ -170,7 +178,7 @@ const Section = styled.section`
         display: flex;
         flex-wrap: nowrap;
         margin: 1rem 0;
-        background-color: #f7f7f7;
+        background-color: var(--text-color2);
         border: 1px solid black;
         border-radius: 0.3rem;
         padding: 0.2rem 0.5rem;
@@ -201,8 +209,8 @@ const Section = styled.section`
             width: 8rem;
             height: 3rem;
             font-size: 1.1rem;
-            color: #f7f7f7;
-            background-color: dodgerblue;
+            color: var(--text-color2);
+            background-color: var(--hover-color1);
             border: none;
             border-radius: 0.5rem;
             cursor: pointer;

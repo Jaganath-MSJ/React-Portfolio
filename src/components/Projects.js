@@ -75,8 +75,8 @@ const Section = styled.section`
   padding: 3rem 5%;
   padding-bottom: 6rem;
   height: auto;
-  background-color: rgb(43, 61, 218);
-  color: #f7f7f7;
+  background-color: var(--background-color2);
+  color: var(--text-color2);
   & > h1 {
     text-align: center;
     font-size: 3rem;
@@ -98,7 +98,7 @@ const Section = styled.section`
       }
       .projectContent {
         position: absolute;
-        color: black;
+        color: var(--text-color1);
         background-color: rgb(149, 247, 183);
         margin-top: -1rem;
         width: 25rem;
@@ -120,7 +120,7 @@ const Section = styled.section`
             border-radius: 1rem;
             transition: 0.3s ease-in-out;
             &:hover {
-              background-color: rgb(24, 35, 133);
+              background-color: var(--hover-color1);
               color: black;
               box-shadow: 5px 5px 5px rgba(81, 81, 81, 0.5);
             }

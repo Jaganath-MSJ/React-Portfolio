@@ -48,8 +48,9 @@ function Home() {
             repeat={Infinity}
             style={{
               display: "inline-block",
-              background: "linear-gradient(to left bottom, blue, dodgerblue)",
-              webkitBackgroundClip: "text",
+              background:
+                "linear-gradient(to left bottom, blue, var(--hover-color1))",
+              WebkitBackgroundClip: "text",
               backgroundClip: "text",
               color: "transparent",
             }}
@@ -62,11 +63,7 @@ function Home() {
           <a href={Data.githubLink} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a
-            href={`mailto: + ${Data.email}`}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={`mailto: + ${Data.email}`} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
           <a href={Data.telegramLink} target="_blank" rel="noreferrer">
@@ -91,7 +88,11 @@ const Section = styled.section`
     }
     & > h1 {
       font-size: 3.5rem;
-      background: linear-gradient(to right bottom, blueviolet, dodgerblue);
+      background: linear-gradient(
+        to right bottom,
+        var(--hover-color2),
+        var(--hover-color1)
+      );
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -122,7 +123,7 @@ const Section = styled.section`
         transition: 0.3s ease-in-out;
         &:hover {
           background-color: transparent;
-          color: blueviolet;
+          color: var(--hover-color2);
         }
       }
     }

@@ -42,8 +42,8 @@ function Skills() {
 const Section = styled.section`
   padding: 3rem 10%;
   height: auto;
-  background-color: rgb(43, 61, 218);
-  color: #f7f7f7;
+  background-color: var(--background-color2);
+  color: var(--text-color2);
   & > h1 {
     text-align: center;
     font-size: 3rem;

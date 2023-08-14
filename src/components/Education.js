@@ -43,7 +43,7 @@ function Education() {
 const Section = styled.section`
   padding: 3rem 10%;
   height: auto;
-  background-color: #f7f7f7;
+  background-color: var(--background-color1);
   & > h1 {
     text-align: center;
     font-size: 3rem;
@@ -60,7 +60,7 @@ const Section = styled.section`
       padding: 0.5rem 1rem;
       transition: 0.3s ease-in-out;
       & > h2 {
-        color: rgb(24, 35, 133);
+        color: var(--background-color2);
       }
       & > h3 {
         color: green;
