@@ -52,37 +52,37 @@ function Navigation() {
       </h2>
       <ul className="navMenuBar">
         <li className={activeSection === "Home" ? "active" : ""}>
-          <a href="#Home">
+          <a href="/#Home">
             <FontAwesomeIcon icon={faHouse} />
             <span>Home</span>
           </a>
         </li>
         <li className={activeSection === "AboutMe" ? "active" : ""}>
-          <a href="#AboutMe">
+          <a href="/#AboutMe">
             <FontAwesomeIcon icon={faUser} />
             <span>About Me</span>
           </a>
         </li>
         <li className={activeSection === "Skills" ? "active" : ""}>
-          <a href="#Skills">
+          <a href="/#Skills">
             <FontAwesomeIcon icon={faLaptopCode} />
             <span>Skills</span>
           </a>
         </li>
         <li className={activeSection === "Education" ? "active" : ""}>
-          <a href="#Education">
+          <a href="/#Education">
             <FontAwesomeIcon icon={faGraduationCap} />
             <span>Education</span>
           </a>
         </li>
         <li className={activeSection === "Projects" ? "active" : ""}>
-          <a href="#Projects">
+          <a href="/#Projects">
             <FontAwesomeIcon icon={faDiagramProject} />
             <span>Projects</span>
           </a>
         </li>
         <li className={activeSection === "Contact" ? "active" : ""}>
-          <a href="#Contact">
+          <a href="/#Contact">
             <FontAwesomeIcon icon={faHeadset} />
             <span>Contact</span>
           </a>

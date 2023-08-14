@@ -11,6 +11,7 @@ import {
   faPhoneAlt,
   faCommentDots,
   faPaperPlane,
+  faAnglesUp,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Contact() {
@@ -65,7 +66,7 @@ function Contact() {
       <h1>
         <FontAwesomeIcon icon={faHeadset} /> Contact
       </h1>
-      <div>
+      <div className="content">
         <motion.div
           className="conatctImage"
           variants={itemVariantsLeft}
@@ -149,19 +150,25 @@ function Contact() {
           </form>
         </motion.div>
       </div>
+      <div className="goTop">
+        <FontAwesomeIcon
+          icon={faAnglesUp}
+          onClick={() => window.scrollTo(0, 0)}
+        />
+      </div>
     </Section>
   );
 }
 
 const Section = styled.section`
   padding: 3rem 10%;
-  padding-bottom: 7rem;
+  padding-bottom: 2rem;
   height: auto;
   & > h1 {
     text-align: center;
     font-size: 3rem;
   }
-  & > div {
+  .content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -238,6 +245,21 @@ const Section = styled.section`
         & > textarea {
           width: 100%;
         }
+      }
+    }
+  }
+  .goTop {
+    text-align: center;
+    padding-top: 2rem;
+    & > svg {
+      background-color: var(--hover-color1);
+      color: var(--text-color2);
+      padding: 0.9rem 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: black;
       }
     }
   }
