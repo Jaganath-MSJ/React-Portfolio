@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import styled from "styled-components";
@@ -9,21 +10,39 @@ import {
   faDiagramProject,
   faEye,
   faCode,
+  faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Projects() {
+  const location = useLocation();
+  useEffect(() => {
+    if (location.pathname === "/projects") window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <Section id="Projects">
       <h1>
-        <FontAwesomeIcon icon={faDiagramProject} /> Projects
+        <FontAwesomeIcon icon={faDiagramProject} />
+        &nbsp;
+        {location.pathname === "/" ? "" : "All"} Projects
       </h1>
-      <div>
-        {Data.Projects.map((project, index) => {
+      <div className="projects">
+        {(location.pathname === "/"
+          ? Data.Projects.slice(0, 6)
+          : Data.Projects
+        ).map((project, index) => {
           return (
             <Project key={project.label} project={project} index={index} />
           );
         })}
       </div>
+      {location.pathname === "/" && (
+        <div className="viewAll">
+          <Link to="/projects">
+            View All <FontAwesomeIcon icon={faAngleRight} />
+          </Link>
+        </div>
+      )}
     </Section>
   );
 }
@@ -81,7 +100,7 @@ const Section = styled.section`
     text-align: center;
     font-size: 3rem;
   }
-  & > div {
+  .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -158,6 +177,24 @@ const Section = styled.section`
         &:hover .projectContent {
           margin-top: -1rem;
         }
+      }
+    }
+  }
+  .viewAll {
+    text-align: center;
+    margin-top: 5rem;
+    & > a {
+      padding: 0.8rem 1.5rem;
+      border: 3px solid var(--hover-color1);
+      color: var(--text-color2);
+      border-radius: 1rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        background-color: var(--hover-color1);
+        color: black;
+        box-shadow: 5px 5px 5px rgba(81, 81, 81, 0.5);
       }
     }
   }
