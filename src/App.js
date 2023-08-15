@@ -5,7 +5,7 @@ import { loadSlim } from "tsparticles-slim";
 import particlesConfig from "./Data/particles.config.json";
 import Navigation from "./Components/Navigation";
 import Home from "./Components/Home";
-import AboutMe from "./Components/About Me";
+import AboutMe from "./Components/AboutMe";
 import Skills from "./Components/Skills";
 import Education from "./Components/Education";
 import Projects from "./Components/Projects";
