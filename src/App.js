@@ -3,14 +3,14 @@ import { Route, Routes } from "react-router-dom";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import particlesConfig from "./Data/particles.config.json";
-import Navigation from "./Components/Navigation";
-import Home from "./Components/Home";
-import AboutMe from "./Components/AboutMe";
-import Skills from "./Components/Skills";
-import Education from "./Components/Education";
-import Projects from "./Components/Projects";
-import Contact from "./Components/Contact";
-import Footer from "./Components/Footer";
+import Navigation from "./Components/Navigation.js";
+import Home from "./Components/Home.js";
+import AboutMe from "./Components/AboutMe.js";
+import Skills from "./Components/Skills.js";
+import Education from "./Components/Education.js";
+import Projects from "./Components/Projects.js";
+import Contact from "./Components/Contact.js";
+import Footer from "./Components/Footer.js";
 
 function App() {
   const particlesInit = useCallback(async (engine) => {
