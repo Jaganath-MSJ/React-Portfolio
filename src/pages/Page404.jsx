@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function ErrorPage() {
+function Page404() {
   return (
     <Error>
       <div>
@@ -11,7 +11,7 @@ function ErrorPage() {
         <p>Sorry, the page you're looking for doesn't exist.</p>
         <div>
           <Link to="/">Return Home</Link>
-          <Link to="..">Navigate Back</Link>
+          <Link to={-1}>Navigate Back</Link>
         </div>
       </div>
     </Error>
@@ -37,9 +37,9 @@ const Error = styled.section`
       margin-bottom: -3rem;
       font-size: 15rem;
       background: linear-gradient(
-        to left top,
-        var(--hover-color2),
-        var(--hover-color1)
+        to right bottom,
+        var(--hover-color1),
+        var(--hover-color2)
       );
       -webkit-background-clip: text;
       background-clip: text;
@@ -90,4 +90,4 @@ const Error = styled.section`
   }
 `;
 
-export default ErrorPage;
+export default Page404;

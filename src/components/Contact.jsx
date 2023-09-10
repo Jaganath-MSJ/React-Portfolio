@@ -317,9 +317,9 @@ const Section = styled.section`
     padding-top: 2rem;
     & > svg {
       background-color: var(--hover-color1);
-      color: var(--text-color2);
       padding: 0.9rem 1rem;
       border-radius: 50%;
+      color: var(--text-color2);
       cursor: pointer;
       transition: 0.3s ease-in-out;
       &:hover {

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import Data from "../Data/data.json";
+import Data from "../data/data.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faAngleRight } from "@fortawesome/free-solid-svg-icons";
