@@ -56,20 +56,20 @@ function Home() {
             }}
           />
         </motion.h2>
-        <div className="connectMe">
+        <address className="connectMe">
           <a href={Data.linkedInLink} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
           <a href={Data.githubLink} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href={`mailto: + ${Data.email}`} target="_blank" rel="noreferrer">
+          <a href={`mailto:${Data.email}`} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
           <a href={Data.telegramLink} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faTelegram} />
           </a>
-        </div>
+        </address>
       </div>
     </Section>
   );

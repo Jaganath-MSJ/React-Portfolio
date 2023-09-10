@@ -19,7 +19,7 @@ function Skills() {
       <div>
         {Data.Skills.map((skill, index) => {
           return (
-            <motion.div
+            <motion.article
               key={skill.label}
               className="skill"
               variants={itemVariantsLeft}
@@ -31,7 +31,7 @@ function Skills() {
                 <img src={skill.img} draggable="false" alt={skill.label} />
               </div>
               <h2>{skill.label}</h2>
-            </motion.div>
+            </motion.article>
           );
         })}
       </div>

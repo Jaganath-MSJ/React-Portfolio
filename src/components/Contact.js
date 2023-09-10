@@ -15,11 +15,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
+  const [emailData, setEmailData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
   const [responseMessage, setResponseMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const itemVariantsLeft = {
     hidden: { opacity: 0, x: -100 },
@@ -30,35 +33,93 @@ function Contact() {
     show: { opacity: 1, x: 0 },
   };
 
+  const handleInputChange = (e) => {
+    if (e.target.name === "phone") {
+      setEmailData((prevData) => {
+        return {
+          ...prevData,
+          [e.target.name]: e.target.value.replace(/\D+/g, "").trim(),
+        };
+      });
+    } else if (e.target.name === "email") {
+      setEmailData((prevData) => {
+        return {
+          ...prevData,
+          [e.target.name]: e.target.value.replace(/\s+/g, "").trim(),
+        };
+      });
+    } else {
+      setEmailData((prevData) => {
+        return {
+          ...prevData,
+          [e.target.name]: e.target.value.replace(/ {2,}/g, " "),
+        };
+      });
+    }
+  };
+
+  const handleValidation = () => {
+    if (emailData.name.trim().length <= 3) {
+      setResponseMessage("Name is too short");
+      return false;
+    }
+    if (
+      !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(emailData.email)
+    ) {
+      setResponseMessage("Email is invalid");
+      return false;
+    }
+    if (emailData.phone.length !== 0 && emailData.phone.length !== 10) {
+      setResponseMessage("Phone number is invalid");
+      return false;
+    }
+    if (emailData.message.trim().length < 10) {
+      setResponseMessage("Message is too short");
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmitToSendMail = async (e) => {
     e.preventDefault();
     setResponseMessage("");
     try {
-      const templateParams = {
-        from_mail: email,
-        name: name,
-        message: message,
-        contact: `email : ${email} ${phone ? `and phone : ${phone}` : ""}`,
-      };
-      const result = await emailjs.send(
-        "service_oovklos",
-        "template_d32swih",
-        templateParams,
-        "f0DXl-qv80B9XXFLP"
-      );
+      if (handleValidation()) {
+        setLoading(true);
+        const templateParams = {
+          from_mail: emailData.email,
+          name: emailData.name.trim(),
+          message: emailData.message.trim(),
+          contact: `email : ${emailData.email} ${
+            emailData.phone ? `and phone : ${emailData.phone}` : ""
+          }`,
+        };
+        const result = await emailjs.send(
+          "service_oovklos",
+          "template_d32swih",
+          templateParams,
+          "f0DXl-qv80B9XXFLP"
+        );
 
-      if (result.status === 200) {
-        setResponseMessage("Email sent successfully");
-        setName("");
-        setEmail("");
-        setPhone("");
-        setMessage("");
-      } else {
-        setResponseMessage("Failed to send email");
+        if (result.status === 200) {
+          setResponseMessage("Email sent successfully");
+          setEmailData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+        } else {
+          setResponseMessage("Failed to send email");
+        }
       }
     } catch (err) {
       setResponseMessage("Failed to send email");
     }
+    setLoading(false);
+    setTimeout(() => {
+      setResponseMessage("");
+    }, [5000]);
   };
 
   return (
@@ -85,63 +146,66 @@ function Contact() {
         >
           <form onSubmit={handleSubmitToSendMail}>
             <div className="contactInput">
-              <span>
+              <label>
                 <FontAwesomeIcon icon={faUser} />
-              </span>
+              </label>
               <input
                 type="text"
                 name="name"
                 placeholder="Name"
-                required
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={emailData.name}
+                onChange={handleInputChange}
                 autoComplete="name"
               />
             </div>
             <div className="contactInput">
-              <span>
+              <label>
                 <FontAwesomeIcon icon={faEnvelope} />
-              </span>
+              </label>
               <input
                 type="email"
                 name="email"
                 placeholder="Email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={emailData.email}
+                onChange={handleInputChange}
                 autoComplete="email"
               />
             </div>
             <div className="contactInput">
-              <span>
+              <label>
                 <FontAwesomeIcon icon={faPhoneAlt} />
-              </span>
+              </label>
               <input
                 type="phone"
                 name="phone"
                 placeholder="Phone"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                value={emailData.phone}
+                onChange={handleInputChange}
                 autoComplete="phone"
               />
             </div>
             <div className="contactInput">
-              <span>
+              <label>
                 <FontAwesomeIcon icon={faCommentDots} />
-              </span>
+              </label>
               <textarea
                 type="text"
                 name="message"
                 placeholder="Message"
-                required
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                value={emailData.message}
+                onChange={handleInputChange}
               />
             </div>
             <div className="submitConform">
               <p>{responseMessage}</p>
               <div className="contactSubmit">
-                <button type="submit">
+                <button
+                  type="submit"
+                  disabled={loading}
+                  style={{
+                    cursor: loading ? "not-allowed" : "pointer",
+                  }}
+                >
                   Submit &nbsp;
                   <FontAwesomeIcon icon={faPaperPlane} />
                 </button>
@@ -189,7 +253,7 @@ const Section = styled.section`
         border: 1px solid black;
         border-radius: 0.3rem;
         padding: 0.2rem 0.5rem;
-        & > span {
+        & > label {
           font-size: 1.2rem;
           margin: 0.3rem;
           color: rgb(194, 189, 190);

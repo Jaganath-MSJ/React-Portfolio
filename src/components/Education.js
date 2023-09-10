@@ -19,7 +19,7 @@ function Education() {
       <div>
         {Data.Education.map((education, index) => {
           return (
-            <motion.div
+            <motion.article
               key={education.degree}
               className="education"
               variants={itemVariantsLeft}
@@ -32,7 +32,7 @@ function Education() {
               <h3>
                 {education.year} | {education.isCompleted}
               </h3>
-            </motion.div>
+            </motion.article>
           );
         })}
       </div>
@@ -69,7 +69,7 @@ const Section = styled.section`
         box-shadow: 10px 10px 10px rgb(168, 167, 167);
       }
       @media only screen and (max-width: 400px) {
-        & >h2 {
+        & > h2 {
           font-size: 1.3rem;
         }
       }

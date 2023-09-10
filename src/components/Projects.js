@@ -63,7 +63,7 @@ function Project({ project, index }) {
   }, []);
 
   return (
-    <motion.div
+    <motion.article
       ref={tiltRef}
       key={project.label}
       className="project"
@@ -86,7 +86,7 @@ function Project({ project, index }) {
           </a>
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }
 
@@ -196,6 +196,9 @@ const Section = styled.section`
         color: black;
         box-shadow: 5px 5px 5px rgba(81, 81, 81, 0.5);
       }
+    }
+    @media screen and (max-width: 500px) {
+      margin-top: 7rem;
     }
   }
 `;
