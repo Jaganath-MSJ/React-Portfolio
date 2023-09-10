@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import Data from "../Data/data.json";
+import Data from "../data/data.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -209,7 +209,7 @@ const Section = styled.section`
       padding: 0.8rem 1.5rem;
       border: 3px solid var(--hover-color1);
       color: var(--text-color2);
-      border-radius: 1rem;
+      border-radius: 15px;
       font-size: 1.1rem;
       font-weight: 500;
       transition: 0.3s ease-in-out;

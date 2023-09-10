@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import Data from "../Data/data.json";
+import Data from "../data/data.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faAngleRight } from "@fortawesome/free-solid-svg-icons";
@@ -111,7 +111,7 @@ const Section = styled.section`
         padding: 1rem 2rem;
         background-color: var(--hover-color1);
         color: white;
-        border-radius: 1rem;
+        border-radius: 15px;
         font-size: 1.2rem;
         transition: 0.3s ease-in-out;
         & > svg {
