@@ -1,0 +1,195 @@
+{
+  "nameInc": "Jaganath M S",
+  "name": "Jaganath",
+
+  "email": "jagan.msjc@gmail.com",
+  "phone": "+91 9385304351",
+  "place": "Tamil Nadu, India - 636302",
+  "resume": "assets/Jaganath-M-S-Resume.pdf",
+
+  "linkedInLink": "https://www.linkedin.com/in/jaganathms",
+  "githubLink": "https://github.com/Jaganath-MSJ",
+  "telegramLink": "https://t.me/MSJ_J",
+
+  "roles": [
+    "Web Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Full Stack Developer"
+  ],
+
+  "img": "assets/Jaganath-M-S-Image.jpg",
+  "role": "Passionate Web Developer",
+  
+  "currently": "I am an engineering graduate with a major in Electrical and Electronics Engineering (EEE), and I am enthusiastic about pursuing an entry-level role as a web developer.",
+  "experience": "My skill set includes expertise in React JS, Node JS, Java, Appian, SQL, and MongoDB, among others. I gained valuable hands-on experience during a 6-month internship at WNS Vuram Tech, where I specialized in the Appian tool.",
+  "projects": "Subsequently, I embarked on personal projects such as Personal Portfolio, Social Media Platform, Weather App, and a Chat App. These endeavors have further strengthened my development skills and have allowed me to apply my knowledge in practical scenarios.",
+  
+  "Skills": [
+    {
+      "label": "React",
+      "img": "assets/skills/react.png"
+    },
+    {
+      "label": "Redux",
+      "img": "assets/skills/redux.png"
+    },
+    {
+      "label": "Node.js",
+      "img": "assets/skills/node-js.png"
+    },
+    {
+      "label": "Java",
+      "img": "assets/skills/java.png"
+    },
+    {
+      "label": "Appian",
+      "img": "assets/skills/appian.png"
+    },
+    {
+      "label": "HTML",
+      "img": "assets/skills/html.png"
+    },
+    {
+      "label": "CSS",
+      "img": "assets/skills/css.png"
+    },
+    {
+      "label": "Java Script",
+      "img": "assets/skills/java-script.png"
+    },
+    {
+      "label": "My Sql",
+      "img": "assets/skills/my-sql.png"
+    },
+    {
+      "label": "Mongo DB",
+      "img": "assets/skills/mongo-db.png"
+    },
+    {
+      "label": "Php My Admin",
+      "img": "assets/skills/php-my-admin.png"
+    },
+    {
+      "label": "C",
+      "img": "assets/skills/c-plus-plus.png"
+    },
+    {
+      "label": "Github",
+      "img": "assets/skills/github.png"
+    },
+    {
+      "label": "Git",
+      "img": "assets/skills/git.png"
+    }
+  ],
+  "Education": [
+    {
+      "degree": "Bachelor Of Engineering In Electrical and Electronics Engineering",
+      "college": "Sri Krishna College of Engineering and Technology, Coimbatore",
+      "year": "2020 - 2023",
+      "isCompleted": "Completed"
+    },
+    {
+      "degree": "Diploma In Electrical and Electronics Engineering",
+      "college": "Thiagarajar Polytechnic College, Salem",
+      "year": "2017 - 2020",
+      "isCompleted": "Completed"
+    },
+    {
+      "degree": "10th - SSLC",
+      "college": "Sri Sarada Balamandir Boys Matric Higher Secondary School, Salem",
+      "year": "2016 - 2017",
+      "isCompleted": "Completed"
+    }
+  ],
+  "Projects": [
+    {
+      "label": "Social Media",
+      "img": "assets/projects/Social-Media.png",
+      "view": "https://msj-social-media.netlify.app",
+      "code": "https://github.com/Jaganath-MSJ/Social-Media"
+    },
+    {
+      "label": "Weather-App",
+      "img": "assets/projects/Weather-App.png",
+      "view": "https://msj-weather-app.netlify.app",
+      "code": "https://github.com/Jaganath-MSJ/Weather-App"
+    },
+    {
+      "label": "Job Search",
+      "img": "assets/projects/Job-Search.png",
+      "view": "https://msj-job-search.netlify.app",
+      "code": "https://github.com/Jaganath-MSJ/Job-Search"
+    },
+    {
+      "label": "Happy Chat App",
+      "img": "assets/projects/Happy-Chat.png",
+      "view": "https://happychat-app.netlify.app",
+      "code": "https://github.com/Jaganath-MSJ/Happy-Chat-App"
+    },
+    {
+      "label": "Mobile Store",
+      "img": "assets/projects/Mobile-Store.png",
+      "view": "https://msj-mobile-store.netlify.app",
+      "code": "https://github.com/Jaganath-MSJ/Mobile-Store"
+    },
+    {
+      "label": "React Calculator",
+      "img": "assets/projects/React-Calculator.png",
+      "view": "https://msj-react-calculator.netlify.app",
+      "code": "https://github.com/Jaganath-MSJ/React-Calculator"
+    },
+    {
+      "label": "Bank System using Java",
+      "img": "assets/projects/Bank.jpg",
+      "view": "https://github.com/Jaganath-MSJ/Bank",
+      "code": "https://github.com/Jaganath-MSJ/Bank"
+    },
+    {
+      "label": "Netflix Clone",
+      "img": "assets/projects/Netflix-Clone.png",
+      "view": "https://jaganath-msj.github.io/Netflix_Clone-Shape_AI-Bootcamp",
+      "code": "https://github.com/Jaganath-MSJ/Netflix_Clone-Shape_AI-Bootcamp"
+    },
+    {
+      "label": "Basics Banking System",
+      "img": "assets/projects/Basics-Banking-System.png",
+      "view": "https://jaganath-msj.github.io/Basics_Banking_System",
+      "code": "https://github.com/Jaganath-MSJ/Basics_Banking_System"
+    },
+    {
+      "label": "Payment Gateway Integration",
+      "img": "assets/projects/Payment-Gateway-Integration.png",
+      "view": "https://jaganath-msj.github.io/Payment_Gateway_Integration",
+      "code": "https://github.com/Jaganath-MSJ/Payment_Gateway_Integration"
+    },
+    {
+      "label": "Farmer Friend",
+      "img": "assets/projects/Farmer-Friend.png",
+      "view": "https://github.com/Jaganath-MSJ/Farmer-Friend",
+      "code": "https://github.com/Jaganath-MSJ/Farmer-Friend"
+    },
+    {
+      "label": "Color Identification",
+      "img": "assets/projects/Color-Identification.png",
+      "view": "https://youtu.be/mUKsMSvCYEU",
+      "code": "https://github.com/Jaganath-MSJ/Color-Identification"
+    },
+    {
+      "label": "Detection Of Face Mask",
+      "img": "assets/projects/Detection-of-Face-Mask.png",
+      "view": "https://youtu.be/TGikf_Y0c50",
+      "code": "https://github.com/Jaganath-MSJ/Detection_of_face_mask"
+    },
+    {
+      "label": "Portfolio",
+      "img": "assets/React-Portfolio.png",
+      "view": "https://jaganath-portfolio.netlify.app",
+      "code": "https://github.com/Jaganath-MSJ/React-Portfolio"
+    }
+  ],
+  
+  "aboutMe": "I am a motivated and goal-driven individual, seeking entry-level opportunities. I am organized, detail-oriented, and efficient in my work approach.",
+  "thankYou": "Thank you for taking the time to visit my personal portfolio website. If you'd like to connect, please feel free to reach out to me using the contact details provided below or through my social media profiles."
+}
