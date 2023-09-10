@@ -24,7 +24,7 @@ function Footer() {
           <p>{Data.aboutMe}</p>
           <p>{Data.thankYou}</p>
         </div>
-        <div className="footerLinks">
+        <nav className="footerLinks">
           <h2>Links</h2>
           <a href="#Home">Home</a>
           <a href="#AboutMe">About Me</a>
@@ -32,25 +32,28 @@ function Footer() {
           <a href="#Education">Education</a>
           <a href="#Project">Projects</a>
           <a href="#Contact">Contact</a>
-        </div>
-        <div className="footerContact">
+        </nav>
+        <address className="footerContact">
           <h2>Contact</h2>
           <p>
             <span>
               <FontAwesomeIcon icon={faPhone} />
-            </span>{" "}
+            </span>
+            &nbsp;
             {Data.phone}
           </p>
           <p>
             <span>
               <FontAwesomeIcon icon={faEnvelope} />
-            </span>{" "}
+            </span>
+            &nbsp;
             {Data.email}
           </p>
           <p>
             <span>
               <FontAwesomeIcon icon={faMapMarkedAlt} />
-            </span>{" "}
+            </span>
+            &nbsp;
             {Data.place}
           </p>
           <div>
@@ -67,7 +70,7 @@ function Footer() {
               <FontAwesomeIcon icon={faTelegram} />
             </a>
           </div>
-        </div>
+        </address>
       </div>
       <div className="footerBottom">
         <p>
@@ -84,11 +87,33 @@ const Foot = styled.footer`
   color: var(--text-color2);
   width: 100%;
   padding-bottom: 0.1rem;
+  & > div {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    & > p {
+      text-align: center;
+      & > svg {
+        color: red;
+        margin-right: 0.3rem;
+      }
+      & > a {
+        outline: none;
+        border: none;
+        color: var(--hover-color2);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          color: var(--text-color2);
+        }
+      }
+    }
+  }
   .footerContent {
     padding: 1rem 4rem;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 0rem 3rem;
     .footerAbout {
       display: flex;
@@ -151,30 +176,6 @@ const Foot = styled.footer`
     @media only screen and (max-width: 600px) {
       .footerLinks > * {
         display: none;
-      }
-    }
-  }
-  & > div {
-    padding: 0 2rem;
-    display: flex;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    & > p {
-      text-align: center;
-      & > svg {
-        color: red;
-        margin-right: 0.3rem;
-      }
-      & > a {
-        outline: none;
-        border: none;
-        color: var(--hover-color2);
-        cursor: pointer;
-        transition: 0.3s ease-in-out;
-        &:hover {
-          color: var(--text-color2);
-        }
       }
     }
   }

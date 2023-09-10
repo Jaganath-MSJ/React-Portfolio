@@ -19,7 +19,7 @@ function Education() {
       <div>
         {Data.Education.map((education, index) => {
           return (
-            <motion.div
+            <motion.article
               key={education.degree}
               className="education"
               variants={itemVariantsLeft}
@@ -32,7 +32,7 @@ function Education() {
               <h3>
                 {education.year} | {education.isCompleted}
               </h3>
-            </motion.div>
+            </motion.article>
           );
         })}
       </div>

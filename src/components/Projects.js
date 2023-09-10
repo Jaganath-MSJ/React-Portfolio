@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import styled from "styled-components";
@@ -7,6 +7,7 @@ import Data from "../Data/data.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowLeft,
   faDiagramProject,
   faEye,
   faCode,
@@ -15,12 +16,18 @@ import {
 
 function Projects() {
   const location = useLocation();
+  const navigate = useNavigate();
   useEffect(() => {
     if (location.pathname === "/projects") window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (
     <Section id="Projects">
+      {location.pathname !== "/" && (
+        <div className="navigateBack">
+          <FontAwesomeIcon icon={faArrowLeft} onClick={() => navigate("..")} />
+        </div>
+      )}
       <h1>
         <FontAwesomeIcon icon={faDiagramProject} />
         &nbsp;
@@ -63,7 +70,7 @@ function Project({ project, index }) {
   }, []);
 
   return (
-    <motion.div
+    <motion.article
       ref={tiltRef}
       key={project.label}
       className="project"
@@ -86,7 +93,7 @@ function Project({ project, index }) {
           </a>
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }
 
@@ -96,6 +103,21 @@ const Section = styled.section`
   height: auto;
   background-color: var(--background-color2);
   color: var(--text-color2);
+  .navigateBack {
+    position: absolute;
+    top: 6.5rem;
+    border: 1px solid var(--text-color2);
+    border-radius: 50%;
+    padding: 0.4rem 0.5rem;
+    & svg {
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1) translateX(-3px);
+      }
+    }
+  }
   & > h1 {
     text-align: center;
     font-size: 3rem;
@@ -196,6 +218,14 @@ const Section = styled.section`
         color: black;
         box-shadow: 5px 5px 5px rgba(81, 81, 81, 0.5);
       }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .navigateBack {
+      display: none;
+    }
+    .viewAll {
+      margin-top: 7rem;
     }
   }
 `;

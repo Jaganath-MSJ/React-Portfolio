@@ -18,7 +18,7 @@ function App() {
   }, []);
   const particlesLoaded = useCallback(async (container) => {}, []);
   return (
-    <div className="App">
+    <main>
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -43,7 +43,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
       </Routes>
       <Footer />
-    </div>
+    </main>
   );
 }
 
