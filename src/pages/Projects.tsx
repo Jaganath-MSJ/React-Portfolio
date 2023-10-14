@@ -53,10 +53,13 @@ function Projects() {
   );
 }
 
-const Project: FC<{
+function Project({
+  project,
+  index,
+}: {
   project: { label: string; img: string; view: string; code: string };
   index: number;
-}> = ({ project, index }) => {
+}) {
   const itemVariantsTop = {
     hidden: { opacity: 0, y: -100 },
     show: { opacity: 1, y: 0 },
@@ -97,7 +100,7 @@ const Project: FC<{
       </div>
     </motion.article>
   );
-};
+}
 
 const Section = styled.section`
   padding: 3rem 5%;

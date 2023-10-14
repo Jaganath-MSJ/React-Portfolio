@@ -32,9 +32,9 @@ function Contact() {
     show: { opacity: 1, x: 0 },
   };
 
-  const handleInputChange = (
+  function handleInputChange(
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  ): void {
     if (e.target.name === "phone") {
       setEmailData((prevData) => {
         return {
@@ -57,9 +57,9 @@ function Contact() {
         };
       });
     }
-  };
+  }
 
-  const handleValidation = () => {
+  function handleValidation(): boolean {
     if (emailData.name.trim().length <= 3) {
       setResponseMessage("Name is too short");
       return false;
@@ -79,9 +79,9 @@ function Contact() {
       return false;
     }
     return true;
-  };
+  }
 
-  const handleEmail = async (): Promise<EmailJSResponseStatus> => {
+  async function handleEmail(): Promise<EmailJSResponseStatus> {
     const templateParams = {
       from_mail: emailData.email,
       name: emailData.name.trim(),
@@ -97,9 +97,9 @@ function Contact() {
       "f0DXl-qv80B9XXFLP"
     );
     return result;
-  };
+  }
 
-  const handleSubmitToSendMail = (e: FormEvent): void => {
+  function handleSubmitToSendMail(e: FormEvent): void {
     e.preventDefault();
     setResponseMessage("");
     try {
@@ -126,7 +126,7 @@ function Contact() {
     setTimeout(() => {
       setResponseMessage("");
     }, 5000);
-  };
+  }
 
   return (
     <Section id="Contact">
