@@ -1,10 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, FC } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import Data from "../data/data.json";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
@@ -13,6 +11,7 @@ import {
   faCode,
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
+import Data from "../data/data.json";
 
 function Projects() {
   const location = useLocation();
@@ -54,15 +53,18 @@ function Projects() {
   );
 }
 
-function Project({ project, index }) {
+const Project: FC<{
+  project: { label: string; img: string; view: string; code: string };
+  index: number;
+}> = ({ project, index }) => {
   const itemVariantsTop = {
     hidden: { opacity: 0, y: -100 },
     show: { opacity: 1, y: 0 },
   };
 
-  const tiltRef = useRef(null);
+  const tiltRef = useRef<HTMLElement | null>(null);
   useEffect(() => {
-    VanillaTilt.init(tiltRef.current, {
+    VanillaTilt.init(tiltRef.current!, {
       max: 15,
       speed: 400,
       glare: false,
@@ -95,7 +97,7 @@ function Project({ project, index }) {
       </div>
     </motion.article>
   );
-}
+};
 
 const Section = styled.section`
   padding: 3rem 5%;

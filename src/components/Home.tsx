@@ -2,8 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import styled from "styled-components";
-import Data from "../data/data.json";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -11,6 +9,7 @@ import {
   faGithub,
   faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
+import Data from "../data/data.json";
 
 function Home() {
   const itemVariantsRight = {

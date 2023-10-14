@@ -20,16 +20,18 @@
     },
     "enable": false
   },
-  "defaultThemes": {},
+  "backgroundMode": false,
   "delay": 0,
+  "detectRetina": true,
+  "duration": 0,
+  "fpsLimit": 120,
+  "fps_limit": 120,
   "fullScreen": {
     "enable": true,
     "zIndex": -1
   },
-  "detectRetina": true,
-  "duration": 0,
-  "fpsLimit": 120,
   "interactivity": {
+    "detects_on": "window",
     "detectsOn": "window",
     "events": {
       "onClick": {
@@ -37,12 +39,37 @@
         "mode": "push"
       },
       "onDiv": {
-        "selectors": [],
+        "el": "",
+        "elementId": "",
         "enable": false,
-        "mode": [],
+        "ids": "",
+        "mode": "",
+        "selectors": "",
         "type": "circle"
       },
       "onHover": {
+        "enable": true,
+        "mode": "grab",
+        "parallax": {
+          "enable": false,
+          "force": 2,
+          "smooth": 10
+        }
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "ondiv": {
+        "el": "",
+        "elementId": "",
+        "enable": false,
+        "ids": "",
+        "mode": "",
+        "selectors": "",
+        "type": "circle"
+      },
+      "onhover": {
         "enable": true,
         "mode": "grab",
         "parallax": {
@@ -578,16 +605,9 @@
   "pauseOnBlur": true,
   "pauseOnOutsideViewport": true,
   "responsive": [],
+  "retina_detect": false,
   "smooth": false,
   "style": {},
   "themes": [],
-  "zLayers": 100,
-  "emitters": [],
-  "motion": {
-    "disable": false,
-    "reduce": {
-      "factor": 4,
-      "value": true
-    }
-  }
+  "zLayers": 100
 }
