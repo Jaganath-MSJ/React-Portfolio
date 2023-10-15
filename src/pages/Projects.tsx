@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, FC } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";

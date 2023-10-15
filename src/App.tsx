@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import { Route, Routes } from "react-router-dom";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
-import type { ISourceOptions, Engine } from "tsparticles-engine";
+import type { Engine } from "tsparticles-engine";
 import Layout from "./pages/Layout";
 import MainPage from "./pages/MainPage";
 import Projects from "./pages/Projects";
@@ -13,7 +13,7 @@ function App() {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
-  const particlesOptions: ISourceOptions = particlesConfig;
+  const particlesOptions: any = particlesConfig;
 
   return (
     <div className="App">
