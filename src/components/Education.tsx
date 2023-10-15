@@ -1,20 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import Data from "../data/data.json";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import Data from "../data/data.json";
 
 function Education() {
   const itemVariantsLeft = {
     hidden: { opacity: 0, x: -100 },
     show: { opacity: 1, x: 0 },
   };
+
   return (
     <Section id="Education">
       <h1>
-        <FontAwesomeIcon icon={faGraduationCap} /> Education
+        <FontAwesomeIcon icon={faGraduationCap} /> Education and Experience
       </h1>
       <div>
         {Data.Education.map((education, index) => {

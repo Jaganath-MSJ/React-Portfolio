@@ -11,7 +11,7 @@ function Page404() {
         <p>Sorry, the page you're looking for doesn't exist.</p>
         <div>
           <Link to="/">Return Home</Link>
-          <Link to={-1}>Navigate Back</Link>
+          <Link to="..">Navigate Back</Link>
         </div>
       </div>
     </Error>

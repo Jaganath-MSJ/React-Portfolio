@@ -1,16 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import Data from "../data/data.json";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import Data from "../data/data.json";
 
 function Skills() {
   const itemVariantsLeft = {
     hidden: { opacity: 0, x: -100 },
     show: { opacity: 1, x: 0 },
   };
+
   return (
     <Section id="Skills">
       <h1>

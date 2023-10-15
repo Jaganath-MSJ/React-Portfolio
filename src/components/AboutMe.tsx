@@ -2,10 +2,9 @@ import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import Data from "../data/data.json";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import Data from "../data/data.json";
 
 function AboutMe() {
   const itemVariantsLeft = {
@@ -17,9 +16,9 @@ function AboutMe() {
     show: { opacity: 1, x: 0 },
   };
 
-  const tiltRef = useRef(null);
+  const tiltRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
-    VanillaTilt.init(tiltRef.current, {
+    VanillaTilt.init(tiltRef.current!, {
       max: 10,
       speed: 400,
       glare: false,

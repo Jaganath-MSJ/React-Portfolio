@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React, { ChangeEvent, FormEvent, useState } from "react";
+import emailjs, { EmailJSResponseStatus } from "emailjs-com";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHeadset,
@@ -33,7 +32,9 @@ function Contact() {
     show: { opacity: 1, x: 0 },
   };
 
-  const handleInputChange = (e) => {
+  function handleInputChange(
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void {
     if (e.target.name === "phone") {
       setEmailData((prevData) => {
         return {
@@ -56,9 +57,9 @@ function Contact() {
         };
       });
     }
-  };
+  }
 
-  const handleValidation = () => {
+  function handleValidation(): boolean {
     if (emailData.name.trim().length <= 3) {
       setResponseMessage("Name is too short");
       return false;
@@ -78,40 +79,45 @@ function Contact() {
       return false;
     }
     return true;
-  };
+  }
 
-  const handleSubmitToSendMail = async (e) => {
+  async function handleEmail(): Promise<EmailJSResponseStatus> {
+    const templateParams = {
+      from_mail: emailData.email,
+      name: emailData.name.trim(),
+      message: emailData.message.trim(),
+      contact: `email : ${emailData.email} ${
+        emailData.phone ? `and phone : ${emailData.phone}` : ""
+      }`,
+    };
+    const result = await emailjs.send(
+      "service_oovklos",
+      "template_d32swih",
+      templateParams,
+      "f0DXl-qv80B9XXFLP"
+    );
+    return result;
+  }
+
+  function handleSubmitToSendMail(e: FormEvent): void {
     e.preventDefault();
     setResponseMessage("");
     try {
       if (handleValidation()) {
         setLoading(true);
-        const templateParams = {
-          from_mail: emailData.email,
-          name: emailData.name.trim(),
-          message: emailData.message.trim(),
-          contact: `email : ${emailData.email} ${
-            emailData.phone ? `and phone : ${emailData.phone}` : ""
-          }`,
-        };
-        const result = await emailjs.send(
-          "service_oovklos",
-          "template_d32swih",
-          templateParams,
-          "f0DXl-qv80B9XXFLP"
-        );
-
-        if (result.status === 200) {
-          setResponseMessage("Email sent successfully");
-          setEmailData({
-            name: "",
-            email: "",
-            phone: "",
-            message: "",
-          });
-        } else {
-          setResponseMessage("Failed to send email");
-        }
+        handleEmail().then((result) => {
+          if (result.status === 200) {
+            setResponseMessage("Email sent successfully");
+            setEmailData({
+              name: "",
+              email: "",
+              phone: "",
+              message: "",
+            });
+          } else {
+            setResponseMessage("Failed to send email");
+          }
+        });
       }
     } catch (err) {
       setResponseMessage("Failed to send email");
@@ -119,8 +125,8 @@ function Contact() {
     setLoading(false);
     setTimeout(() => {
       setResponseMessage("");
-    }, [5000]);
-  };
+    }, 5000);
+  }
 
   return (
     <Section id="Contact">
@@ -146,11 +152,12 @@ function Contact() {
         >
           <form onSubmit={handleSubmitToSendMail}>
             <div className="contactInput">
-              <label>
+              <label htmlFor="name">
                 <FontAwesomeIcon icon={faUser} />
               </label>
               <input
                 type="text"
+                id="name"
                 name="name"
                 placeholder="Name"
                 value={emailData.name}
@@ -159,11 +166,12 @@ function Contact() {
               />
             </div>
             <div className="contactInput">
-              <label>
+              <label htmlFor="email">
                 <FontAwesomeIcon icon={faEnvelope} />
               </label>
               <input
                 type="email"
+                id="email"
                 name="email"
                 placeholder="Email"
                 value={emailData.email}
@@ -172,11 +180,12 @@ function Contact() {
               />
             </div>
             <div className="contactInput">
-              <label>
+              <label htmlFor="phone">
                 <FontAwesomeIcon icon={faPhoneAlt} />
               </label>
               <input
                 type="phone"
+                id="phone"
                 name="phone"
                 placeholder="Phone"
                 value={emailData.phone}
@@ -185,12 +194,12 @@ function Contact() {
               />
             </div>
             <div className="contactInput">
-              <label>
+              <label htmlFor="message">
                 <FontAwesomeIcon icon={faCommentDots} />
               </label>
               <textarea
-                type="text"
                 name="message"
+                id="message"
                 placeholder="Message"
                 value={emailData.message}
                 onChange={handleInputChange}
