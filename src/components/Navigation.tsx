@@ -6,13 +6,22 @@ import {
   faUser,
   faLaptopCode,
   faGraduationCap,
+  faBriefcase,
   faDiagramProject,
   faHeadset,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Navigation() {
   const sections = useMemo(
-    () => ["Home", "AboutMe", "Skills", "Education", "Projects", "Contact"],
+    () => [
+      "Home",
+      "AboutMe",
+      "Skills",
+      "Education",
+      "Experience",
+      "Projects",
+      "Contact",
+    ],
     []
   );
   const [activeSection, setActiveSection] = useState(sections[0]);
@@ -71,6 +80,12 @@ function Navigation() {
           <a href="/#Education">
             <FontAwesomeIcon icon={faGraduationCap} />
             <span>Education</span>
+          </a>
+        </li>
+        <li className={activeSection === "Experience" ? "active" : ""}>
+          <a href="/#Experience">
+            <FontAwesomeIcon icon={faBriefcase} />
+            <span>Experience</span>
           </a>
         </li>
         <li className={activeSection === "Projects" ? "active" : ""}>

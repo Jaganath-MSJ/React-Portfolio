@@ -2,20 +2,29 @@ import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import Data from "../data/data.json";
 
 function Experience() {
+  const itemVariantsLeft = {
+    hidden: { opacity: 0, x: -100 },
+    show: { opacity: 1, x: 0 },
+  };
+
   return (
     <Section id="Experience">
       <h1>
-        <FontAwesomeIcon icon={faGraduationCap} /> Experience
+        <FontAwesomeIcon icon={faBriefcase} /> Experience
       </h1>
       <div>
-        {Data.Experience.map((experience) => (
+        {Data.Experience.map((experience, index) => (
           <motion.article
             key={`${experience.companyName} | ${experience.role}`}
             className="experience"
+            variants={itemVariantsLeft}
+            initial="hidden"
+            whileInView="show"
+            transition={{ duration: 1, delay: index * 0.2 }}
           >
             <h2>{`${experience.role}${
               experience.isIntership ? " | Intership" : ""
