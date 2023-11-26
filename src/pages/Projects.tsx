@@ -36,11 +36,9 @@ function Projects() {
         {(location.pathname === "/"
           ? Data.Projects.slice(0, 6)
           : Data.Projects
-        ).map((project, index) => {
-          return (
-            <Project key={project.label} project={project} index={index} />
-          );
-        })}
+        ).map((project, index) => (
+          <Project key={project.label} project={project} index={index} />
+        ))}
       </div>
       {location.pathname === "/" && (
         <div className="viewAll">
@@ -53,13 +51,12 @@ function Projects() {
   );
 }
 
-function Project({
-  project,
-  index,
-}: {
-  project: { label: string; img: string; view: string; code: string };
-  index: number;
-}) {
+interface ProjectPropType {
+  readonly project: { label: string; img: string; view: string; code: string };
+  readonly index: number;
+}
+
+function Project({ project, index }: ProjectPropType) {
   const itemVariantsTop = {
     hidden: { opacity: 0, y: -100 },
     show: { opacity: 1, y: 0 },

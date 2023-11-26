@@ -45,8 +45,7 @@ function Navigation() {
     <Nav>
       <h2 className="navHeader">
         <a href="/">
-          Jaganath
-          <span>&nbsp;Portfolio</span>
+          Jaganath <span>Portfolio</span>
         </a>
       </h2>
       <ul className="navMenuBar">

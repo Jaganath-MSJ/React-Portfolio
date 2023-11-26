@@ -5,6 +5,7 @@ import Skills from "../components/Skills";
 import Education from "../components/Education";
 import Projects from "./Projects";
 import Contact from "../components/Contact";
+import Experience from "../components/Experience";
 
 function MainPage() {
   return (
@@ -13,6 +14,7 @@ function MainPage() {
       <AboutMe />
       <Skills />
       <Education />
+      <Experience />
       <Projects />
       <Contact />
     </Fragment>

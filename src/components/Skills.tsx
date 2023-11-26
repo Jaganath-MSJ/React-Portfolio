@@ -17,23 +17,21 @@ function Skills() {
         <FontAwesomeIcon icon={faLaptopCode} /> Skills
       </h1>
       <div>
-        {Data.Skills.map((skill, index) => {
-          return (
-            <motion.article
-              key={skill.label}
-              className="skill"
-              variants={itemVariantsLeft}
-              initial="hidden"
-              whileInView="show"
-              transition={{ duration: 1, delay: index * 0.1 }}
-            >
-              <div>
-                <img src={skill.img} draggable="false" alt={skill.label} />
-              </div>
-              <h2>{skill.label}</h2>
-            </motion.article>
-          );
-        })}
+        {Data.Skills.map((skill, index) => (
+          <motion.article
+            key={skill.label}
+            className="skill"
+            variants={itemVariantsLeft}
+            initial="hidden"
+            whileInView="show"
+            transition={{ duration: 1, delay: index * 0.1 }}
+          >
+            <div>
+              <img src={skill.img} draggable="false" alt={skill.label} />
+            </div>
+            <h2>{skill.label}</h2>
+          </motion.article>
+        ))}
       </div>
     </Section>
   );

@@ -14,27 +14,27 @@ function Education() {
   return (
     <Section id="Education">
       <h1>
-        <FontAwesomeIcon icon={faGraduationCap} /> Education and Experience
+        <FontAwesomeIcon icon={faGraduationCap} /> Education
       </h1>
       <div>
-        {Data.Education.map((education, index) => {
-          return (
-            <motion.article
-              key={education.degree}
-              className="education"
-              variants={itemVariantsLeft}
-              initial="hidden"
-              whileInView="show"
-              transition={{ duration: 1, delay: index * 0.2 }}
-            >
-              <h2>{education.degree}</h2>
-              <h4>{education.college}</h4>
-              <h3>
-                {education.year} | {education.isCompleted}
-              </h3>
-            </motion.article>
-          );
-        })}
+        {Data.Education.map((education, index) => (
+          <motion.article
+            key={education.degree}
+            className="education"
+            variants={itemVariantsLeft}
+            initial="hidden"
+            whileInView="show"
+            transition={{ duration: 1, delay: index * 0.2 }}
+          >
+            <h2>{education.degree}</h2>
+            <h4>{education.college}</h4>
+            <h3>
+              {`${education.fromYear} - ${education.toYear} | ${
+                education.isCompleted ? "Completed" : "Present"
+              }`}
+            </h3>
+          </motion.article>
+        ))}
       </div>
     </Section>
   );
@@ -42,6 +42,7 @@ function Education() {
 
 const Section = styled.section`
   padding: 3rem 10%;
+  padding-bottom: 0;
   height: auto;
   background-color: var(--background-color1);
   & > h1 {

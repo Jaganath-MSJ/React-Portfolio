@@ -29,11 +29,5 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
-  background-color: wheat;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
-  background-color: var(--hover-color1);
+  width: 0;
 }
