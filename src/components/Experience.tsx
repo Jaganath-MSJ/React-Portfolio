@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import Data from "../data/data.json";
+import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
 function Experience() {
   const itemVariantsLeft = {
@@ -12,9 +11,10 @@ function Experience() {
   };
 
   return (
-    <Section id="Experience">
+    <Section id={NAVIGATION_STRING[4].LABLE}>
       <h1>
-        <FontAwesomeIcon icon={faBriefcase} /> Experience
+        {NAVIGATION_STRING[4].ICON}
+        &nbsp;{NAVIGATION_STRING[4].LABLE}
       </h1>
       <div>
         {Data.Experience.map((experience, index) => (

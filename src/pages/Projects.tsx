@@ -6,12 +6,12 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
-  faDiagramProject,
   faEye,
   faCode,
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Data from "../data/data.json";
+import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
 function Projects() {
   const location = useLocation();
@@ -21,16 +21,16 @@ function Projects() {
   }, [location.pathname]);
 
   return (
-    <Section id="Projects">
+    <Section id={NAVIGATION_STRING[5].LABLE}>
       {location.pathname !== "/" && (
         <div className="navigateBack">
           <FontAwesomeIcon icon={faArrowLeft} onClick={() => navigate("..")} />
         </div>
       )}
       <h1>
-        <FontAwesomeIcon icon={faDiagramProject} />
-        &nbsp;
-        {location.pathname === "/" ? "" : "All"} Projects
+        {NAVIGATION_STRING[5].ICON}&nbsp;
+        {location.pathname === "/" ? "" : "All "}
+        {NAVIGATION_STRING[5].LABLE}
       </h1>
       <div className="projects">
         {(location.pathname === "/"

@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHeadset,
   faUser,
   faEnvelope,
   faPhoneAlt,
@@ -12,6 +11,7 @@ import {
   faPaperPlane,
   faAnglesUp,
 } from "@fortawesome/free-solid-svg-icons";
+import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
 function Contact() {
   const [emailData, setEmailData] = useState({
@@ -129,9 +129,10 @@ function Contact() {
   }
 
   return (
-    <Section id="Contact">
+    <Section id={NAVIGATION_STRING[6].LABLE}>
       <h1>
-        <FontAwesomeIcon icon={faHeadset} /> Contact
+        {NAVIGATION_STRING[6].ICON}
+        &nbsp;{NAVIGATION_STRING[6].LABLE}
       </h1>
       <div className="content">
         <motion.div

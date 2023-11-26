@@ -1,29 +1,9 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faUser,
-  faLaptopCode,
-  faGraduationCap,
-  faBriefcase,
-  faDiagramProject,
-  faHeadset,
-} from "@fortawesome/free-solid-svg-icons";
+import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
 function Navigation() {
-  const sections = useMemo(
-    () => [
-      "Home",
-      "AboutMe",
-      "Skills",
-      "Education",
-      "Experience",
-      "Projects",
-      "Contact",
-    ],
-    []
-  );
+  const sections = useMemo(() => NAVIGATION_STRING.map((NAV) => NAV.LABLE), []);
   const [activeSection, setActiveSection] = useState(sections[0]);
 
   const handleScroll = useCallback(() => {
@@ -54,52 +34,21 @@ function Navigation() {
     <Nav>
       <h2 className="navHeader">
         <a href="/">
-          Jaganath <span>Portfolio</span>
+          Jaganath&nbsp;<span>Portfolio</span>
         </a>
       </h2>
       <ul className="navMenuBar">
-        <li className={activeSection === "Home" ? "active" : ""}>
-          <a href="/#Home">
-            <FontAwesomeIcon icon={faHouse} />
-            <span>Home</span>
-          </a>
-        </li>
-        <li className={activeSection === "AboutMe" ? "active" : ""}>
-          <a href="/#AboutMe">
-            <FontAwesomeIcon icon={faUser} />
-            <span>About Me</span>
-          </a>
-        </li>
-        <li className={activeSection === "Skills" ? "active" : ""}>
-          <a href="/#Skills">
-            <FontAwesomeIcon icon={faLaptopCode} />
-            <span>Skills</span>
-          </a>
-        </li>
-        <li className={activeSection === "Education" ? "active" : ""}>
-          <a href="/#Education">
-            <FontAwesomeIcon icon={faGraduationCap} />
-            <span>Education</span>
-          </a>
-        </li>
-        <li className={activeSection === "Experience" ? "active" : ""}>
-          <a href="/#Experience">
-            <FontAwesomeIcon icon={faBriefcase} />
-            <span>Experience</span>
-          </a>
-        </li>
-        <li className={activeSection === "Projects" ? "active" : ""}>
-          <a href="/#Projects">
-            <FontAwesomeIcon icon={faDiagramProject} />
-            <span>Projects</span>
-          </a>
-        </li>
-        <li className={activeSection === "Contact" ? "active" : ""}>
-          <a href="/#Contact">
-            <FontAwesomeIcon icon={faHeadset} />
-            <span>Contact</span>
-          </a>
-        </li>
+        {NAVIGATION_STRING.map((NAV) => (
+          <li
+            key={NAV.LABLE}
+            className={activeSection === NAV.LABLE ? "active" : ""}
+          >
+            <a href={`/#${NAV.LABLE}`}>
+              {NAV.ICON}
+              <span>{NAV.LABLE}</span>
+            </a>
+          </li>
+        ))}
       </ul>
     </Nav>
   );
@@ -185,7 +134,7 @@ const Nav = styled.nav`
       }
     }
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 890px) {
     justify-content: space-around;
     .navHeader {
       margin: 1rem 0;

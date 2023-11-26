@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import Data from "../data/data.json";
+import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
 function Education() {
   const itemVariantsLeft = {
@@ -12,9 +11,10 @@ function Education() {
   };
 
   return (
-    <Section id="Education">
+    <Section id={NAVIGATION_STRING[3].LABLE}>
       <h1>
-        <FontAwesomeIcon icon={faGraduationCap} /> Education
+        {NAVIGATION_STRING[3].ICON}
+        &nbsp;{NAVIGATION_STRING[3].LABLE}
       </h1>
       <div>
         {Data.Education.map((education, index) => (
