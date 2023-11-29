@@ -6,12 +6,12 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
-  faDiagramProject,
   faEye,
   faCode,
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Data from "../data/data.json";
+import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
 function Projects() {
   const location = useLocation();
@@ -21,26 +21,24 @@ function Projects() {
   }, [location.pathname]);
 
   return (
-    <Section id="Projects">
+    <Section id={NAVIGATION_STRING[5].LABLE}>
       {location.pathname !== "/" && (
         <div className="navigateBack">
           <FontAwesomeIcon icon={faArrowLeft} onClick={() => navigate("..")} />
         </div>
       )}
       <h1>
-        <FontAwesomeIcon icon={faDiagramProject} />
-        &nbsp;
-        {location.pathname === "/" ? "" : "All"} Projects
+        {NAVIGATION_STRING[5].ICON}&nbsp;
+        {location.pathname === "/" ? "" : "All "}
+        {NAVIGATION_STRING[5].LABLE}
       </h1>
       <div className="projects">
         {(location.pathname === "/"
           ? Data.Projects.slice(0, 6)
           : Data.Projects
-        ).map((project, index) => {
-          return (
-            <Project key={project.label} project={project} index={index} />
-          );
-        })}
+        ).map((project, index) => (
+          <Project key={project.label} project={project} index={index} />
+        ))}
       </div>
       {location.pathname === "/" && (
         <div className="viewAll">
@@ -53,13 +51,12 @@ function Projects() {
   );
 }
 
-function Project({
-  project,
-  index,
-}: {
-  project: { label: string; img: string; view: string; code: string };
-  index: number;
-}) {
+interface ProjectPropType {
+  readonly project: { label: string; img: string; view: string; code: string };
+  readonly index: number;
+}
+
+function Project({ project, index }: ProjectPropType) {
   const itemVariantsTop = {
     hidden: { opacity: 0, y: -100 },
     show: { opacity: 1, y: 0 },

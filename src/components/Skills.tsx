@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import Data from "../data/data.json";
+import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
 function Skills() {
   const itemVariantsLeft = {
@@ -12,28 +11,27 @@ function Skills() {
   };
 
   return (
-    <Section id="Skills">
+    <Section id={NAVIGATION_STRING[2].LABLE}>
       <h1>
-        <FontAwesomeIcon icon={faLaptopCode} /> Skills
+        {NAVIGATION_STRING[2].ICON}
+        &nbsp;{NAVIGATION_STRING[2].LABLE}
       </h1>
       <div>
-        {Data.Skills.map((skill, index) => {
-          return (
-            <motion.article
-              key={skill.label}
-              className="skill"
-              variants={itemVariantsLeft}
-              initial="hidden"
-              whileInView="show"
-              transition={{ duration: 1, delay: index * 0.1 }}
-            >
-              <div>
-                <img src={skill.img} draggable="false" alt={skill.label} />
-              </div>
-              <h2>{skill.label}</h2>
-            </motion.article>
-          );
-        })}
+        {Data.Skills.map((skill, index) => (
+          <motion.article
+            key={skill.label}
+            className="skill"
+            variants={itemVariantsLeft}
+            initial="hidden"
+            whileInView="show"
+            transition={{ duration: 1, delay: index * 0.1 }}
+          >
+            <div>
+              <img src={skill.img} draggable="false" alt={skill.label} />
+            </div>
+            <h2>{skill.label}</h2>
+          </motion.article>
+        ))}
       </div>
     </Section>
   );
