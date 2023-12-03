@@ -19,7 +19,7 @@ function Footer() {
     <Foot>
       <div className="footerContent">
         <div className="footerAbout">
-          <h2>{Data.name} Portfolio</h2>
+          <h2>{Data.name}&nbsp;Portfolio</h2>
           <p>{Data.aboutMe}</p>
           <p>{Data.thankYou}</p>
         </div>

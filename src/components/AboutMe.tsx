@@ -3,8 +3,9 @@ import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import Data from "../data/data.json";
+import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
 function AboutMe() {
   const itemVariantsLeft = {
@@ -26,10 +27,10 @@ function AboutMe() {
   }, []);
 
   return (
-    <Section id="AboutMe">
+    <Section id={NAVIGATION_STRING[1].LABLE}>
       <h1>
-        <FontAwesomeIcon icon={faUser} />
-        &nbsp;About Me
+        {NAVIGATION_STRING[1].ICON}
+        &nbsp;{NAVIGATION_STRING[1].LABLE}
       </h1>
       <div>
         <motion.div

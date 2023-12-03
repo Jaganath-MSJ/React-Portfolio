@@ -10,6 +10,7 @@ import {
   faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
 import Data from "../data/data.json";
+import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
 function Home() {
   const itemVariantsRight = {
@@ -22,7 +23,7 @@ function Home() {
   };
 
   return (
-    <Section id="Home">
+    <Section id={NAVIGATION_STRING[0].LABLE}>
       <div>
         <h3>Hey! I am</h3>
         <motion.h1

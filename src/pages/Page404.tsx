@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 function Page404() {
   return (
-    <Error>
+    <ErrorSection>
       <div>
         <h1>404</h1>
         <h2>Oops! Page not Found</h2>
@@ -14,11 +14,11 @@ function Page404() {
           <Link to="..">Navigate Back</Link>
         </div>
       </div>
-    </Error>
+    </ErrorSection>
   );
 }
 
-const Error = styled.section`
+const ErrorSection = styled.section`
   height: 47rem;
   display: flex;
   justify-content: center;

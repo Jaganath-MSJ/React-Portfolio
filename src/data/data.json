@@ -88,20 +88,53 @@
     {
       "degree": "Bachelor Of Engineering In Electrical and Electronics Engineering",
       "college": "Sri Krishna College of Engineering and Technology, Coimbatore",
-      "year": "2020 - 2023",
-      "isCompleted": "Completed"
+      "fromYear": 2020,
+      "toYear": 2023,
+      "isCompleted": true
     },
     {
       "degree": "Diploma In Electrical and Electronics Engineering",
       "college": "Thiagarajar Polytechnic College, Salem",
-      "year": "2017 - 2020",
-      "isCompleted": "Completed"
+      "fromYear": 2017,
+      "toYear": 2020,
+      "isCompleted": true
     },
     {
       "degree": "10th - SSLC",
       "college": "Sri Sarada Balamandir Boys Matric Higher Secondary School, Salem",
-      "year": "2016 - 2017",
-      "isCompleted": "Completed"
+      "fromYear": 2016,
+      "toYear": 2017,
+      "isCompleted": true
+    }
+  ],
+  "Experience": [
+    {
+      "role": "Associate Software Engineer",
+      "companyName": "Workhall",
+      "isIntership": false,
+      "fromMonthAndYear": "Sep 2023",
+      "toMonthAndYear": "Feb 2022"
+    },
+    {
+      "role": "Associate Technical Consultant",
+      "companyName": "WNS-Vuram",
+      "isIntership": true,
+      "fromMonthAndYear": "Oct 2022",
+      "toMonthAndYear": "Mar 2023"
+    },
+    {
+      "role": "Web Developer",
+      "companyName": "The Sparks Foundation",
+      "isIntership": true,
+      "fromMonthAndYear": "Jan 2022",
+      "toMonthAndYear": "Feb 2022"
+    },
+    {
+      "role": "Web Developer",
+      "companyName": "The Sparks Foundation",
+      "isIntership": true,
+      "fromMonthAndYear": "Jan 2022",
+      "toMonthAndYear": "Feb 2022"
     }
   ],
   "Projects": [
