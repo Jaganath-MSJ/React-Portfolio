@@ -30,7 +30,9 @@ function Experience() {
               experience.isIntership ? " | Intership" : ""
             }`}</h2>
             <h3>{experience.companyName}</h3>
-            <h4>{`${experience.fromMonthAndYear} | ${experience.toMonthAndYear}`}</h4>
+            <h4>{`${experience.fromMonthAndYear} | ${
+              experience.toMonthAndYear ?? "Present"
+            }`}</h4>
           </motion.article>
         ))}
       </div>

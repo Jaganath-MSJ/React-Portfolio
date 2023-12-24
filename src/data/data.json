@@ -113,7 +113,7 @@
       "companyName": "Workhall",
       "isIntership": false,
       "fromMonthAndYear": "Sep 2023",
-      "toMonthAndYear": "Feb 2022"
+      "toMonthAndYear": null
     },
     {
       "role": "Associate Technical Consultant",
@@ -121,13 +121,6 @@
       "isIntership": true,
       "fromMonthAndYear": "Oct 2022",
       "toMonthAndYear": "Mar 2023"
-    },
-    {
-      "role": "Web Developer",
-      "companyName": "The Sparks Foundation",
-      "isIntership": true,
-      "fromMonthAndYear": "Jan 2022",
-      "toMonthAndYear": "Feb 2022"
     },
     {
       "role": "Web Developer",
