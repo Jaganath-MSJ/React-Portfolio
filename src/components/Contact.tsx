@@ -191,7 +191,6 @@ function Contact() {
                 placeholder="Phone"
                 value={emailData.phone}
                 onChange={handleInputChange}
-                autoComplete="phone"
               />
             </div>
             <div className="contactInput">
