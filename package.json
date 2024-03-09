@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -16,6 +17,7 @@
     "styled-components": "^6.0.7",
     "tsparticles": "^2.12.0",
     "vanilla-tilt": "^1.8.0",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -31,14 +33,7 @@
     "@types/react-dom": "^18.2.13",
     "@types/styled-components": "^5.1.28",
     "postcss": "^8.4.31",
-    "react-scripts": "^5.0.1",
-    "typescript": "2.7.x"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "typescript": "^5.4.2"
   },
   "browserslist": {
     "production": [
