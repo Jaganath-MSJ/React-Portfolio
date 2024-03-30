@@ -11,10 +11,10 @@ function Education() {
   };
 
   return (
-    <Section id={NAVIGATION_STRING[3].LABLE}>
+    <Section id={NAVIGATION_STRING[3].LABEL}>
       <h1>
         {NAVIGATION_STRING[3].ICON}
-        &nbsp;{NAVIGATION_STRING[3].LABLE}
+        &nbsp;{NAVIGATION_STRING[3].LABEL}
       </h1>
       <div>
         {Data.Education.map((education, index) => (

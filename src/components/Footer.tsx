@@ -1,17 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPhone,
-  faEnvelope,
-  faMapMarkedAlt,
-  faHeart,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faLinkedin,
-  faGithub,
-  faTelegram,
-} from "@fortawesome/free-brands-svg-icons";
+import PhoneIcon from "../icons/PhoneIcon";
+import EmailIcon from "../icons/EmailIcon";
+import MapMarkedIcon from "../icons/MapMarkedIcon";
+import LinkedIn from "../icons/brand_logo/LinkedIn";
+import Github from "../icons/brand_logo/Github";
+import Telegram from "../icons/brand_logo/Telegram";
+import HeartIcon from "../icons/HeartIcon";
 import Data from "../data/data.json";
 
 function Footer() {
@@ -36,44 +31,45 @@ function Footer() {
           <h2>Contact</h2>
           <p>
             <span>
-              <FontAwesomeIcon icon={faPhone} />
+              <PhoneIcon />
             </span>
             &nbsp;
             {Data.phone}
           </p>
           <p>
             <span>
-              <FontAwesomeIcon icon={faEnvelope} />
+              <EmailIcon />
             </span>
             &nbsp;
             {Data.email}
           </p>
           <p>
             <span>
-              <FontAwesomeIcon icon={faMapMarkedAlt} />
+              <MapMarkedIcon />
             </span>
             &nbsp;
             {Data.place}
           </p>
           <div>
             <a href={Data.linkedInLink} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} />
+              <LinkedIn />
             </a>
             <a href={Data.githubLink} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faGithub} />
+              <Github />
             </a>
             <a href={`mailto:${Data.email}`} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faEnvelope} />
+              <EmailIcon />
             </a>
             <a href={Data.telegramLink} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faTelegram} />
+              <Telegram />
             </a>
           </div>
         </address>
       </div>
       <div className="footerBottom">
         <p>
-          This Designed is made with <FontAwesomeIcon icon={faHeart} />
+          This Designed is made with
+          <HeartIcon />
           by <a href={Data.linkedInLink}>{Data.nameInc}</a>
         </p>
       </div>
@@ -147,7 +143,8 @@ const Foot = styled.footer`
         color: var(--color1);
         font-size: 1.1rem;
         & > span {
-          color: var(--hover-color2);
+          stroke: var(--hover-color2);
+          fill: var(--hover-color2);
         }
       }
       & > div {
@@ -165,9 +162,12 @@ const Foot = styled.footer`
           border: 1px solid white;
           border-radius: 1.5rem;
           transition: 0.3s ease-in-out;
+          fill: black;
+          stroke: black;
           &:hover {
             background: transparent;
-            color: var(--hover-color2);
+            fill: var(--hover-color2);
+            stroke: var(--hover-color2);
           }
         }
       }
@@ -176,6 +176,13 @@ const Foot = styled.footer`
       .footerLinks > * {
         display: none;
       }
+    }
+  }
+  .footerBottom {
+    & > p {
+      display: flex;
+      align-items: center;
+      fill: red;
     }
   }
 `;

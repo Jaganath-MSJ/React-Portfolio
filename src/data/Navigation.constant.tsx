@@ -1,41 +1,38 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faUser,
-  faLaptopCode,
-  faGraduationCap,
-  faBriefcase,
-  faDiagramProject,
-  faHeadset,
-} from "@fortawesome/free-solid-svg-icons";
+import UserIcon from "../icons/navigation_icons/UserIcon";
+import HomeIcon from "../icons/navigation_icons/HomeIcon";
+import SkillsIcon from "../icons/navigation_icons/SkillsIcon";
+import EducationIcon from "../icons/navigation_icons/EducationIcon";
+import ExperienceIcon from "../icons/navigation_icons/ExperienceIcon";
+import ProjectsIcon from "../icons/navigation_icons/ProjectsIcon";
+import ContactIcon from "../icons/navigation_icons/ContactIcon";
 
 export const NAVIGATION_STRING = [
   {
-    LABLE: "Home",
-    ICON: <FontAwesomeIcon icon={faHouse} />,
+    LABEL: "Home",
+    ICON: <HomeIcon />,
   },
   {
-    LABLE: "AboutMe",
-    ICON: <FontAwesomeIcon icon={faUser} />,
+    LABEL: "AboutMe",
+    ICON: <UserIcon />,
   },
   {
-    LABLE: "Skills",
-    ICON: <FontAwesomeIcon icon={faLaptopCode} />,
+    LABEL: "Skills",
+    ICON: <SkillsIcon />,
   },
   {
-    LABLE: "Education",
-    ICON: <FontAwesomeIcon icon={faGraduationCap} />,
+    LABEL: "Education",
+    ICON: <EducationIcon />,
   },
   {
-    LABLE: "Experience",
-    ICON: <FontAwesomeIcon icon={faBriefcase} />,
+    LABEL: "Experience",
+    ICON: <ExperienceIcon />,
   },
   {
-    LABLE: "Projects",
-    ICON: <FontAwesomeIcon icon={faDiagramProject} />,
+    LABEL: "Projects",
+    ICON: <ProjectsIcon />,
   },
   {
-    LABLE: "Contact",
-    ICON: <FontAwesomeIcon icon={faHeadset} />,
+    LABEL: "Contact",
+    ICON: <ContactIcon />,
   },
 ];

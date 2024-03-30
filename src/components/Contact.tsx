@@ -2,15 +2,12 @@ import React, { ChangeEvent, FormEvent, useState } from "react";
 import emailjs, { EmailJSResponseStatus } from "emailjs-com";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faEnvelope,
-  faPhoneAlt,
-  faCommentDots,
-  faPaperPlane,
-  faAnglesUp,
-} from "@fortawesome/free-solid-svg-icons";
+import UserIcon from "../icons/navigation_icons/UserIcon";
+import EmailIcon from "../icons/EmailIcon";
+import PhoneIcon from "../icons/PhoneIcon";
+import MessageIcon from "../icons/MessageIcon";
+import PaperPlaneIcon from "../icons/PaperPlaneIcon";
+import DoubleAngleUp from "../icons/DoubleAngleUp";
 import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
 function Contact() {
@@ -129,10 +126,10 @@ function Contact() {
   }
 
   return (
-    <Section id={NAVIGATION_STRING[6].LABLE}>
+    <Section id={NAVIGATION_STRING[6].LABEL}>
       <h1>
         {NAVIGATION_STRING[6].ICON}
-        &nbsp;{NAVIGATION_STRING[6].LABLE}
+        &nbsp;{NAVIGATION_STRING[6].LABEL}
       </h1>
       <div className="content">
         <motion.div
@@ -154,7 +151,7 @@ function Contact() {
           <form onSubmit={handleSubmitToSendMail}>
             <div className="contactInput">
               <label htmlFor="name">
-                <FontAwesomeIcon icon={faUser} />
+                <UserIcon />
               </label>
               <input
                 type="text"
@@ -168,7 +165,7 @@ function Contact() {
             </div>
             <div className="contactInput">
               <label htmlFor="email">
-                <FontAwesomeIcon icon={faEnvelope} />
+                <EmailIcon />
               </label>
               <input
                 type="email"
@@ -182,7 +179,7 @@ function Contact() {
             </div>
             <div className="contactInput">
               <label htmlFor="phone">
-                <FontAwesomeIcon icon={faPhoneAlt} />
+                <PhoneIcon />
               </label>
               <input
                 type="phone"
@@ -195,7 +192,7 @@ function Contact() {
             </div>
             <div className="contactInput">
               <label htmlFor="message">
-                <FontAwesomeIcon icon={faCommentDots} />
+                <MessageIcon />
               </label>
               <textarea
                 name="message"
@@ -216,7 +213,7 @@ function Contact() {
                   }}
                 >
                   Submit &nbsp;
-                  <FontAwesomeIcon icon={faPaperPlane} />
+                  <PaperPlaneIcon />
                 </button>
               </div>
             </div>
@@ -224,10 +221,7 @@ function Contact() {
         </motion.div>
       </div>
       <div className="goTop">
-        <FontAwesomeIcon
-          icon={faAnglesUp}
-          onClick={() => window.scrollTo(0, 0)}
-        />
+        <DoubleAngleUp onClick={() => window.scrollTo(0, 0)} />
       </div>
     </Section>
   );
@@ -264,8 +258,9 @@ const Section = styled.section`
         padding: 0.2rem 0.5rem;
         & > label {
           font-size: 1.2rem;
-          margin: 0.3rem;
-          color: rgb(194, 189, 190);
+          margin-top: 0.3rem;
+          fill: rgb(194, 189, 190);
+          stroke: rgb(194, 189, 190);
         }
         & > input,
         & > textarea {
@@ -295,8 +290,10 @@ const Section = styled.section`
             border-radius: 0.5rem;
             cursor: pointer;
             transition: 0.3s ease-in-out;
+            fill: white;
             &:hover {
               color: black;
+              fill: black;
               box-shadow: 5px 5px 5px rgba(81, 81, 81, 0.5);
             }
           }
@@ -331,8 +328,9 @@ const Section = styled.section`
       color: var(--text-color2);
       cursor: pointer;
       transition: 0.3s ease-in-out;
+      fill: white;
       &:hover {
-        color: black;
+        fill: black;
       }
     }
   }

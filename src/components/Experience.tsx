@@ -11,10 +11,10 @@ function Experience() {
   };
 
   return (
-    <Section id={NAVIGATION_STRING[4].LABLE}>
+    <Section id={NAVIGATION_STRING[4].LABEL}>
       <h1>
         {NAVIGATION_STRING[4].ICON}
-        &nbsp;{NAVIGATION_STRING[4].LABLE}
+        &nbsp;{NAVIGATION_STRING[4].LABEL}
       </h1>
       <div>
         {Data.Experience.map((experience, index) => (

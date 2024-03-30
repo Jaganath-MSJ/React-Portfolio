@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
 function Navigation() {
-  const sections = useMemo(() => NAVIGATION_STRING.map((NAV) => NAV.LABLE), []);
+  const sections = useMemo(() => NAVIGATION_STRING.map((NAV) => NAV.LABEL), []);
   const [activeSection, setActiveSection] = useState(sections[0]);
 
   const handleScroll = useCallback(() => {
@@ -40,12 +40,12 @@ function Navigation() {
       <ul className="navMenuBar">
         {NAVIGATION_STRING.map((NAV) => (
           <li
-            key={NAV.LABLE}
-            className={activeSection === NAV.LABLE ? "active" : ""}
+            key={NAV.LABEL}
+            className={activeSection === NAV.LABEL ? "active" : ""}
           >
-            <a href={`/#${NAV.LABLE}`}>
+            <a href={`/#${NAV.LABEL}`}>
               {NAV.ICON}
-              <span>{NAV.LABLE}</span>
+              <span>{NAV.LABEL}</span>
             </a>
           </li>
         ))}
@@ -96,11 +96,15 @@ const Nav = styled.nav`
         outline: none;
         border: none;
         transition: 0.2s ease-in-out;
+        fill: black;
+        stroke: black;
         & > svg {
           display: none;
         }
         &:hover {
           color: var(--hover-color1);
+          fill: var(--hover-color1);
+          stroke: var(--hover-color1);
         }
       }
       &::after {
@@ -121,6 +125,8 @@ const Nav = styled.nav`
     .active {
       & > a {
         color: var(--hover-color1);
+        fill: var(--hover-color1);
+        stroke: var(--hover-color1);
       }
       &::after {
         height: 3px;

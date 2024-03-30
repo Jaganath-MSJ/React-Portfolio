@@ -2,13 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-  faLinkedin,
-  faGithub,
-  faTelegram,
-} from "@fortawesome/free-brands-svg-icons";
+import LinkedIn from "../icons/brand_logo/LinkedIn";
+import Github from "../icons/brand_logo/Github";
+import EmailIcon from "../icons/EmailIcon";
+import Telegram from "../icons/brand_logo/Telegram";
 import Data from "../data/data.json";
 import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
@@ -23,7 +20,7 @@ function Home() {
   };
 
   return (
-    <Section id={NAVIGATION_STRING[0].LABLE}>
+    <Section id={NAVIGATION_STRING[0].LABEL}>
       <div>
         <h3>Hey! I am</h3>
         <motion.h1
@@ -59,16 +56,16 @@ function Home() {
         </motion.h2>
         <address className="connectMe">
           <a href={Data.linkedInLink} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faLinkedin} />
+            <LinkedIn />
           </a>
           <a href={Data.githubLink} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faGithub} />
+            <Github />
           </a>
           <a href={`mailto:${Data.email}`} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faEnvelope} />
+            <EmailIcon />
           </a>
           <a href={Data.telegramLink} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faTelegram} />
+            <Telegram />
           </a>
         </address>
       </div>
@@ -122,9 +119,12 @@ const Section = styled.section`
         border: 1px solid black;
         border-radius: 1.5rem;
         transition: 0.3s ease-in-out;
+        fill: white;
+        stroke: white;
         &:hover {
-          background-color: transparent;
-          color: var(--hover-color2);
+          background: transparent;
+          fill: var(--hover-color2);
+          stroke: var(--hover-color2);
         }
       }
     }

@@ -3,13 +3,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowLeft,
-  faEye,
-  faCode,
-  faAngleRight,
-} from "@fortawesome/free-solid-svg-icons";
+import AngleRight from "../icons/AngleRight";
+import ArrowLeft from "../icons/ArrowLeft";
+import EyeIcon from "../icons/EyeIcon";
+import CodeIcon from "../icons/CodeIcon";
 import Data from "../data/data.json";
 import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
@@ -21,16 +18,16 @@ function Projects() {
   }, [location.pathname]);
 
   return (
-    <Section id={NAVIGATION_STRING[5].LABLE}>
+    <Section id={NAVIGATION_STRING[5].LABEL}>
       {location.pathname !== "/" && (
         <div className="navigateBack">
-          <FontAwesomeIcon icon={faArrowLeft} onClick={() => navigate("..")} />
+          <ArrowLeft onClick={() => navigate(-1)} />
         </div>
       )}
       <h1>
         {NAVIGATION_STRING[5].ICON}&nbsp;
         {location.pathname === "/" ? "" : "All "}
-        {NAVIGATION_STRING[5].LABLE}
+        {NAVIGATION_STRING[5].LABEL}
       </h1>
       <div className="projects">
         {(location.pathname === "/"
@@ -43,7 +40,8 @@ function Projects() {
       {location.pathname === "/" && (
         <div className="viewAll">
           <Link to="/projects">
-            View All <FontAwesomeIcon icon={faAngleRight} />
+            View All
+            <AngleRight />
           </Link>
         </div>
       )}
@@ -88,10 +86,12 @@ function Project({ project, index }: ProjectPropType) {
         <h2>{project.label}</h2>
         <div>
           <a href={project.view} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faEye} /> View
+            <EyeIcon />
+            View
           </a>
           <a href={project.code} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faCode} /> Code
+            <CodeIcon />
+            Code
           </a>
         </div>
       </div>
@@ -113,6 +113,7 @@ const Section = styled.section`
     padding: 0.4rem 0.5rem;
     & svg {
       font-size: 1.2rem;
+      stroke: white;
       cursor: pointer;
       transition: 0.3s ease-in-out;
       &:hover {
@@ -123,6 +124,8 @@ const Section = styled.section`
   & > h1 {
     text-align: center;
     font-size: 3rem;
+    fill: var(--text-color2);
+    stroke: var(--text-color2);
   }
   .projects {
     display: flex;
@@ -160,11 +163,15 @@ const Section = styled.section`
             padding: 0.5rem 2rem;
             background-color: black;
             color: rgb(149, 247, 183);
+            fill: rgb(149, 247, 183);
             border-radius: 1rem;
+            align-items: center;
+            gap: 0.3rem;
             transition: 0.3s ease-in-out;
             &:hover {
               background-color: var(--hover-color1);
               color: black;
+              fill: black;
               box-shadow: 5px 5px 5px rgba(81, 81, 81, 0.5);
             }
           }
@@ -175,7 +182,7 @@ const Section = styled.section`
         transition: 0.3s ease-in-out;
       }
       &:hover .projectContent > div > a {
-        display: block;
+        display: flex;
       }
     }
     @media only screen and (max-width: 900px) {
@@ -205,19 +212,25 @@ const Section = styled.section`
     }
   }
   .viewAll {
-    text-align: center;
     margin-top: 5rem;
+    display: flex;
+    justify-content: center;
     & > a {
       padding: 0.8rem 1.5rem;
       border: 3px solid var(--hover-color1);
       color: var(--text-color2);
+      display: flex;
+      align-items: center;
+      width: max-content;
       border-radius: 15px;
       font-size: 1.1rem;
       font-weight: 500;
       transition: 0.3s ease-in-out;
+      stroke: white;
       &:hover {
         background-color: var(--hover-color1);
         color: black;
+        stroke: black;
         box-shadow: 5px 5px 5px rgba(81, 81, 81, 0.5);
       }
     }

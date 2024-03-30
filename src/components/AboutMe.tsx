@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import AngleRight from "../icons/AngleRight";
 import Data from "../data/data.json";
 import { NAVIGATION_STRING } from "../data/Navigation.constant";
 
@@ -27,10 +26,10 @@ function AboutMe() {
   }, []);
 
   return (
-    <Section id={NAVIGATION_STRING[1].LABLE}>
+    <Section id={NAVIGATION_STRING[1].LABEL}>
       <h1>
         {NAVIGATION_STRING[1].ICON}
-        &nbsp;{NAVIGATION_STRING[1].LABLE}
+        &nbsp;{NAVIGATION_STRING[1].LABEL}
       </h1>
       <div>
         <motion.div
@@ -57,7 +56,7 @@ function AboutMe() {
           <h4>{Data.projects}</h4>
           <a href={Data.resume} target="_blank" rel="noreferrer">
             Resume&nbsp;
-            <FontAwesomeIcon icon={faAngleRight} />
+            <AngleRight />
           </a>
         </motion.div>
       </div>
@@ -111,14 +110,16 @@ const Section = styled.section`
         padding: 1rem 2rem;
         background-color: var(--hover-color1);
         color: white;
+        stroke: white;
         border-radius: 15px;
         font-size: 1.2rem;
         transition: 0.3s ease-in-out;
-        & > svg {
-          font-size: 1.4rem;
-        }
+        display: flex;
+        align-items: center;
+        width: max-content;
         &:hover {
           color: black;
+          stroke: black;
           box-shadow: 5px 5px 5px rgba(81, 81, 81, 0.5);
         }
       }

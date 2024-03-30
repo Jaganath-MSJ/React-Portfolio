@@ -11,10 +11,10 @@ function Skills() {
   };
 
   return (
-    <Section id={NAVIGATION_STRING[2].LABLE}>
+    <Section id={NAVIGATION_STRING[2].LABEL}>
       <h1>
         {NAVIGATION_STRING[2].ICON}
-        &nbsp;{NAVIGATION_STRING[2].LABLE}
+        &nbsp;{NAVIGATION_STRING[2].LABEL}
       </h1>
       <div>
         {Data.Skills.map((skill, index) => (
@@ -45,6 +45,7 @@ const Section = styled.section`
   & > h1 {
     text-align: center;
     font-size: 3rem;
+    fill: var(--text-color2);
   }
   & > div {
     display: flex;
