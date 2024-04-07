@@ -138,6 +138,12 @@
       "code": "https://github.com/Jaganath-MSJ/Social-Media"
     },
     {
+      "label": "Calendar Simple",
+      "img": "assets/projects/Calendar-Simple.png",
+      "view": "https://www.npmjs.com/package/calendar-simple",
+      "code": "https://github.com/Jaganath-MSJ/CalendarSimple"
+    },
+    {
       "label": "Weather-App",
       "img": "assets/projects/Weather-App.png",
       "view": "https://msj-weather-app.netlify.app",
