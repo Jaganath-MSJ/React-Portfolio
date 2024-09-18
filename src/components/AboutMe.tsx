@@ -33,7 +33,7 @@ function AboutMe() {
       </h1>
       <div>
         <motion.div
-          className="aboutmeImg"
+          className="aboutMeImg"
           ref={tiltRef}
           variants={itemVariantsLeft}
           initial="hidden"
@@ -43,7 +43,7 @@ function AboutMe() {
           <img src={Data.img} draggable="false" alt={Data.nameInc} />
         </motion.div>
         <motion.div
-          className="aboutmeDetails"
+          className="aboutMeDetails"
           variants={itemVariantsRight}
           initial="hidden"
           whileInView="show"
@@ -78,7 +78,7 @@ const Section = styled.section`
     flex-wrap: nowrap;
     justify-content: center;
     gap: 10%;
-    .aboutmeImg > img {
+    .aboutMeImg > img {
       margin: auto;
       width: 24rem;
       height: 26rem;
@@ -91,7 +91,7 @@ const Section = styled.section`
         box-shadow: 10px 10px 10px rgb(168, 167, 167);
       }
     }
-    .aboutmeDetails {
+    .aboutMeDetails {
       & > h2 {
         font-weight: bolder;
         font-size: 1.8rem;
@@ -128,7 +128,7 @@ const Section = styled.section`
       flex-wrap: wrap;
     }
     @media only screen and (max-width: 600px) {
-      .aboutmeImg > img {
+      .aboutMeImg > img {
         width: 18rem;
         height: 20rem;
       }

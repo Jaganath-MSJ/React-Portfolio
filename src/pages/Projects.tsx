@@ -19,11 +19,11 @@ function Projects() {
 
   return (
     <Section id={NAVIGATION_STRING[5].LABEL}>
-      {location.pathname !== "/" && (
+      {location.pathname !== "/" ? (
         <div className="navigateBack">
           <ArrowLeft onClick={() => navigate(-1)} />
         </div>
-      )}
+      ) : null}
       <h1>
         {NAVIGATION_STRING[5].ICON}&nbsp;
         {location.pathname === "/" ? "" : "All "}
@@ -37,14 +37,14 @@ function Projects() {
           <Project key={project.label} project={project} index={index} />
         ))}
       </div>
-      {location.pathname === "/" && (
+      {Data.Projects.length > 6 && location.pathname === "/" ? (
         <div className="viewAll">
           <Link to="/projects">
             View All
             <AngleRight />
           </Link>
         </div>
-      )}
+      ) : null}
     </Section>
   );
 }
