@@ -27,7 +27,7 @@ function Experience() {
             transition={{ duration: 1, delay: index * 0.2 }}
           >
             <h2>{`${experience.role}${
-              experience.isIntership ? " | Intership" : ""
+              experience.isInternship ? " | Internship" : ""
             }`}</h2>
             <h3>{experience.companyName}</h3>
             <h4>{`${experience.fromMonthAndYear} | ${

@@ -133,7 +133,7 @@ function Contact() {
       </h1>
       <div className="content">
         <motion.div
-          className="conatctImage"
+          className="contactImage"
           variants={itemVariantsLeft}
           initial="hidden"
           whileInView="show"
@@ -242,7 +242,7 @@ const Section = styled.section`
     padding: 1rem;
     background-color: rgba(220, 220, 220, 0.5);
     border-radius: 1rem;
-    .conatctImage > img {
+    .contactImage > img {
       width: 25rem;
       height: 25rem;
       opacity: 1;
@@ -306,7 +306,7 @@ const Section = styled.section`
       }
     }
     @media only screen and (max-width: 680px) {
-      .conatctImage > img {
+      .contactImage > img {
         width: 15rem;
         height: 15rem;
       }
