@@ -22,7 +22,7 @@ function Home() {
   return (
     <Section id={NAVIGATION_STRING[0].LABEL}>
       <div>
-        <h3>Hey! I am</h3>
+        <h3>Hey! I am a</h3>
         <motion.h1
           variants={itemVariantsLeft}
           initial="hidden"
