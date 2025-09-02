@@ -22,7 +22,7 @@ function Home() {
   return (
     <Section id={NAVIGATION_STRING[0].LABEL}>
       <div>
-        <h3>Hey! I am a</h3>
+        <h3>Hey! I am</h3>
         <motion.h1
           variants={itemVariantsLeft}
           initial="hidden"
@@ -37,7 +37,7 @@ function Home() {
           whileInView="show"
           transition={{ duration: 1 }}
         >
-          <span>I am&nbsp;</span>
+          <span>I am a&nbsp;</span>
           <TypeAnimation
             className="changeText"
             sequence={Data.roles.flatMap((r) => [r, 1000])}
