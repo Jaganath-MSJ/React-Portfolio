@@ -88,23 +88,6 @@ const Foot = styled.footer`
     justify-content: center;
     font-size: 1.2rem;
     font-weight: bold;
-    & > p {
-      text-align: center;
-      & > svg {
-        color: red;
-        margin-right: 0.3rem;
-      }
-      & > a {
-        outline: none;
-        border: none;
-        color: var(--hover-color2);
-        cursor: pointer;
-        transition: 0.3s ease-in-out;
-        &:hover {
-          color: var(--text-color2);
-        }
-      }
-    }
   }
   .footerContent {
     padding: 1rem 4rem;
@@ -179,10 +162,19 @@ const Foot = styled.footer`
     }
   }
   .footerBottom {
-    & > p {
-      display: flex;
-      align-items: center;
-      fill: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    & > p > a {
+      outline: none;
+      border: none;
+      color: var(--hover-color2);
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: var(--text-color2);
+      }
     }
   }
 `;
