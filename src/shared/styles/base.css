@@ -1,0 +1,225 @@
+/* ============================================================
+   RESET + BASE TYPOGRAPHY + GLOBAL UTILITIES
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+figure,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font);
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* ---------- Shell ---------- */
+.shell {
+  width: 100%;
+  max-width: var(--shell-max);
+  margin: 0 auto;
+  padding-inline: var(--pad-desktop);
+}
+@media (max-width: 720px) {
+  .shell {
+    padding-inline: var(--pad-mobile);
+  }
+}
+
+section {
+  padding-block: var(--space-4xl);
+}
+@media (max-width: 720px) {
+  section {
+    padding-block: var(--space-3xl);
+  }
+}
+
+/* ---------- Buttons (shared recipe) ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: var(--glow-sm);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+}
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--heading);
+}
+.btn-ghost:hover {
+  background: var(--border);
+}
+.btn-ghost:active {
+  transform: scale(0.97);
+}
+.btn .arrow {
+  transition: transform 0.2s ease;
+}
+.btn:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* ---------- Icon button (shared) ---------- */
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  background: transparent;
+}
+.icon-btn:hover {
+  color: var(--heading);
+  border-color: var(--accent-border);
+  background: var(--surface);
+}
+.icon-btn:active {
+  transform: scale(0.94);
+}
+
+/* ---------- Card (shared recipe) ---------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: var(--transition);
+}
+.card:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--glow-sm);
+}
+
+/* ---------- Fade-in on scroll ---------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
