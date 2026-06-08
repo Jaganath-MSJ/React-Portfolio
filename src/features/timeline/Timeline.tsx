@@ -1,0 +1,65 @@
+import { useMemo, useState } from 'react';
+import data from '@/data/data.json';
+import { SectionHead } from '@/shared/ui/SectionHead';
+import { useFadeIn } from '@/shared/hooks/useFadeIn';
+import styles from './Timeline.module.css';
+
+const TABS = [
+  { id: 'all', label: 'All' },
+  { id: 'work', label: 'Work' },
+  { id: 'edu', label: 'Education' },
+] as const;
+
+type TabId = (typeof TABS)[number]['id'];
+
+export function Timeline() {
+  const [tab, setTab] = useState<TabId>('all');
+  const ref = useFadeIn();
+
+  const rows = useMemo(() => {
+    if (tab === 'all') return data.Timeline;
+    return data.Timeline.filter((r) => r.kind === tab);
+  }, [tab]);
+
+  return (
+    <section id="Timeline" aria-label="Timeline">
+      <div className="shell" ref={ref}>
+        <SectionHead
+          label="04 — Timeline"
+          title="Where I've"
+          accent="been."
+          caption="Roles, internships and academic milestones — most recent first."
+        />
+        <div className={styles.tabs} role="tablist" aria-label="Timeline filter">
+          {TABS.map((t) => (
+            <button
+              key={t.id}
+              type="button"
+              role="tab"
+              aria-selected={tab === t.id}
+              className={tab === t.id ? styles.active : ''}
+              onClick={() => setTab(t.id)}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+        <ol className={styles.timeline} aria-live="polite">
+          {rows.map((r, i) => (
+            <li className={`card ${styles.row}`} key={`${r.role}-${i}`}>
+              <span className={styles.date}>
+                {r.from} <span className={styles.sep}>→</span>{' '}
+                {r.to ? r.to : <span className={styles.now}>Present</span>}
+              </span>
+              <div className={styles.body}>
+                <h3>{r.role}</h3>
+                <p className={styles.org}>{r.org}</p>
+              </div>
+              <span className={`${styles.badge} ${r.to ? '' : styles.live}`}>{r.type}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}

@@ -4,7 +4,7 @@
 
   "email": "jagan.msjc@gmail.com",
   "phone": "+91 9385304351",
-  "place": "Tamil Nadu, India - 636302",
+  "place": "Tamil Nadu, India",
   "resume": "assets/Resume.pdf",
 
   "linkedInLink": "https://www.linkedin.com/in/jaganathms",
@@ -12,157 +12,145 @@
   "telegramLink": "https://t.me/MSJ_J",
 
   "roles": [
-    "Web Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    "Full Stack Developer"
+    "Frontend Engineer",
+    "Full Stack Developer",
+    "React Specialist",
+    "TypeScript Author"
   ],
 
   "img": "assets/Image.jpg",
-  "role": "Passionate Web Developer",
+  "role": "Frontend Engineer @ Workhall",
 
-  "currently": "Electrical & Electronics Engineering Graduate | Frontend Developer at Workhall | Pursuing Web Development.",
-  "experience": "My skill set includes expertise in React JS, Typescript, Node JS, Java, Appian, SQL, and MongoDB, among others. I gained valuable hands-on experience during a 6-month internship at WNS Vuram Tech, where I specialized in the Appian tool.",
-  "projects": "Subsequently, I embarked on personal projects such as Personal Portfolio, Social Media Platform, Weather App, and a Chat App. These endeavors have further strengthened my development skills and have allowed me to apply my knowledge in practical scenarios.",
+  "blurb": "Electrical & Electronics Engineering graduate turned web developer. I build accessible, performant interfaces — currently shipping React + TypeScript products at Workhall.",
+  "blurb2": "Comfortable across the stack with React, Redux, Node, Java and Appian. I publish small open-source utilities, sketch product ideas, and obsess over micro-interactions. Open to interesting collaborations.",
+
+  "stats": [
+    { "num": "3+", "lbl": "Years Building" },
+    { "num": "5", "lbl": "Featured Projects" },
+    { "num": "15+", "lbl": "Tooling Stack" }
+  ],
 
   "Skills": [
-    {
-      "label": "React",
-      "img": "assets/skills/react.png"
-    },
-    {
-      "label": "Redux",
-      "img": "assets/skills/redux.png"
-    },
-    { "label": "Typescipt", "img": "assets/skills/typescript.png" },
-    {
-      "label": "Node.js",
-      "img": "assets/skills/node-js.png"
-    },
-    {
-      "label": "Java",
-      "img": "assets/skills/java.png"
-    },
-    {
-      "label": "Appian",
-      "img": "assets/skills/appian.png"
-    },
-    {
-      "label": "HTML",
-      "img": "assets/skills/html.png"
-    },
-    {
-      "label": "CSS",
-      "img": "assets/skills/css.png"
-    },
-    {
-      "label": "Java Script",
-      "img": "assets/skills/java-script.png"
-    },
-    {
-      "label": "My Sql",
-      "img": "assets/skills/my-sql.png"
-    },
-    {
-      "label": "Mongo DB",
-      "img": "assets/skills/mongo-db.png"
-    },
-    {
-      "label": "Php My Admin",
-      "img": "assets/skills/php-my-admin.png"
-    },
-    {
-      "label": "C",
-      "img": "assets/skills/c-plus-plus.png"
-    },
-    {
-      "label": "Github",
-      "img": "assets/skills/github.png"
-    },
-    {
-      "label": "Git",
-      "img": "assets/skills/git.png"
-    }
+    { "label": "React", "group": "Frontend", "img": "assets/skills/react.png" },
+    { "label": "TypeScript", "group": "Language", "img": "assets/skills/typescript.png" },
+    { "label": "JavaScript", "group": "Language", "img": "assets/skills/java-script.png" },
+    { "label": "Redux", "group": "State", "img": "assets/skills/redux.png" },
+    { "label": "HTML", "group": "Markup", "img": "assets/skills/html.png" },
+    { "label": "CSS", "group": "Styling", "img": "assets/skills/css.png" },
+    { "label": "Node.js", "group": "Backend", "img": "assets/skills/node-js.png" },
+    { "label": "Java", "group": "Language", "img": "assets/skills/java.png" },
+    { "label": "Appian", "group": "Platform", "img": "assets/skills/appian.png" },
+    { "label": "MySQL", "group": "Database", "img": "assets/skills/my-sql.png" },
+    { "label": "MongoDB", "group": "Database", "img": "assets/skills/mongo-db.png" },
+    { "label": "phpMyAdmin", "group": "Tooling", "img": "assets/skills/php-my-admin.png" },
+    { "label": "C / C++", "group": "Language", "img": "assets/skills/c-plus-plus.png" },
+    { "label": "Git", "group": "Versioning", "img": "assets/skills/git.png" },
+    { "label": "GitHub", "group": "Versioning", "img": "assets/skills/github.png" }
   ],
-  "Education": [
+
+  "Timeline": [
     {
-      "degree": "Bachelor Of Engineering In Electrical and Electronics Engineering",
-      "college": "Sri Krishna College of Engineering and Technology, Coimbatore",
-      "fromYear": 2020,
-      "toYear": 2023,
-      "isCompleted": true
-    },
-    {
-      "degree": "Diploma In Electrical and Electronics Engineering",
-      "college": "Thiagarajar Polytechnic College, Salem",
-      "fromYear": 2017,
-      "toYear": 2020,
-      "isCompleted": true
-    },
-    {
-      "degree": "10th - SSLC",
-      "college": "Sri Sarada Balamandir Boys Matric Higher Secondary School, Salem",
-      "fromYear": 2016,
-      "toYear": 2017,
-      "isCompleted": true
-    }
-  ],
-  "Experience": [
-    {
+      "kind": "work",
       "role": "Associate Software Engineer",
-      "companyName": "Workhall",
-      "isInternship": false,
-      "fromMonthAndYear": "Sep 2023",
-      "toMonthAndYear": null
+      "org": "Workhall",
+      "from": "Sep 2023",
+      "to": null,
+      "type": "Full-time"
     },
     {
+      "kind": "work",
       "role": "Associate Technical Consultant",
-      "companyName": "WNS-Vuram",
-      "isInternship": true,
-      "fromMonthAndYear": "Oct 2022",
-      "toMonthAndYear": "Mar 2023"
+      "org": "WNS-Vuram",
+      "from": "Oct 2022",
+      "to": "Mar 2023",
+      "type": "Internship"
     },
     {
-      "role": "Web Developer",
-      "companyName": "The Sparks Foundation",
-      "isInternship": true,
-      "fromMonthAndYear": "Jan 2022",
-      "toMonthAndYear": "Feb 2022"
+      "kind": "work",
+      "role": "Web Developer Intern",
+      "org": "The Sparks Foundation",
+      "from": "Jan 2022",
+      "to": "Feb 2022",
+      "type": "Internship"
+    },
+    {
+      "kind": "edu",
+      "role": "B.E. Electrical & Electronics Engineering",
+      "org": "Sri Krishna College of Engineering and Technology, Coimbatore",
+      "from": "2020",
+      "to": "2023",
+      "type": "Bachelor's"
+    },
+    {
+      "kind": "edu",
+      "role": "Diploma — Electrical & Electronics Engineering",
+      "org": "Thiagarajar Polytechnic College, Salem",
+      "from": "2017",
+      "to": "2020",
+      "type": "Diploma"
+    },
+    {
+      "kind": "edu",
+      "role": "SSLC — 10th Standard",
+      "org": "Sri Sarada Balamandir Boys Matric Hr Sec School, Salem",
+      "from": "2016",
+      "to": "2017",
+      "type": "School"
     }
   ],
+
   "Projects": [
     {
       "label": "Social Media",
+      "year": 2023,
+      "cat": "Web App",
+      "desc": "Twitter-style social platform with auth, post creation, profiles and a follow graph.",
+      "tags": ["React", "Redux", "Node", "MongoDB"],
       "img": "assets/projects/Social-Media.png",
       "view": "https://msj-social-media.netlify.app",
       "code": "https://github.com/Jaganath-MSJ/Social-Media"
     },
     {
       "label": "Calendar Simple",
+      "year": 2023,
+      "cat": "Library",
+      "desc": "Lightweight calendar-matrix utility published to npm — zero dependencies.",
+      "tags": ["NPM", "JavaScript", "Utility"],
       "img": "assets/projects/Calendar-Simple.png",
       "view": "https://www.npmjs.com/package/calendar-simple",
       "code": "https://github.com/Jaganath-MSJ/CalendarSimple"
     },
     {
-      "label": "Weather App",
-      "img": "assets/projects/Weather-App.png",
-      "view": "https://msj-weather-app.netlify.app",
-      "code": "https://github.com/Jaganath-MSJ/Weather-App"
+      "label": "Happy Chat",
+      "year": 2022,
+      "cat": "Realtime",
+      "desc": "Realtime 1-to-1 chat application with avatars, typing state and message persistence.",
+      "tags": ["React", "Socket.IO", "Express"],
+      "img": "assets/projects/Happy-Chat.png",
+      "view": "https://happychat-app.netlify.app",
+      "code": "https://github.com/Jaganath-MSJ/Happy-Chat-App"
     },
     {
       "label": "Job Search",
+      "year": 2022,
+      "cat": "Web App",
+      "desc": "Job listings browser with filtering, search and saved roles.",
+      "tags": ["React", "Redux"],
       "img": "assets/projects/Job-Search.png",
       "view": "https://msj-job-search.netlify.app",
       "code": "https://github.com/Jaganath-MSJ/Job-Search"
     },
     {
-      "label": "Happy Chat App",
-      "img": "assets/projects/Happy-Chat.png",
-      "view": "https://happychat-app.netlify.app",
-      "code": "https://github.com/Jaganath-MSJ/Happy-Chat-App"
+      "label": "Weather App",
+      "year": 2022,
+      "cat": "Web App",
+      "desc": "City-based current & forecast weather using a public weather API.",
+      "tags": ["React", "REST API"],
+      "img": "assets/projects/Weather-App.png",
+      "view": "https://msj-weather-app.netlify.app",
+      "code": "https://github.com/Jaganath-MSJ/Weather-App"
     }
   ],
 
-  "aboutMe": "I am a motivated and goal-driven individual currently working as a Frontend Developer at Workhall, where I am passionate about crafting innovative web solutions.",
-  "thankYou": "Thank you for taking the time to visit my personal portfolio website. If you'd like to connect, please feel free to reach out to me using the contact details provided below or through my social media profiles."
+  "thankYou": "If you'd like to collaborate, ship something together, or just say hello — my inbox is open."
 }

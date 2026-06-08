@@ -1,24 +1,34 @@
-import React, { Fragment } from "react";
-import Home from "../components/Home";
-import AboutMe from "../components/AboutMe";
-import Skills from "../components/Skills";
-import Education from "../components/Education";
-import Projects from "./Projects";
-import Contact from "../components/Contact";
-import Experience from "../components/Experience";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { Hero } from '@/features/hero/Hero';
+import { About } from '@/features/about/About';
+import { ProjectsSection } from '@/features/projects/ProjectsSection';
+import { Stack } from '@/features/stack/Stack';
+import { Timeline } from '@/features/timeline/Timeline';
+import { Contact } from '@/features/contact/Contact';
+import { scrollToId } from '@/shared/lib/scrollToId';
 
-function MainPage() {
+export function MainPage() {
+  const location = useLocation();
+
+  // Handle nav jumps that arrive from another route (e.g. /projects → /#Stack)
+  useEffect(() => {
+    const target = (location.state as { scrollTo?: string } | null)?.scrollTo;
+    if (target) {
+      // wait a frame so sections have rendered before measuring
+      requestAnimationFrame(() => scrollToId(target));
+      window.history.replaceState({}, '');
+    }
+  }, [location.state]);
+
   return (
-    <Fragment>
-      <Home />
-      <AboutMe />
-      <Skills />
-      <Education />
-      <Experience />
-      <Projects />
+    <>
+      <Hero />
+      <About />
+      <ProjectsSection />
+      <Stack />
+      <Timeline />
       <Contact />
-    </Fragment>
+    </>
   );
 }
-
-export default MainPage;
