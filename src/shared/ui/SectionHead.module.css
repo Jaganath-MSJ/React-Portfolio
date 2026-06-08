@@ -1,0 +1,51 @@
+.head {
+  margin-bottom: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.label::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.head h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--heading);
+  max-width: 18ch;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.caption {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 56ch;
+  margin-top: var(--space-xs);
+}
+
+@media (max-width: 720px) {
+  .head h2 {
+    font-size: 36px;
+  }
+}
