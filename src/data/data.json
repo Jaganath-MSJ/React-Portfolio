@@ -22,7 +22,7 @@
   "role": "Frontend Engineer @ Workhall",
 
   "blurb": "Electrical & Electronics Engineering graduate turned web developer. I build accessible, performant interfaces — currently shipping React + TypeScript products at Workhall.",
-  "blurb2": "Comfortable across the stack with React, Redux, Node, Java and Appian. I publish small open-source utilities, sketch product ideas, and obsess over micro-interactions. Open to interesting collaborations.",
+  "blurb2": "2.5+ years building scalable web apps with React, TypeScript, Redux, and Node. I've cut load times by 20%, boosted team efficiency by 40%, and publish open-source packages. Always open to interesting collaborations.",
 
   "stats": [
     { "num": "3+", "lbl": "Years Building" },
@@ -32,20 +32,22 @@
 
   "Skills": [
     { "label": "React", "group": "Frontend", "img": "assets/skills/react.png" },
+    { "label": "React Native", "group": "Frontend", "img": "assets/skills/react.png" },
+    { "label": "Next.js", "group": "Frontend", "img": "assets/skills/next-js.png" },
     { "label": "TypeScript", "group": "Language", "img": "assets/skills/typescript.png" },
     { "label": "JavaScript", "group": "Language", "img": "assets/skills/java-script.png" },
-    { "label": "Redux", "group": "State", "img": "assets/skills/redux.png" },
     { "label": "HTML", "group": "Markup", "img": "assets/skills/html.png" },
     { "label": "CSS", "group": "Styling", "img": "assets/skills/css.png" },
+    { "label": "Tailwind", "group": "Styling", "img": "assets/skills/tailwind.png" },
+    { "label": "SASS", "group": "Styling", "img": "assets/skills/sass.png" },
+    { "label": "Redux", "group": "State", "img": "assets/skills/redux.png" },
+    { "label": "Zustand", "group": "State", "img": "assets/skills/zustand.png" },
     { "label": "Node.js", "group": "Backend", "img": "assets/skills/node-js.png" },
-    { "label": "Java", "group": "Language", "img": "assets/skills/java.png" },
-    { "label": "Appian", "group": "Platform", "img": "assets/skills/appian.png" },
-    { "label": "MySQL", "group": "Database", "img": "assets/skills/my-sql.png" },
+    { "label": "Express.js", "group": "Backend", "img": "assets/skills/express-js.png" },
     { "label": "MongoDB", "group": "Database", "img": "assets/skills/mongo-db.png" },
-    { "label": "phpMyAdmin", "group": "Tooling", "img": "assets/skills/php-my-admin.png" },
-    { "label": "C / C++", "group": "Language", "img": "assets/skills/c-plus-plus.png" },
-    { "label": "Git", "group": "Versioning", "img": "assets/skills/git.png" },
-    { "label": "GitHub", "group": "Versioning", "img": "assets/skills/github.png" }
+    { "label": "My SQL", "group": "Database", "img": "assets/skills/my-sql.png" },
+    { "label": "Git", "group": "Tooling", "img": "assets/skills/git.png" },
+    { "label": "GitHub Actions", "group": "Tooling", "img": "assets/skills/github.png" }
   ],
 
   "Timeline": [
@@ -62,7 +64,7 @@
       "role": "Associate Technical Consultant",
       "org": "WNS-Vuram",
       "from": "Oct 2022",
-      "to": "Mar 2023",
+      "to": "May 2023",
       "type": "Internship"
     },
     {
@@ -101,31 +103,31 @@
 
   "Projects": [
     {
+      "label": "Calendar Simple",
+      "year": 2026,
+      "cat": "Library",
+      "desc": "Production-grade React calendar library published to npm. Features Month, Week, Day, Schedule and Custom Days views, rich event management with multi-day spanning and custom styling, full TypeScript support, ARIA accessibility, keyboard navigation, dark mode, RTL, and i18n via Luxon.",
+      "tags": ["NPM", "React", "TypeScript", "Luxon"],
+      "img": "assets/projects/Calendar-Simple.png",
+      "view": "https://calendarsimple.netlify.app",
+      "code": "https://github.com/Jaganath-MSJ/CalendarSimple"
+    },
+    {
       "label": "Social Media",
       "year": 2023,
       "cat": "Web App",
-      "desc": "Twitter-style social platform with auth, post creation, profiles and a follow graph.",
-      "tags": ["React", "Redux", "Node", "MongoDB"],
+      "desc": "Full-stack social platform with JWT-based authentication, protected routes, post creation and editing, profile management, and a follow graph — delivering a seamless experience across all authenticated workflows.",
+      "tags": ["React", "Redux", "Node.js", "MongoDB", "JWT"],
       "img": "assets/projects/Social-Media.png",
       "view": "https://msj-social-media.netlify.app",
       "code": "https://github.com/Jaganath-MSJ/Social-Media"
     },
     {
-      "label": "Calendar Simple",
-      "year": 2023,
-      "cat": "Library",
-      "desc": "Lightweight calendar-matrix utility published to npm — zero dependencies.",
-      "tags": ["NPM", "JavaScript", "Utility"],
-      "img": "assets/projects/Calendar-Simple.png",
-      "view": "https://www.npmjs.com/package/calendar-simple",
-      "code": "https://github.com/Jaganath-MSJ/CalendarSimple"
-    },
-    {
       "label": "Happy Chat",
       "year": 2022,
       "cat": "Realtime",
-      "desc": "Realtime 1-to-1 chat application with avatars, typing state and message persistence.",
-      "tags": ["React", "Socket.IO", "Express"],
+      "desc": "Real-time 1-to-1 chat app with end-to-end encryption, Socket.io-powered messaging, typing indicators, avatars, and message persistence.",
+      "tags": ["React", "Socket.IO", "Express", "MongoDB"],
       "img": "assets/projects/Happy-Chat.png",
       "view": "https://happychat-app.netlify.app",
       "code": "https://github.com/Jaganath-MSJ/Happy-Chat-App"
