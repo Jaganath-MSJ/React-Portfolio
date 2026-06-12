@@ -10,7 +10,6 @@ export { default as IcPhone } from './phone.svg?react';
 export { default as IcPin } from './pin.svg?react';
 export { default as IcDownload } from './download.svg?react';
 export { default as IcSend } from './send.svg?react';
-export { default as IcSearch } from './search.svg?react';
 export { default as IcSun } from './sun.svg?react';
 export { default as IcMoon } from './moon.svg?react';
 export { default as IcLinkedIn } from './linkedin.svg?react';

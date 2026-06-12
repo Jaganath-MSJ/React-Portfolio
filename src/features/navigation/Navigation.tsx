@@ -5,13 +5,12 @@ import data from '@/data/data.json';
 import { useUi } from '@/app/providers/UiProvider';
 import { useScrollSpy } from '@/shared/hooks/useScrollSpy';
 import { scrollToId } from '@/shared/lib/scrollToId';
-import { KBD_MOD } from '@/shared/hooks/usePalette';
-import { IcArrowRight, IcMenu, IcMoon, IcSearch, IcSun } from '@/shared/icons';
+import { IcArrowRight, IcMenu, IcMoon, IcSun } from '@/shared/icons';
 import { MobileDrawer } from './MobileDrawer';
 import styles from './Navigation.module.css';
 
 export function Navigation() {
-  const { theme, toggleTheme, setPaletteOpen } = useUi();
+  const { theme, toggleTheme } = useUi();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -59,16 +58,6 @@ export function Navigation() {
           ))}
         </ul>
         <div className={styles.actions}>
-          <button
-            type="button"
-            className={styles.kbdHint}
-            onClick={() => setPaletteOpen(true)}
-            aria-label="Open command palette"
-          >
-            <IcSearch width={14} height={14} />
-            <span>Search</span>
-            <kbd>{KBD_MOD}K</kbd>
-          </button>
           <button
             type="button"
             className="icon-btn"
