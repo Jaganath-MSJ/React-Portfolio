@@ -14,7 +14,6 @@ import {
   IcMoon,
   IcSearch,
   IcSun,
-  IcTelegram,
 } from '@/shared/icons';
 import styles from './CommandPalette.module.css';
 
@@ -77,17 +76,6 @@ export function CommandPalette() {
         keywords: 'github code repo',
         run: () => {
           window.open(data.githubLink, '_blank');
-          onClose();
-        },
-      },
-      {
-        group: 'External',
-        label: 'Telegram',
-        hint: 'Send a message',
-        icon: <IcTelegram width={14} height={14} />,
-        keywords: 'telegram chat',
-        run: () => {
-          window.open(data.telegramLink, '_blank');
           onClose();
         },
       },

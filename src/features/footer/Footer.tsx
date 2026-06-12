@@ -21,9 +21,6 @@ export function Footer() {
             <a href={data.githubLink} target="_blank" rel="noreferrer">
               GitHub <IcArrowUR width={11} height={11} className={styles.arrow} />
             </a>
-            <a href={data.telegramLink} target="_blank" rel="noreferrer">
-              Telegram <IcArrowUR width={11} height={11} className={styles.arrow} />
-            </a>
           </div>
         </div>
         <div className={styles.bottom}>

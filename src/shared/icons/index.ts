@@ -15,4 +15,3 @@ export { default as IcSun } from './sun.svg?react';
 export { default as IcMoon } from './moon.svg?react';
 export { default as IcLinkedIn } from './linkedin.svg?react';
 export { default as IcGithub } from './github.svg?react';
-export { default as IcTelegram } from './telegram.svg?react';

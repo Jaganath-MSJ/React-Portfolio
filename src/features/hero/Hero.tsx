@@ -1,6 +1,6 @@
 import data from '@/data/data.json';
 import { scrollToId } from '@/shared/lib/scrollToId';
-import { IcArrowRight, IcDownload, IcGithub, IcLinkedIn, IcMail, IcTelegram } from '@/shared/icons';
+import { IcArrowRight, IcDownload, IcGithub, IcLinkedIn, IcMail } from '@/shared/icons';
 import { RoleRotator } from './RoleRotator';
 import styles from './Hero.module.css';
 
@@ -36,9 +36,6 @@ export function Hero() {
             </a>
             <a href={data.githubLink} target="_blank" rel="noreferrer" className="icon-btn" aria-label="GitHub">
               <IcGithub />
-            </a>
-            <a href={data.telegramLink} target="_blank" rel="noreferrer" className="icon-btn" aria-label="Telegram">
-              <IcTelegram />
             </a>
             <a href={`mailto:${data.email}`} className="icon-btn" aria-label="Email">
               <IcMail />
