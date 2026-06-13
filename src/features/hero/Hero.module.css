@@ -7,6 +7,36 @@
   flex-direction: column;
 }
 
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.title,
+.roles,
+.meta,
+.cta {
+  animation: rise var(--reveal-dur) var(--reveal-ease) both;
+}
+.title {
+  animation-delay: 0.05s;
+}
+.roles {
+  animation-delay: 0.13s;
+}
+.meta {
+  animation-delay: 0.21s;
+}
+.cta {
+  animation-delay: 0.29s;
+}
+
 .title {
   font-size: 72px;
   font-weight: 700;

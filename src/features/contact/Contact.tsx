@@ -1,13 +1,14 @@
+import type { CSSProperties } from 'react';
 import data from '@/data/data.json';
 import { SectionHead } from '@/shared/ui/SectionHead';
-import { useFadeIn } from '@/shared/hooks/useFadeIn';
+import { useReveal } from '@/shared/hooks/useReveal';
 import { useUi } from '@/app/providers/UiProvider';
 import { IcCheck, IcCopy, IcMail, IcPhone, IcPin } from '@/shared/icons';
 import { ContactForm } from './ContactForm';
 import styles from './Contact.module.css';
 
 export function Contact() {
-  const ref = useFadeIn();
+  const ref = useReveal();
   const { copy, copiedKey } = useUi();
 
   const cards = [
@@ -21,7 +22,7 @@ export function Contact() {
       <div className="shell" ref={ref}>
         <SectionHead label="05 — Contact" title="Let's make" accent="something." caption={data.thankYou} />
         <div className={styles.grid}>
-          <div className={styles.intro}>
+          <div className={`reveal ${styles.intro}`} style={{ '--i': 1 } as CSSProperties}>
             <h3>
               Got a project in <span className={styles.accent}>mind?</span>
             </h3>
@@ -52,7 +53,9 @@ export function Contact() {
               ))}
             </ul>
           </div>
-          <ContactForm />
+          <div className="reveal" style={{ '--i': 2 } as CSSProperties}>
+            <ContactForm />
+          </div>
         </div>
       </div>
     </section>

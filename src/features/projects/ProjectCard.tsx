@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { IcArrowUR } from '@/shared/icons';
 import styles from './Projects.module.css';
 
@@ -12,9 +13,20 @@ export interface Project {
   code: string;
 }
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({
+  project,
+  index = 0,
+  animate = true,
+}: {
+  project: Project;
+  index?: number;
+  animate?: boolean;
+}) {
   return (
-    <li className={`card ${styles.projectCard}`}>
+    <li
+      className={`card ${animate ? 'reveal' : ''} ${styles.projectCard}`}
+      style={{ '--i': index } as CSSProperties}
+    >
       <a
         className={styles.img}
         href={project.view}

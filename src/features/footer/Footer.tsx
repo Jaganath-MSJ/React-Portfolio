@@ -1,13 +1,15 @@
 import data from '@/data/data.json';
 import { scrollToId } from '@/shared/lib/scrollToId';
+import { useReveal } from '@/shared/hooks/useReveal';
 import { IcArrowUR, IcArrowUp } from '@/shared/icons';
 import styles from './Footer.module.css';
 
 export function Footer() {
+  const ref = useReveal<HTMLDivElement>();
   return (
     <footer className={styles.foot}>
-      <div className="shell">
-        <div className={styles.top}>
+      <div className="shell" ref={ref}>
+        <div className={`reveal ${styles.top}`}>
           <h2 className={styles.display}>
             Let's work <span className={styles.accent}>together.</span>
           </h2>

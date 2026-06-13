@@ -42,6 +42,10 @@
   --transition: all 0.2s ease;
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
+  --reveal-dur: 0.55s;
+  --reveal-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --reveal-step: 70ms;
+
   --shell-max: 1100px;
   --pad-mobile: 24px;
   --pad-desktop: 48px;

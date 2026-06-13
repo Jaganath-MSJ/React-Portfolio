@@ -1,7 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type CSSProperties } from 'react';
 import data from '@/data/data.json';
 import { SectionHead } from '@/shared/ui/SectionHead';
-import { useFadeIn } from '@/shared/hooks/useFadeIn';
+import { useReveal } from '@/shared/hooks/useReveal';
 import styles from './Timeline.module.css';
 
 const TABS = [
@@ -14,7 +14,7 @@ type TabId = (typeof TABS)[number]['id'];
 
 export function Timeline() {
   const [tab, setTab] = useState<TabId>('all');
-  const ref = useFadeIn();
+  const ref = useReveal();
 
   const rows = useMemo(() => {
     if (tab === 'all') return data.Timeline;
@@ -30,7 +30,7 @@ export function Timeline() {
           accent="been."
           caption="Roles, internships and academic milestones — most recent first."
         />
-        <div className={styles.tabs} role="tablist" aria-label="Timeline filter">
+        <div className={`reveal ${styles.tabs}`} role="tablist" aria-label="Timeline filter">
           {TABS.map((t) => (
             <button
               key={t.id}
@@ -46,7 +46,11 @@ export function Timeline() {
         </div>
         <ol className={styles.timeline} aria-live="polite">
           {rows.map((r, i) => (
-            <li className={`card ${styles.row}`} key={`${r.role}-${i}`}>
+            <li
+              className={`card reveal ${styles.row}`}
+              style={{ '--i': Math.min(i + 1, 6) } as CSSProperties}
+              key={`${r.role}-${i}`}
+            >
               <span className={styles.date}>
                 {r.from} <span className={styles.sep}>→</span>{' '}
                 {r.to ? r.to : <span className={styles.now}>Present</span>}

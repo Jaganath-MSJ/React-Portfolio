@@ -14,6 +14,17 @@
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid var(--border);
+  animation: nav-in var(--reveal-dur) var(--reveal-ease) both;
+}
+@keyframes nav-in {
+  from {
+    opacity: 0;
+    translate: 0 -100%;
+  }
+  to {
+    opacity: 1;
+    translate: none;
+  }
 }
 
 .brand {
@@ -90,6 +101,12 @@
 .cta:hover {
   background: var(--accent-hover);
   box-shadow: var(--glow-sm);
+}
+.cta svg {
+  transition: transform 0.2s ease;
+}
+.cta:hover svg {
+  transform: translateX(3px);
 }
 
 .nav .menuBtn {

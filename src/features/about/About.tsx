@@ -1,10 +1,28 @@
+import type { CSSProperties } from 'react';
 import data from '@/data/data.json';
 import { SectionHead } from '@/shared/ui/SectionHead';
-import { useFadeIn } from '@/shared/hooks/useFadeIn';
+import { useReveal } from '@/shared/hooks/useReveal';
+import { useInView } from '@/shared/hooks/useInView';
+import { useCountUp } from '@/shared/hooks/useCountUp';
 import styles from './About.module.css';
 
+function StatNumber({ value, active }: { value: string; active: boolean }) {
+  const match = /^(\d+)(.*)$/.exec(value);
+  const end = match ? Number(match[1]) : 0;
+  const suffix = match ? match[2] : value;
+  const count = useCountUp(end, active);
+  return (
+    <dt className={styles.num}>
+      {match ? count : value}
+      {match ? suffix : ''}
+    </dt>
+  );
+}
+
 export function About() {
-  const ref = useFadeIn();
+  const ref = useReveal();
+  const stats = useInView<HTMLDListElement>();
+
   return (
     <section id="About" aria-label="About">
       <div className="shell" ref={ref}>
@@ -15,23 +33,23 @@ export function About() {
           caption="EEE graduate by training, web developer by trade. I gravitate to the seam where visual design meets the code that actually runs it."
         />
         <div className={styles.grid}>
-          <figure className={styles.portrait}>
+          <figure className={`reveal ${styles.portrait}`} style={{ '--i': 1 } as CSSProperties}>
             <img src={data.img} alt={data.nameInc} draggable="false" loading="lazy" decoding="async" />
             <figcaption>
               {data.nameInc} · {data.place}
             </figcaption>
           </figure>
-          <div className={styles.body}>
+          <div className={`reveal ${styles.body}`} style={{ '--i': 2 } as CSSProperties}>
             <h3>
               I'm {data.name}, a <span className={styles.accent}>frontend engineer</span> shipping React +
               TypeScript at Workhall.
             </h3>
             <p>{data.blurb}</p>
             <p>{data.blurb2}</p>
-            <dl className={styles.stats}>
+            <dl className={styles.stats} ref={stats.ref}>
               {data.stats.map((s) => (
                 <div className={`card ${styles.statCard}`} key={s.lbl}>
-                  <dt className={styles.num}>{s.num}</dt>
+                  <StatNumber value={s.num} active={stats.inView} />
                   <dd className={styles.statLbl}>{s.lbl}</dd>
                 </div>
               ))}

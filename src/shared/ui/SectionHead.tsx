@@ -9,7 +9,7 @@ interface SectionHeadProps {
 
 export function SectionHead({ label, title, accent, caption }: SectionHeadProps) {
   return (
-    <header className={styles.head}>
+    <header className={`reveal ${styles.head}`}>
       <span className={styles.label}>{label}</span>
       <h2>
         {title}
