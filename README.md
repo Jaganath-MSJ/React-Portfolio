@@ -16,7 +16,7 @@ I'm Jaganath, an Electrical & Electronics Engineering graduate turned web develo
 - **Vite** — build tool & dev server
 - **React Router v7** — routing
 - **CSS Modules + design tokens** — no CSS framework, no CSS-in-JS
-- **EmailJS** — contact form delivery
+- **mailto** — contact form opens the visitor's mail client
 - **Netlify** — hosting
 
 ## Connect
