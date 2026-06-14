@@ -39,7 +39,7 @@ export function Navigation() {
           }}
         >
           <span className={styles.dot} aria-hidden="true" />
-          <span>{data.nameInc}</span>
+          <span>{data.profile.nameInc}</span>
         </a>
         <ul className={styles.links}>
           {NAV.map((n) => (
@@ -67,8 +67,8 @@ export function Navigation() {
           >
             {theme === 'dark' ? <IcSun width={16} height={16} /> : <IcMoon width={16} height={16} />}
           </button>
-          <a className={styles.cta} href={`mailto:${data.email}`}>
-            Get in touch <IcArrowRight width={14} height={14} />
+          <a className={styles.cta} href={`mailto:${data.profile.email}`}>
+            {data.nav.cta} <IcArrowRight width={14} height={14} />
           </a>
           <button
             type="button"

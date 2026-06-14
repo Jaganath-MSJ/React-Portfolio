@@ -53,13 +53,13 @@ export function MobileDrawer({ open, onClose, onJump }: MobileDrawerProps) {
         ))}
       </div>
       <div className={styles.foot}>
-        <a href={data.linkedInLink} target="_blank" rel="noreferrer">
+        <a href={data.profile.linkedInLink} target="_blank" rel="noreferrer">
           LinkedIn
         </a>
-        <a href={data.githubLink} target="_blank" rel="noreferrer">
+        <a href={data.profile.githubLink} target="_blank" rel="noreferrer">
           GitHub
         </a>
-        <a href={`mailto:${data.email}`}>Email</a>
+        <a href={`mailto:${data.profile.email}`}>Email</a>
       </div>
     </div>
   );

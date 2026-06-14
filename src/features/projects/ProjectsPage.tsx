@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import data from '@/data/data.json';
 import { SectionHead } from '@/shared/ui/SectionHead';
 import { useReveal } from '@/shared/hooks/useReveal';
 import { IcArrowRight } from '@/shared/icons';
@@ -14,10 +15,10 @@ export function ProjectsPage() {
           <IcArrowRight width={14} height={14} className={styles.backArrow} /> Back home
         </Link>
         <SectionHead
-          label="Personal projects"
-          title="Everything"
-          accent="I've shipped."
-          caption="The full list — open-source utilities, weekend experiments, and small products built outside of work."
+          label={data.projects.page.label}
+          title={data.projects.page.title}
+          accent={data.projects.page.accent}
+          caption={data.projects.page.caption}
         />
         <ProjectsGrid />
       </div>

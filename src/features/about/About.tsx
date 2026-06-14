@@ -27,27 +27,27 @@ export function About() {
     <section id="About" aria-label="About">
       <div className="shell" ref={ref}>
         <SectionHead
-          label="01 — About"
-          title="A frontend"
-          accent="generalist."
-          caption="EEE graduate by training, web developer by trade. I gravitate to the seam where visual design meets the code that actually runs it."
+          label={data.about.label}
+          title={data.about.title}
+          accent={data.about.accent}
+          caption={data.about.caption}
         />
         <div className={styles.grid}>
           <figure className={`reveal ${styles.portrait}`} style={{ '--i': 1 } as CSSProperties}>
-            <img src={data.img} alt={data.nameInc} draggable="false" loading="lazy" decoding="async" />
+            <img src={data.profile.img} alt={data.profile.nameInc} draggable="false" loading="lazy" decoding="async" />
             <figcaption>
-              {data.nameInc} · {data.place}
+              {data.profile.nameInc} · {data.profile.place}
             </figcaption>
           </figure>
           <div className={`reveal ${styles.body}`} style={{ '--i': 2 } as CSSProperties}>
             <h3>
-              I'm {data.name}, a <span className={styles.accent}>frontend engineer</span> shipping React +
-              TypeScript at Workhall.
+              I'm {data.profile.name}, a <span className={styles.accent}>{data.about.leadAccent}</span>{' '}
+              {data.about.leadTail}
             </h3>
-            <p>{data.blurb}</p>
-            <p>{data.blurb2}</p>
+            <p>{data.about.blurb}</p>
+            <p>{data.about.blurb2}</p>
             <dl className={styles.stats} ref={stats.ref}>
-              {data.stats.map((s) => (
+              {data.about.stats.map((s) => (
                 <div className={`card ${styles.statCard}`} key={s.lbl}>
                   <StatNumber value={s.num} active={stats.inView} />
                   <dd className={styles.statLbl}>{s.lbl}</dd>

@@ -10,13 +10,13 @@ export function Stack() {
     <section id="Stack" aria-label="Tooling stack">
       <div className="shell" ref={ref}>
         <SectionHead
-          label="03 — Stack"
-          title="Tools I"
-          accent="reach for."
-          caption="The day-to-day toolkit — components I've shipped in production, plus the systems I lean on around them."
+          label={data.stack.label}
+          title={data.stack.title}
+          accent={data.stack.accent}
+          caption={data.stack.caption}
         />
         <ul className={styles.grid}>
-          {data.Skills.map((s, i) => (
+          {data.stack.items.map((s, i) => (
             <li
               className={`card reveal ${styles.skillCard}`}
               style={{ '--i': Math.min(i, 6) } as CSSProperties}

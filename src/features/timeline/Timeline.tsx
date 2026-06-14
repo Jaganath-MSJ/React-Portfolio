@@ -17,20 +17,20 @@ export function Timeline() {
   const ref = useReveal();
 
   const rows = useMemo(() => {
-    if (tab === 'all') return data.Timeline;
-    return data.Timeline.filter((r) => r.kind === tab);
+    if (tab === 'all') return data.timeline.items;
+    return data.timeline.items.filter((r) => r.kind === tab);
   }, [tab]);
 
   return (
     <section id="Timeline" aria-label="Timeline">
       <div className="shell" ref={ref}>
         <SectionHead
-          label="04 — Timeline"
-          title="Where I've"
-          accent="been."
-          caption="Roles, internships and academic milestones — most recent first."
+          label={data.timeline.label}
+          title={data.timeline.title}
+          accent={data.timeline.accent}
+          caption={data.timeline.caption}
         />
-        <div className={`reveal ${styles.tabs}`} role="tablist" aria-label="Timeline filter">
+        <div className={`reveal ${styles.tabs}`} role="tablist" aria-label=" filter">
           {TABS.map((t) => (
             <button
               key={t.id}

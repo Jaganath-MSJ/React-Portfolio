@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import data from '@/data/data.json';
 import { IcArrowRight } from '@/shared/icons';
 import styles from './NotFound.module.css';
 
@@ -8,9 +9,9 @@ export function NotFound() {
       <div className="shell">
         <p className={styles.code}>404</p>
         <h1>
-          This page doesn't <span className={styles.accent}>exist.</span>
+          {data.notFound.title} <span className={styles.accent}>{data.notFound.accent}</span>
         </h1>
-        <p className={styles.caption}>The link may be broken, or the page may have moved.</p>
+        <p className={styles.caption}>{data.notFound.caption}</p>
         <Link to="/" className="btn btn-ghost">
           Back home <IcArrowRight width={14} height={14} className="arrow" />
         </Link>

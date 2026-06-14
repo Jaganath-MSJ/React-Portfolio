@@ -11,23 +11,23 @@ export function Footer() {
       <div className="shell" ref={ref}>
         <div className={`reveal ${styles.top}`}>
           <h2 className={styles.display}>
-            Let's work <span className={styles.accent}>together.</span>
+            {data.footer.title} <span className={styles.accent}>{data.footer.accent}</span>
           </h2>
           <div className={styles.side}>
-            <a href={`mailto:${data.email}`}>
-              {data.email} <IcArrowUR width={11} height={11} className={styles.arrow} />
+            <a href={`mailto:${data.profile.email}`}>
+              {data.profile.email} <IcArrowUR width={11} height={11} className={styles.arrow} />
             </a>
-            <a href={data.linkedInLink} target="_blank" rel="noreferrer">
+            <a href={data.profile.linkedInLink} target="_blank" rel="noreferrer">
               LinkedIn <IcArrowUR width={11} height={11} className={styles.arrow} />
             </a>
-            <a href={data.githubLink} target="_blank" rel="noreferrer">
+            <a href={data.profile.githubLink} target="_blank" rel="noreferrer">
               GitHub <IcArrowUR width={11} height={11} className={styles.arrow} />
             </a>
           </div>
         </div>
         <div className={styles.bottom}>
           <span>
-            © {new Date().getFullYear()} {data.nameInc} · Built with React
+            © {new Date().getFullYear()} {data.profile.nameInc} · {data.footer.colophon}
           </span>
           <button type="button" className={styles.topBtn} onClick={() => scrollToId('top')} aria-label="Back to top">
             Back to top <IcArrowUp width={12} height={12} />

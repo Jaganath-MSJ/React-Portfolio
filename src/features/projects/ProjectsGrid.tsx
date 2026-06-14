@@ -3,7 +3,7 @@ import data from '@/data/data.json';
 import { ProjectCard, type Project } from './ProjectCard';
 import styles from './Projects.module.css';
 
-const PROJECTS = data.Projects as Project[];
+const PROJECTS = data.projects.items as Project[];
 
 export function ProjectsGrid() {
   // remember which cards already revealed so switching filters doesn't replay them

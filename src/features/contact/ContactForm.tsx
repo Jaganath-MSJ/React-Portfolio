@@ -24,7 +24,7 @@ export function ContactForm() {
   function mailtoHref() {
     const subj = encodeURIComponent(`Hello from ${form.name || 'your portfolio'}`);
     const body = encodeURIComponent(`${form.message}\n\n— ${form.name}`);
-    return `mailto:${data.email}?subject=${subj}&body=${body}`;
+    return `mailto:${data.profile.email}?subject=${subj}&body=${body}`;
   }
 
   function submit(e: FormEvent) {
@@ -37,35 +37,34 @@ export function ContactForm() {
     setForm(EMPTY);
   }
 
+  const cc = data.contact;
   return (
     <form className={styles.form} onSubmit={submit} noValidate>
       <div className={styles.field}>
-        <label htmlFor="cf-name">Your name</label>
+        <label htmlFor="cf-name">{cc.nameLabel}</label>
         <input
           id="cf-name"
           name="name"
           value={form.name}
           onChange={change}
-          placeholder="Jane Doe"
+          placeholder={cc.namePlaceholder}
           autoComplete="name"
         />
       </div>
       <div className={styles.field}>
-        <label htmlFor="cf-msg">Message</label>
+        <label htmlFor="cf-msg">{cc.messageLabel}</label>
         <textarea
           id="cf-msg"
           name="message"
           value={form.message}
           onChange={change}
-          placeholder="What are we building?"
+          placeholder={cc.messagePlaceholder}
         />
       </div>
       <div className={styles.formFooter}>
-        <p className={`${styles.status} ${err ? styles.statusErr : ''}`}>
-          {err || 'Pressing Send opens your mail client with this message.'}
-        </p>
+        <p className={`${styles.status} ${err ? styles.statusErr : ''}`}>{err || cc.formHint}</p>
         <button type="submit" className="btn btn-primary">
-          Send message <IcSend width={14} height={14} />
+          {cc.submit} <IcSend width={14} height={14} />
         </button>
       </div>
     </form>

@@ -11,22 +11,23 @@ export function Contact() {
   const ref = useReveal();
   const { copy, copiedKey } = useUi();
 
+  const cc = data.contact;
   const cards = [
-    { key: 'email', lbl: 'Email', val: data.email, icon: <IcMail width={16} height={16} /> },
-    { key: 'phone', lbl: 'Phone', val: data.phone, icon: <IcPhone width={16} height={16} /> },
-    { key: 'location', lbl: 'Location', val: data.place, icon: <IcPin width={16} height={16} /> },
+    { key: 'email', lbl: cc.emailLabel, val: data.profile.email, icon: <IcMail width={16} height={16} /> },
+    { key: 'phone', lbl: cc.phoneLabel, val: data.profile.phone, icon: <IcPhone width={16} height={16} /> },
+    { key: 'location', lbl: cc.locationLabel, val: data.profile.place, icon: <IcPin width={16} height={16} /> },
   ];
 
   return (
     <section id="Contact" aria-label="Contact">
       <div className="shell" ref={ref}>
-        <SectionHead label="05 — Contact" title="Let's make" accent="something." caption={data.thankYou} />
+        <SectionHead label={cc.label} title={cc.title} accent={cc.accent} caption={cc.caption} />
         <div className={styles.grid}>
           <div className={`reveal ${styles.intro}`} style={{ '--i': 1 } as CSSProperties}>
             <h3>
-              Got a project in <span className={styles.accent}>mind?</span>
+              {cc.introTitle} <span className={styles.accent}>{cc.introAccent}</span>
             </h3>
-            <p>Drop a line and I'll get back within a day. For longer briefs, attach context to the email.</p>
+            <p>{cc.introText}</p>
             <ul className={styles.cards}>
               {cards.map((c) => (
                 <li className={`card ${styles.card}`} key={c.key}>

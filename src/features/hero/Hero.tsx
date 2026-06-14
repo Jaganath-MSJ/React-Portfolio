@@ -9,35 +9,35 @@ export function Hero() {
     <section className={styles.hero} id="top">
       <div className="shell">
         <h1 className={styles.title}>
-          {data.name} <span className={styles.accent}>M S</span>
+          {data.profile.name} <span className={styles.accent}>M S</span>
         </h1>
         <div className={styles.sub}>
           <p className={styles.roles}>
-            Building accessible, performant interfaces as a&nbsp;
-            <RoleRotator words={data.roles} />.
+            {data.hero.rolePrefix}&nbsp;
+            <RoleRotator words={data.hero.roles} />.
           </p>
           <address className={styles.meta}>
-            <span className={styles.lbl}>Currently</span>
-            <span className={styles.val}>{data.role}</span>
-            <span className={styles.lbl}>Based in</span>
-            <span className={styles.val}>{data.place}</span>
+            <span className={styles.lbl}>{data.hero.currentlyLabel}</span>
+            <span className={styles.val}>{data.hero.role}</span>
+            <span className={styles.lbl}>{data.hero.basedInLabel}</span>
+            <span className={styles.val}>{data.profile.place}</span>
           </address>
         </div>
         <div className={styles.cta}>
           <button className="btn btn-primary" type="button" onClick={() => scrollToId('Projects')}>
-            See projects <IcArrowRight width={14} height={14} className="arrow" />
+            {data.hero.ctaProjects} <IcArrowRight width={14} height={14} className="arrow" />
           </button>
-          <a className="btn btn-ghost" href={data.resume} target="_blank" rel="noreferrer">
-            Download resume <IcDownload width={14} height={14} />
+          <a className="btn btn-ghost" href={data.profile.resume} target="_blank" rel="noreferrer">
+            {data.hero.ctaResume} <IcDownload width={14} height={14} />
           </a>
           <div className={styles.socials}>
-            <a href={data.linkedInLink} target="_blank" rel="noreferrer" className="icon-btn" aria-label="LinkedIn">
+            <a href={data.profile.linkedInLink} target="_blank" rel="noreferrer" className="icon-btn" aria-label="LinkedIn">
               <IcLinkedIn />
             </a>
-            <a href={data.githubLink} target="_blank" rel="noreferrer" className="icon-btn" aria-label="GitHub">
+            <a href={data.profile.githubLink} target="_blank" rel="noreferrer" className="icon-btn" aria-label="GitHub">
               <IcGithub />
             </a>
-            <a href={`mailto:${data.email}`} className="icon-btn" aria-label="Email">
+            <a href={`mailto:${data.profile.email}`} className="icon-btn" aria-label="Email">
               <IcMail />
             </a>
           </div>
