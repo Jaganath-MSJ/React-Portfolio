@@ -1,0 +1,96 @@
+.tabs {
+  display: inline-flex;
+  gap: var(--space-xs);
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-xl);
+}
+.tabs button {
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  transition: var(--transition);
+}
+.tabs button:hover {
+  color: var(--heading);
+}
+.tabs button.active {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 220px 1fr auto;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.date {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  padding-top: 2px;
+}
+.sep {
+  margin: 0 6px;
+  opacity: 0.6;
+}
+.now {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.body h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--heading);
+}
+.org {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text);
+  margin-top: var(--space-xs);
+}
+
+.badge {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.live {
+  color: var(--accent);
+  border-color: var(--accent-border);
+  background: var(--glow);
+}
+
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  .badge {
+    justify-self: start;
+  }
+}

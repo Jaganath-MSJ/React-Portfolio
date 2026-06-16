@@ -1,0 +1,12 @@
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  z-index: 100;
+  transition: width 80ms linear;
+  pointer-events: none;
+  box-shadow: 0 0 12px var(--accent);
+}
