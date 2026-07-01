@@ -35,9 +35,6 @@ export function About() {
         <div className={styles.grid}>
           <figure className={`reveal ${styles.portrait}`} style={{ '--i': 1 } as CSSProperties}>
             <img src={data.profile.img} alt={data.profile.nameInc} draggable="false" loading="lazy" decoding="async" />
-            <figcaption>
-              {data.profile.nameInc} · {data.profile.place}
-            </figcaption>
           </figure>
           <div className={`reveal ${styles.body}`} style={{ '--i': 2 } as CSSProperties}>
             <h3>
