@@ -67,6 +67,9 @@
   max-width: 56ch;
 }
 
+.roleLine {
+  white-space: nowrap;
+}
 .rotator {
   color: var(--accent);
   font-weight: 600;

@@ -13,8 +13,10 @@ export function Hero() {
         </h1>
         <div className={styles.sub}>
           <p className={styles.roles}>
-            {data.hero.rolePrefix}&nbsp;
-            <RoleRotator words={data.hero.roles} />.
+            <span className={styles.roleLine}>
+              {data.hero.rolePrefix}&nbsp;
+              <RoleRotator words={data.hero.roles} />.
+            </span>
           </p>
           <address className={styles.meta}>
             <span className={styles.lbl}>{data.hero.currentlyLabel}</span>
