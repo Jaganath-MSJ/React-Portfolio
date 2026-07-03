@@ -6,7 +6,7 @@
     "phone": "+91 9385304351",
     "place": "Tamil Nadu, India",
     "resume": "assets/Resume.pdf",
-    "img": "assets/Image.jpg",
+    "img": "assets/Photo.jpg",
     "linkedInLink": "https://www.linkedin.com/in/jaganathms",
     "githubLink": "https://github.com/Jaganath-MSJ"
   },
@@ -20,8 +20,8 @@
     "roles": [
       "Frontend Engineer",
       "React & TypeScript Developer",
-      "Full Stack Developer",
-      "UI Engineer"
+      "Backend Developer",
+      "Full Stack Developer"
     ],
     "currentlyLabel": "Currently",
     "role": "Frontend Engineer @ Workhall",
